@@ -1,0 +1,25 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 15px 15px 0px 15px;
+  height: 5vh;
+}
+
+.navbar--brand {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar--panel {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.active {
+  display: none;
+}

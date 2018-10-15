@@ -1,0 +1,10 @@
+.homepage {
+  display: flex;
+  height: 86vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage--orphan {
+  font-size: 10rem;
+}

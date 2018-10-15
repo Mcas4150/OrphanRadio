@@ -11,7 +11,7 @@ export default class NavBar extends Component {
         <Link className="navbar--brand" to="/home">
           Orphan.
         </Link>
-        <div className="navbar--center">
+        <div className="navbar--links">
           <NavLink
             className="nav-link"
             exact
@@ -24,9 +24,9 @@ export default class NavBar extends Component {
             className="nav-link"
             exact
             activeClassName="active"
-            to="/releases"
+            to="/records"
           >
-            Releases.
+            Records.
           </NavLink>
           <NavLink
             className="nav-link"
@@ -37,7 +37,7 @@ export default class NavBar extends Component {
             Presents.
           </NavLink>
         </div>
-        <div className="nav-panel">Ham</div>
+        <div className="navbar--panel">Ham</div>
       </div>
     );
   }
