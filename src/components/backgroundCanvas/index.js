@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import "./BackgroundCanvas.css";
 
 export default class BackgroundCanvas extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+
   componentDidMount() {
     const canvas = this.refs.canvas;
     var width = window.innerWidth;
@@ -185,7 +190,7 @@ export default class BackgroundCanvas extends Component {
 
           // context.strokeStyle = "rgba(" + i +"," + j +"," + 0 + "," + scale/2 + ")";
 
-          context.strokeStyle = "#5387B1";
+          context.strokeStyle = "#0000FF";
           context.beginPath();
           context.moveTo(lastx2d + lastScale, lasty2d);
           context.lineTo(x2d + scale, y2d);

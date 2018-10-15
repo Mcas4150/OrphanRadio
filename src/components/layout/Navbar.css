@@ -3,11 +3,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   padding: 15px 15px 0px 15px;
   height: 5vh;
+  font-size: 1.25rem;
 }
 
 .navbar--brand {
   display: flex;
   justify-content: flex-start;
+  text-decoration: none;
+  color: black;
 }
 
 .navbar--panel {
@@ -18,6 +21,8 @@
 .nav-link {
   margin-left: 5px;
   margin-right: 5px;
+  text-decoration: none;
+  color: black;
 }
 
 .active {

@@ -1,0 +1,6 @@
+.radio-page {
+  display: flex;
+  height: 86vh;
+  justify-content: center;
+  align-items: center;
+}

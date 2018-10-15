@@ -37,7 +37,9 @@ export default class NavBar extends Component {
             Presents.
           </NavLink>
         </div>
-        <div className="navbar--panel">Ham</div>
+        <div className="navbar--panel">
+          <i className="fas fa-bars" />
+        </div>
       </div>
     );
   }
