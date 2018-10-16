@@ -20,6 +20,8 @@
   display: flex;
   align-items: center;
   font-size: 3rem;
+  align-self: center;
+  height: 50px;
 }
 
 .presents-page--sublinks {
@@ -28,4 +30,13 @@
   align-items: center;
   font-size: 3rem;
   font-family: "GT-Super-Display-Light";
+  text-align: right;
+}
+
+.presents-page--sublinks__link {
+  display: contents;
+}
+
+.bold {
+  font-weight: bold;
 }

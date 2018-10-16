@@ -13,7 +13,12 @@ export default class PresentsPage extends Component {
             <div className="presents-page--title__text">PRESENTS.</div>
           </div>
           <div className="presents-page--carousel">Images</div>
-          <div className="presents-page--sublinks">Upcoming</div>
+          <div className="presents-page--sublinks">
+            {" "}
+            <div className="presents-page--sublinks__link bold">Upcoming</div>
+            <br />
+            <div className="presents-page--sublinks__link">Past</div>
+          </div>
         </div>
         <Footer />
       </div>
