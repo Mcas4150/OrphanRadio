@@ -27,7 +27,7 @@ export default class BackgroundCanvas extends Component {
     var point3d = [];
     var angleX = 0;
     var angleY = 0;
-    var HALF_WIDTH = width / 2;
+    var HALF_WIDTH = width / 1.25;
     var HALF_HEIGHT = height / 2;
 
     var x3d = 0;

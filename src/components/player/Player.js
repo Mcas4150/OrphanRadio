@@ -4,10 +4,10 @@ import { connect } from "react-redux";
 import { getCurrentShow } from "../../actions/radioActions";
 
 class Player extends Component {
-  constructor(props) {
-    super(props);
-    this.returnShowData = this.returnShowData.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.returnShowData = this.returnShowData.bind(this);
+  // }
 
   componentDidMount() {
     this.props.getCurrentShow();
@@ -25,25 +25,28 @@ class Player extends Component {
   //   return currentTrack;
   // }
 
-  returnShowData() {
-    let currentShowName = null;
-    if (this.props.currentShowData.currentShow !== null) {
-      let showData = this.props.currentShowData;
-      currentShowName = showData.currentShow[0].name;
-      let parsedForInvertedCommas = currentShowName.replace(/&#039;/g, "'");
-      let parsedForAmpersands = parsedForInvertedCommas.replace(/&amp;/g, "&");
-      return parsedForAmpersands;
-    }
-    return currentShowName;
-  }
+  // returnShowData() {
+  //   let currentShowName = null;
+  //   if (this.props.currentShowData.currentShow !== null) {
+  //     let showData = this.props.currentShowData;
+  //     currentShowName = showData.currentShow[0].name;
+  //     let parsedForInvertedCommas = currentShowName.replace(/&#039;/g, "'");
+  //     let parsedForAmpersands = parsedForInvertedCommas.replace(/&amp;/g, "&");
+  //     return parsedForAmpersands;
+  //   }
+  //   return currentShowName;
+  // }
 
   render() {
+    const { showData } = this.props.currentShowData;
+
     return (
       <div>
         <marquee className="current-show" behavior="scroll" direction="left">
           {" "}
           The Show
           {/* {this.returnShowData()} */}
+          {/* {showData.currentShow[0].name} */}
         </marquee>
       </div>
     );
@@ -56,7 +59,7 @@ Player.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  currentShowData: state.radio.currentShowStream
+  currentShowData: state.radio
 });
 
 export default connect(

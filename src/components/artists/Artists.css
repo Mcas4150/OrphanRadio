@@ -1,0 +1,9 @@
+.records-page--artist__title {
+  font-size: 3rem;
+  font-family: "GT-Super-Display-Light";
+  font-weight: bold;
+}
+
+.records-page--artist__image {
+  width: 100%;
+}
