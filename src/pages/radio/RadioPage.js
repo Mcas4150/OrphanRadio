@@ -1,7 +1,12 @@
 import React, { Component } from "react";
+import { NavLink, Route, Redirect } from "react-router-dom";
 import NavBar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import Schedule from "../../components/schedule/Schedule";
+import Archive from "../../components/archive/Archive";
+import Residents from "../../components/residents/Residents";
+import AloneIn from "../../components/aloneIn/AloneIn";
+
 import "./RadioPage.css";
 
 export default class RadioPage extends Component {
@@ -14,16 +19,44 @@ export default class RadioPage extends Component {
             <div className="radio-page--title__text">RADIO.</div>
           </div>
           <div className="radio-page--carousel">
-            <Schedule />
+            <Redirect to={`/radio/schedule`} component={Schedule} />
+            <Route path={`/radio/schedule`} component={Schedule} />
+            <Route path={`/radio/archive`} component={Archive} />
+            <Route path={`/radio/residents`} component={Residents} />
+            <Route path={`/radio/aloneIn`} component={AloneIn} />
           </div>
           <div className="radio-page--sublinks">
-            <div className="radio-page--sublinks__link bold">Schedule</div>
+            <NavLink
+              className="radio-page--sublinks__link"
+              activeClassName="active"
+              to={`/radio/schedule`}
+            >
+              Schedule
+            </NavLink>
             <br />
-            <div className="radio-page--sublinks__link">Archive</div>
+            <NavLink
+              className="radio-page--sublinks__link"
+              activeClassName="active"
+              to={`/radio/archive`}
+            >
+              Archive
+            </NavLink>
             <br />
-            <div className="radio-page--sublinks__link">Residents</div>
+            <NavLink
+              className="radio-page--sublinks__link"
+              activeClassName="active"
+              to={`/radio/residents`}
+            >
+              Residents
+            </NavLink>
             <br />
-            <div className="radio-page--sublinks__link">Alone In</div>
+            <NavLink
+              className="radio-page--sublinks__link"
+              activeClassName="active"
+              to={`/radio/aloneIn`}
+            >
+              Alone In
+            </NavLink>
           </div>
         </div>
         <Footer />

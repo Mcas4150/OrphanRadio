@@ -52,6 +52,11 @@
   display: contents;
 }
 
-.bold {
+.sublink {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
   font-weight: bold;
 }

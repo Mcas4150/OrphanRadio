@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getCurrentWeek } from "../../actions/radioActions";
+import "./Schedule.css";
 
 class Schedule extends Component {
   componentDidMount() {
@@ -9,7 +10,7 @@ class Schedule extends Component {
   }
 
   render() {
-    return <div />;
+    return <div>Schedule </div>;
   }
 }
 

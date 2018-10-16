@@ -7,7 +7,7 @@ import Footer from "./components/layout/Footer";
 
 import HomePage from "./pages/home/HomePage";
 import RadioPage from "./pages/radio/RadioPage";
-import { RecordsPage } from "./pages/records/RecordsPage";
+import RecordsPage from "./pages/records/RecordsPage";
 import PresentsPage from "./pages/presents/PresentsPage";
 import store from "./store";
 

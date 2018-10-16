@@ -35,8 +35,10 @@
 
 .radio-page--sublinks__link {
   display: contents;
+  text-decoration: none;
+  color: black;
 }
 
-.bold {
+.active {
   font-weight: bold;
 }

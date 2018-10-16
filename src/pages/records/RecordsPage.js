@@ -3,49 +3,45 @@ import NavBar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import Artists from "../../components/artists/Artists";
 import Releases from "../../components/releases/Releases";
-import { Link, Route, Switch } from "react-router-dom";
+import { NavLink, Route, Redirect } from "react-router-dom";
 import "./RecordsPage.css";
 
-export const RecordsPage = ({ match }) => {
-  return (
-    <div className="records-page">
-      <NavBar />
-      <div className="records-page--container">
-        <div className="records-page--title">
-          <div className="records-page--title__text">RECORDS.</div>
-        </div>
-        <div className="records-page--carousel">
-          <Route exact path={match.url} render={() => <Artists />} />
-          {/* <Route path={`${match.url}/:sectionName`} component={SubView} /> */}
-          <Route exact path={`${match.url}/artists`} component={Artists} />
-          <Route exact path={`${match.url}/releases`} component={Releases} />
-          {/* <Switch>
-              <Route exact path={`/records`} component={Artists} />
-              <Route path={`/records/artists`} component={Artists} />
-              <Route path={`/records/releases`} component={Releases} />
-            </Switch> */}
-        </div>
+export default class RecordsPage extends Component {
+  render() {
+    return (
+      <div className="records-page">
+        <NavBar />
+        <div className="records-page--container">
+          <div className="records-page--title">
+            <div className="records-page--title__text">RECORDS.</div>
+          </div>
+          <div className="records-page--carousel">
+            <Redirect to={`/records/artists`} component={Artists} />
+            <Route path={`/records/artists`} component={Artists} />
+            <Route path={`/records/releases`} component={Releases} />
+          </div>
 
-        <div className="records-page--sublinks">
-          {" "}
-          <Link
-            className="records-page--sublinks__link bold"
-            to={`${match.url}/artists`}
-          >
-            Artists
-          </Link>
-          <br />
-          <Link
-            className="records-page--sublinks__link"
-            to={`${match.url}/releases`}
-          >
-            Releases
-          </Link>
+          <div className="records-page--sublinks">
+            {" "}
+            <NavLink
+              className="records-page--sublinks__link sublink"
+              activeClassName="active"
+              to={`/records/artists`}
+            >
+              Artists
+            </NavLink>
+            <br />
+            <NavLink
+              className="records-page--sublinks__link sublink"
+              activeClassName="active"
+              to={`/records/releases`}
+            >
+              Releases
+            </NavLink>
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
-};
-
-const SubView = ({ match }) => <div>{match.params.sectionName}</div>;
+    );
+  }
+}

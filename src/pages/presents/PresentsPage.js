@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import NavBar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
-import Python from "../../img/DJPython.jpg";
+import Upcoming from "./Upcoming";
+import Past from "./Past";
+import { NavLink, Route, Redirect } from "react-router-dom";
+
 import "./PresentsPage.css";
 
 export default class PresentsPage extends Component {
@@ -14,15 +17,27 @@ export default class PresentsPage extends Component {
             <div className="presents-page--title__text">PRESENTS.</div>
           </div>
           <div className="presents-page--carousel">
-            {" "}
-            <img className="presents-page--event__image" src={Python} />
-            <div className="presents-page--event__title">Tickets</div>
+            <Redirect to={`/presents/upcoming`} component={Upcoming} />
+            <Route path={`/presents/upcoming`} component={Upcoming} />
+            <Route path={`/presents/past`} component={Past} />
           </div>
           <div className="presents-page--sublinks">
             {" "}
-            <div className="presents-page--sublinks__link bold">Upcoming</div>
+            <NavLink
+              className="presents-page--sublinks__link sublink"
+              activeClassName="active"
+              to={`/presents/upcoming`}
+            >
+              Upcoming
+            </NavLink>
             <br />
-            <div className="presents-page--sublinks__link">Past</div>
+            <NavLink
+              className="presents-page--sublinks__link sublink"
+              activeClassName="active"
+              to={`/presents/past`}
+            >
+              Past
+            </NavLink>
           </div>
         </div>
         <Footer />
