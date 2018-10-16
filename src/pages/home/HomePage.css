@@ -1,6 +1,11 @@
 .homepage {
+  height: 100%;
+  padding: 15px;
+}
+
+.homepage--container {
   display: flex;
-  height: 86vh;
+  height: 88vh;
   justify-content: center;
   align-items: center;
 }

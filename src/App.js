@@ -18,15 +18,15 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <NavBar />
-            <div className="main">
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/radio" component={RadioPage} />
-              <Route exact path="/records" component={RecordsPage} />
-              <Route exact path="/presents" component={PresentsPage} />
-              <Route exact path="/home" component={HomePage} />
-            </div>
-            <Footer />
+            {/* <NavBar /> */}
+
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/radio" component={RadioPage} />
+            <Route exact path="/records" component={RecordsPage} />
+            <Route exact path="/presents" component={PresentsPage} />
+            <Route exact path="/home" component={HomePage} />
+
+            {/* <Footer /> */}
           </div>
         </Router>
       </Provider>

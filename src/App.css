@@ -7,3 +7,8 @@
   font-family: "FugueRegular";
   src: url("./utils/fonts/Fugue-Regular.ttf");
 }
+
+@font-face {
+  font-family: "GT-Super-Display-Light";
+  src: url("./utils/fonts/GT-Super-Display-Light.ttf");
+}

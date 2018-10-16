@@ -1,0 +1,41 @@
+.records-page {
+  background: linear-gradient(to left, white 88%, yellow);
+  height: 100%;
+  padding: 15px;
+}
+
+.records-page--container {
+  display: grid;
+  height: 88vh;
+
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.records-page--title {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.records-page--title__text {
+  transform: rotate(90deg);
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.records-page--sublinks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2.5rem;
+  font-family: "GT-Super-Display-Light";
+  text-align: right;
+}
+
+.records-page--sublinks__link {
+  display: contents;
+}
+
+.bold {
+  font-weight: bold;
+}
