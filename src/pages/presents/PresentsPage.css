@@ -1,12 +1,13 @@
 .presents-page {
   background: linear-gradient(to left, white 88%, red);
-  height: 100%;
+  height: calc(100vh - 30px);
+  display: grid;
+  grid-template-rows: 1fr 16fr 1fr;
   padding: 15px;
 }
 
 .presents-page--main {
   display: grid;
-  height: 88vh;
   grid-template-columns: 1fr 4fr 1fr;
 }
 

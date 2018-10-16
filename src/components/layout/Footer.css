@@ -2,19 +2,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* padding: 0px 15px 0px 15px; */
-  height: 5vh;
+
   font-size: 1.5rem;
 }
 
 .footer--stream {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .footer--donate {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .footer--stream__circle {

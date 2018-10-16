@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   /* padding: 15px 15px 0px 15px; */
-  height: 5vh;
+
   font-size: 1.55rem;
 }
 
@@ -23,9 +23,6 @@
   margin-right: 8px;
   text-decoration: none;
   color: black;
-}
-
-.nav-link:hover {
 }
 
 .active {
