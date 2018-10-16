@@ -1,15 +1,21 @@
-import { GET_STREAM } from "../actions/types";
+import { GET_CURRENT_SHOW, GET_CURRENT_WEEK } from "../actions/types";
 
 const initialState = {
-  stream: []
+  currentShowStream: [],
+  currentWeekStream: []
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_STREAM:
+    case GET_CURRENT_SHOW:
       return {
         ...state,
-        stream: action.payload
+        currentShowStream: action.payload
+      };
+    case GET_CURRENT_WEEK:
+      return {
+        ...state,
+        currentWeekStream: action.payload
       };
     default:
       return state;

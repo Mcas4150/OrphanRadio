@@ -6,10 +6,9 @@ export default class BackgroundCanvas extends Component {
     super(props);
   }
 
-
   componentDidMount() {
     const canvas = this.refs.canvas;
-    var width = window.innerWidth;
+    var width = window.innerWidth * 2;
     var height = window.innerHeight;
     var context = canvas.getContext("2d");
     canvas.setAttribute("width", width);

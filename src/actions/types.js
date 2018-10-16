@@ -1,1 +1,2 @@
-export const GET_STREAM = "GET_STREAM";
+export const GET_CURRENT_SHOW = "GET_CURRENT_SHOW";
+export const GET_CURRENT_WEEK = "GET_CURRENT_WEEK";
