@@ -1,7 +1,7 @@
 import { GET_CURRENT_SHOW, GET_CURRENT_WEEK } from "../actions/types";
 
 const initialState = {
-  currentShowStream: [],
+  currentShowStream: { currentShow: [{ name: "not-playing" }] },
   currentWeekStream: []
 };
 
@@ -18,6 +18,6 @@ export default function(state = initialState, action) {
         currentWeekStream: action.payload
       };
     default:
-      return state;
+      return { ...state };
   }
 }

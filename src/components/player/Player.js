@@ -39,15 +39,21 @@ class Player extends Component {
   // }
 
   render() {
-    const { showData } = this.props.currentShowData;
+    const { currentShowStream } = this.props.radio;
+    let showContent;
+    if (currentShowStream === null) {
+      showContent = "no show";
+    } else {
+      showContent = currentShowStream.currentShow[0].name;
+    }
+
+    // const showName = currentShowData.currentShowStream.currentShow[0].name;
 
     return (
       <div className="marquee-container">
         <marquee className="current-show" behavior="scroll" direction="left">
           {" "}
-          The Show
-          {/* {this.returnShowData()} */}
-          {/* {showData.currentShow[0].name} */}
+          {showContent}
         </marquee>
       </div>
     );
@@ -56,11 +62,11 @@ class Player extends Component {
 
 Player.propTypes = {
   getCurrentShow: PropTypes.func.isRequired,
-  currentShowData: PropTypes.object.isRequired
+  radio: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  currentShowData: state.radio
+  radio: state.radio
 });
 
 export default connect(
