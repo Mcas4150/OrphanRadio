@@ -27,7 +27,7 @@ class App extends Component {
               <Route path="/presents" component={PresentsPage} />
               <Route path="/home" component={HomePage} />
             </Switch>
-            {/* <Footer /> */}
+            <Footer />
           </div>
         </Router>
       </Provider>

@@ -5,10 +5,15 @@ import { getCurrentShow } from "../../actions/radioActions";
 import "./Player.css";
 
 class Player extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.returnShowData = this.returnShowData.bind(this);
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      playing: false
+    };
+    // this.returnShowData = this.returnShowData.bind(this);
+    this.audioPlayer = React.createRef();
+    this.handlePlayPauseClicked = this.handlePlayPauseClicked.bind(this);
+  }
 
   componentDidMount() {
     this.props.getCurrentShow();
@@ -38,6 +43,18 @@ class Player extends Component {
   //   return currentShowName;
   // }
 
+  handlePlayPauseClicked() {
+    if (this.state.playing === false) {
+      this.setState({ playing: true }, function() {
+        this.audioPlayer.current.play();
+      });
+    } else {
+      this.setState({ playing: false }, function() {
+        this.audioPlayer.current.pause();
+      });
+    }
+  }
+
   render() {
     const { currentShowStream } = this.props.radio;
     let showContent;
@@ -50,12 +67,23 @@ class Player extends Component {
     // const showName = currentShowData.currentShowStream.currentShow[0].name;
 
     return (
-      <div className="marquee-container">
-        <marquee className="current-show" behavior="scroll" direction="left">
-          {" "}
-          {showContent}
-        </marquee>
-      </div>
+      <React.Fragment>
+        <audio ref={this.audioPlayer} id="audioPlayer" name="media">
+          <source
+            src=" http://bentennas.out.airtime.pro:8000/bentennas_a"
+            type="audio/mpeg"
+          />
+        </audio>
+        <div className="play" onClick={this.handlePlayPauseClicked}>
+          Play
+        </div>
+        <div className="marquee-container">
+          <marquee className="current-show" behavior="scroll" direction="left">
+            {" "}
+            {showContent}
+          </marquee>
+        </div>
+      </React.Fragment>
     );
   }
 }
