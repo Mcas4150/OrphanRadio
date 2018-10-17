@@ -9,6 +9,7 @@ class Schedule extends Component {
   constructor(props) {
     super(props);
     this.organizeWeek = this.organizeWeek.bind(this);
+    this.showTimeParser = this.showTimeParser.bind(this);
   }
 
   componentDidMount() {
@@ -20,10 +21,33 @@ class Schedule extends Component {
       return (
         <div>
           <div>{stream.monday[i].name}</div>
+
           <br />
         </div>
       );
     }
+  }
+
+  showTimeParser(show) {
+    let startTime = show.monday[0].starts;
+    let endTime = show.monday[0].ends;
+    let parsedStart = startTime
+      .split(" ")
+      .splice(1)
+      .join()
+      .slice(0, -3);
+    let parsedEnd = endTime
+      .split(" ")
+      .splice(1)
+      .join()
+      .slice(0, -3);
+    return (
+      <div>
+        <td className="show-time">
+          {parsedStart} - {parsedEnd}
+        </td>
+      </div>
+    );
   }
 
   render() {
@@ -37,7 +61,10 @@ class Schedule extends Component {
         <div className="schedule-week">
           <div className="monday">
             monday
-            <div>{this.organizeWeek(currentWeekStream)}</div>
+            <div>
+              {this.organizeWeek(currentWeekStream)}
+              {this.showTimeParser(currentWeekStream)}
+            </div>
           </div>
         </div>
       );
