@@ -1,0 +1,5 @@
+.marquee-container {
+  display: flex;
+  margin-left: 15px;
+  width: 15vw;
+}

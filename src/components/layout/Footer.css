@@ -12,10 +12,19 @@
   align-items: flex-end;
 }
 
+.footer--stream__container {
+  display: flex;
+}
+
 .footer--donate {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+.footer-circle-container {
+  display: flex;
+  align-self: center;
 }
 
 .footer--stream__circle {

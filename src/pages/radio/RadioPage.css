@@ -13,17 +13,20 @@
 }
 
 .radio-page--title {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "title-text nothing";
 }
 
 .radio-page--title__text {
   transform: rotate(90deg);
-  display: flex;
-  align-items: center;
+  transform: translateX(-61px) rotate(90deg);
+
+  justify-content: right;
   font-size: 3rem;
   align-self: center;
-  height: 50px;
+
+  grid-area: title-text;
 }
 
 .radio-page--sublinks {

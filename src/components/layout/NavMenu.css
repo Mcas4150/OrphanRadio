@@ -1,0 +1,32 @@
+.navMenu--list {
+  text-align: left;
+  padding: 15px;
+}
+
+.navMenu--link {
+  font-size: 1.55rem;
+  font-family: "FugueRegular";
+  color: white;
+  transition: "color 0.2s ease-in-out";
+  animation: "0.5s slideIn forwards";
+  animation-delay: 0.2s;
+}
+
+.navMenu--link:hover {
+  color: gray;
+}
+
+.navMenu--image-container {
+  display: flex;
+  align-items: center;
+}
+
+.orphanLogo {
+  width: 100%;
+}
+
+hr {
+  color: white;
+  animation: "0.5s shrink forwards";
+  animation-delay: 0.2;
+}

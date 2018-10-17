@@ -1,6 +1,8 @@
 .homepage {
-  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 16fr 1fr;
   padding: 15px;
+  height: calc(100vh - 30px);
 }
 
 .homepage--container {

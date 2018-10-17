@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getCurrentShow } from "../../actions/radioActions";
+import "./Player.css";
 
 class Player extends Component {
   // constructor(props) {
@@ -41,7 +42,7 @@ class Player extends Component {
     const { showData } = this.props.currentShowData;
 
     return (
-      <div>
+      <div className="marquee-container">
         <marquee className="current-show" behavior="scroll" direction="left">
           {" "}
           The Show

@@ -8,7 +8,9 @@ export default class Upcoming extends Component {
       <div className="presents-page--upcoming">
         {" "}
         <img className="presents-page--event__image" alt="event" src={Python} />
-        <div className="presents-page--event__title">Tickets</div>
+        <div className="presents-page--event__title">
+          <a href="https://www.residentadvisor.net/events/1080327">Tickets</a>
+        </div>
       </div>
     );
   }

@@ -12,17 +12,18 @@
 }
 
 .presents-page--title {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "title-text nothing";
 }
 
 .presents-page--title__text {
   transform: rotate(90deg);
-  display: flex;
-  align-items: center;
+  transform: translateX(-100px) rotate(90deg);
+  justify-content: right;
   font-size: 3rem;
   align-self: center;
-  height: 50px;
+  grid-area: title-text;
 }
 
 .presents-page--sublinks {
