@@ -27,7 +27,7 @@ class ArtistForm extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    // const { user } = this.props.auth;
+    const { user } = this.props.auth;
 
     const newArtist = {
       name: this.state.name,
@@ -121,12 +121,12 @@ class ArtistForm extends Component {
 
 ArtistForm.propTypes = {
   addArtist: PropTypes.func.isRequired,
-  // auth: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  // auth: state.auth,
+  auth: state.auth,
   errors: state.errors
 });
 
