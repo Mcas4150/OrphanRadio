@@ -8,12 +8,13 @@
 
 .radio-page--main {
   display: grid;
-
+  height: 85vh;
   grid-template-columns: 1fr 4fr 1fr;
 }
 
 .radio-page--title {
   display: grid;
+  height: 85vh;
   grid-template-columns: 1fr 4fr;
   grid-template-areas: "title-text nothing";
 }
@@ -30,6 +31,7 @@
 }
 
 .radio-page--sublinks {
+  height: 85vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -44,6 +46,23 @@
   color: black;
 }
 
+.radio-page--carousel {
+  overflow-y: scroll;
+  height: 85vh;
+}
+
 .active {
   font-weight: bold;
+}
+
+.radio-page--carousel::-webkit-scrollbar-track {
+  background: white;
+}
+
+.radio-page--carousel::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.radio-page--carousel::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

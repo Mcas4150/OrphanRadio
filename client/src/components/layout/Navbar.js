@@ -35,7 +35,7 @@ export default class NavBar extends Component {
             className="nav-link"
             exact
             activeClassName="active"
-            to="/radio"
+            to="/radio/schedule"
           >
             Radio.
           </NavLink>
@@ -43,7 +43,7 @@ export default class NavBar extends Component {
             className="nav-link"
             exact
             activeClassName="active"
-            to="/records"
+            to="/records/artists"
           >
             Records.
           </NavLink>
@@ -51,7 +51,7 @@ export default class NavBar extends Component {
             className="nav-link"
             exact
             activeClassName="active"
-            to="/presents"
+            to="/presents/upcoming"
           >
             Presents.
           </NavLink>

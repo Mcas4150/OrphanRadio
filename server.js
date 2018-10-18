@@ -4,9 +4,9 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const path = require("path");
 
-// const users = require("./routes/api/users");
+const users = require("./routes/api/users");
 // const profile = require("./routes/api/profile");
-// const posts = require("./routes/api/posts");
+const artists = require("./routes/api/artists");
 // const tracks = require("./routes/api/tracks");
 
 const app = express();
@@ -31,9 +31,9 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 // Use Routes
-// app.use("/api/users", users);
+app.use("/api/users", users);
 // app.use("/api/profile", profile);
-// app.use("/api/posts", posts);
+app.use("/api/artists", artists);
 // app.use("/api/tracks", tracks);
 
 // Server statis assets if in production

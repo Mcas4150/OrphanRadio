@@ -1,2 +1,10 @@
 export const GET_CURRENT_SHOW = "GET_CURRENT_SHOW";
 export const GET_CURRENT_WEEK = "GET_CURRENT_WEEK";
+export const ADD_ARTIST = "ADD_ARTIST";
+export const GET_ERRORS = "GET_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const GET_ARTISTS = "GET_ARTISTS";
+export const GET_ARTIST = "GET_ARTIST";
+export const ARTIST_LOADING = "ARTIST_LOADING";
+export const DELETE_ARTIST = "DELETE_ARTIST";
+export const SET_CURRENT_USER = "SET_CURRENT_USER";
