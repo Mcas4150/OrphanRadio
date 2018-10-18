@@ -1,15 +1,22 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* padding: 0px 15px 0px 15px; */
+  padding: 0px 15px 15px 15px;
 
   font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  width: calc(100vw - 30px);
 }
 
 .footer--stream {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+}
+
+.footer--stream__marquee {
+  display: flex;
 }
 
 .footer--stream__container {

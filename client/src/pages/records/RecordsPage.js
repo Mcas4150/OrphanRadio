@@ -40,7 +40,6 @@ export default class RecordsPage extends Component {
             </NavLink>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

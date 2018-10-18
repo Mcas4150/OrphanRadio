@@ -15,7 +15,6 @@ export default class HomePage extends Component {
             <BackgroundCanvas />
             <div className="homepage--orphan">Orphan.</div>
           </div>
-          <Footer />
         </div>
       </ReactCursorPosition>
     );

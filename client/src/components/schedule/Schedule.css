@@ -1,0 +1,13 @@
+.schedule--timezone {
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.schedule--timezone__title {
+  margin-right: 15px;
+}
+
+.schedule--day {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}

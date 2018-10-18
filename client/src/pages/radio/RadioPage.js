@@ -59,7 +59,7 @@ export default class RadioPage extends Component {
             </NavLink>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

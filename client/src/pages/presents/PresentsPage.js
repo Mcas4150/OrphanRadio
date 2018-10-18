@@ -40,7 +40,6 @@ export default class PresentsPage extends Component {
             </NavLink>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

@@ -21,12 +21,17 @@ class Schedule extends Component {
       return (
         <div>
           <div>{stream.monday[i].name}</div>
-
-          <br />
         </div>
       );
     }
   }
+
+  // const scheduleDay = () => (
+  //   <div>
+
+  //         </div>
+
+  // )
 
   showTimeParser(show) {
     let startTime = show.monday[0].starts;
@@ -60,7 +65,6 @@ class Schedule extends Component {
       showContent = (
         <div className="schedule-week">
           <div className="monday">
-            monday
             <div>
               {this.organizeWeek(currentWeekStream)}
               {this.showTimeParser(currentWeekStream)}
@@ -70,7 +74,81 @@ class Schedule extends Component {
       );
     }
 
-    return <div>{showContent}</div>;
+    return (
+      <div className="schedule">
+        <div className="schedule--timezone">
+          <div className="schedule--timezone__title">TIMEZONE:</div>
+          <div className="schedule--timezone__selector">GMT+0</div>
+        </div>
+        <hr />
+        <div className="schedule--daily__grid">
+          <div className="schedule--day">
+            <div className="schedule--day__date">
+              <div className="schedule--day__name">Monday</div>
+              <div className="schedule--day__calendar">18/04/18</div>
+            </div>
+            <div className="schedule--day__shows">
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+            </div>
+          </div>
+          <hr />
+          <div className="schedule--day">
+            <div className="schedule--day__date">
+              <div className="schedule--day__name">Tuesday</div>
+              <div className="schedule--day__calendar">18/05/18</div>
+            </div>
+            <div className="schedule--day__shows">
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+            </div>
+          </div>
+          <hr />
+          <div className="schedule--day">
+            <div className="schedule--day__date">
+              <div className="schedule--day__name">Wednesday</div>
+              <div className="schedule--day__calendar">18/06/18</div>
+            </div>
+            <div className="schedule--day__shows">
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+            </div>
+          </div>
+          <hr />
+          <div className="schedule--day">
+            <div className="schedule--day__date">
+              <div className="schedule--day__name">Thursday</div>
+              <div className="schedule--day__calendar">18/07/18</div>
+            </div>
+            <div className="schedule--day__shows">
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+              <hr />
+              <div className="schedule--day__show">{showContent}</div>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+    );
   }
 }
 
