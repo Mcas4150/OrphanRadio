@@ -16,3 +16,9 @@
   font-size: 12rem;
   font-family: "FugueRegular";
 }
+
+@media (max-width: 649px) {
+  .homepage--orphan {
+    font-size: 6rem;
+  }
+}

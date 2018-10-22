@@ -22,11 +22,10 @@ class Schedule extends Component {
   componentWillMount() {
     this.fetchDate();
     this.fetchDay();
-  }
-
-  componentDidMount() {
     this.props.getCurrentWeek();
   }
+
+  componentDidMount() {}
 
   organizeWeek(stream, day) {
     for (let i = 0; i < stream.monday.length; i++) {

@@ -63,3 +63,15 @@
 .active {
   font-weight: bold;
 }
+
+@media (max-width: 649px) {
+  .records-page--title__text {
+    transform: translateX(-65px) rotate(90deg);
+    justify-content: right;
+    font-size: 2rem;
+  }
+
+  .records-page--sublinks {
+    font-size: 2rem;
+  }
+}

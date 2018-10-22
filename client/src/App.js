@@ -10,6 +10,7 @@ import NavBar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import AdminPage from "./pages/admin/AdminPage";
 import HomePage from "./pages/home/HomePage";
+import Example from "./pages/home/cursor";
 import RadioPage from "./pages/radio/RadioPage";
 import RecordsPage from "./pages/records/RecordsPage";
 import PresentsPage from "./pages/presents/PresentsPage";
@@ -52,6 +53,7 @@ class App extends Component {
               <Route path="/records" component={RecordsPage} />
               <Route path="/presents" component={PresentsPage} />
               <Route path="/home" component={HomePage} />
+              <Route path="/cursor" component={Example} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
               <Route path="/admin" component={AdminPage} />

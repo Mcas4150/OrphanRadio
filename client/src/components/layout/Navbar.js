@@ -32,7 +32,7 @@ export default class NavBar extends Component {
         </Link>
         <div className="navbar--links">
           <NavLink
-            className="nav-link"
+            className="nav-link link--radio"
             exact
             activeClassName="active"
             to="/radio/schedule"
@@ -40,7 +40,7 @@ export default class NavBar extends Component {
             Radio.
           </NavLink>
           <NavLink
-            className="nav-link"
+            className="nav-link link--records"
             exact
             activeClassName="active"
             to="/records/artists"
@@ -48,7 +48,7 @@ export default class NavBar extends Component {
             Records.
           </NavLink>
           <NavLink
-            className="nav-link"
+            className="nav-link link--presents"
             exact
             activeClassName="active"
             to="/presents/upcoming"

@@ -1,26 +1,14 @@
 import React, { Component } from "react";
-import BackgroundCanvas from "../../components/backgroundCanvas/index";
-import NavBar from "../../components/layout/Navbar";
-import Footer from "../../components/layout/Footer";
 import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
-import "./HomePage.css";
+import BackgroundCanvas from "../../components/backgroundCanvas/index";
+import HomePage from "./HomePage";
 
-export default class HomePage extends Component {
+export default class Example extends Component {
   render() {
     return (
-      <ReactCursorPosition
-        activationInteractionMouse={INTERACTIONS.HOVER} //default
-        // hoverDelayInMs={250} //default: 0
-        // hoverOffDelayInMs={150} //default: 0
-      >
-        <div className="homepage">
-          <NavBar />
-          <div className="homepage--container">
-            <BackgroundCanvas />
-
-            <div className="homepage--orphan">Orphan.</div>
-          </div>
-        </div>
+      <ReactCursorPosition className="example">
+        <PositionLabel />
+        <BackgroundCanvas />
       </ReactCursorPosition>
     );
   }
@@ -29,11 +17,11 @@ export default class HomePage extends Component {
 const PositionLabel = props => {
   const {
     detectedEnvironment: {
-      isMouseDetected = true,
+      isMouseDetected = false,
       isTouchDetected = false
     } = {},
-    elementDimensions: { width = 1200, height = 1000 } = {},
-    isActive = true,
+    elementDimensions: { width = 0, height = 0 } = {},
+    isActive = false,
     isPositionOutside = false,
     position: { x = 0, y = 0 } = {}
   } = props;

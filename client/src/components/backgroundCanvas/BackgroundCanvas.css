@@ -1,8 +1,16 @@
 canvas {
   background: white;
   position: absolute;
-  top: 0;
+  top: 35px;
   left: 0;
-  z-index: -1;
+  color: blue;
+  z-index: 1;
+  opacity: 0.1;
   max-width: 100%;
+}
+
+@media (max-width: 649px) {
+  .canvas {
+    max-width: 75%;
+  }
 }

@@ -47,3 +47,15 @@
 .active {
   font-weight: bold;
 }
+
+@media (max-width: 649px) {
+  .presents-page--title__text {
+    transform: translateX(-65px) rotate(90deg);
+    justify-content: right;
+    font-size: 2rem;
+  }
+
+  .presents-page--sublinks {
+    font-size: 2rem;
+  }
+}

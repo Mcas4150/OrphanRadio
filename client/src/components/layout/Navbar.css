@@ -25,6 +25,18 @@
   color: black;
 }
 
+.link--radio:hover {
+  color: blue;
+}
+
+.link--records:hover {
+  color: yellow;
+}
+
+.link--presents:hover {
+  color: red;
+}
+
 .active {
   display: none;
 }
@@ -53,5 +65,18 @@
   }
   100% {
     width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar--links {
+    display: none;
+  }
+
+  .navbar {
+    grid-template-columns: 1fr 1fr;
+    /* padding: 15px 15px 0px 15px; */
+
+    font-size: 1.55rem;
   }
 }
