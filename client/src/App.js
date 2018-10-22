@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
-
+import posed, { PoseGroup } from "react-pose";
 import NavBar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import AdminPage from "./pages/admin/AdminPage";

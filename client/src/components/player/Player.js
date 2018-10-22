@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getCurrentShow } from "../../actions/radioActions";
+import Playbutton from "../playbutton/Playbutton";
 import "./Player.css";
 
 class Player extends Component {
@@ -74,9 +75,13 @@ class Player extends Component {
             type="audio/mpeg"
           />
         </audio>
-        <div className="play" onClick={this.handlePlayPauseClicked}>
+        <Playbutton
+          className="play"
+          playingTrueFalse={this.state.playing}
+          playClicked={this.handlePlayPauseClicked}
+        >
           Play
-        </div>
+        </Playbutton>
         <div className="marquee-container">
           <marquee className="current-show" behavior="scroll" direction="left">
             {" "}

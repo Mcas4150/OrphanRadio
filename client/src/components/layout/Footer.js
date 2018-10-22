@@ -8,7 +8,7 @@ export default class Footer extends Component {
       <div className="footer">
         <div className="footer--stream">
           <div className="footer--stream__container">
-            Listen Live
+            Live
             <div className="footer-circle-container">
               <div className="footer--stream__circle" />
             </div>

@@ -1,0 +1,16 @@
+.pause-button {
+  margin: 5px;
+
+  border-color: black;
+  border-style: double;
+  border-width: 0 0 0 12px;
+}
+
+.play-button {
+  margin: 5px;
+  margin-bottom: 0px;
+  border-style: solid;
+  border-width: var(--main-button-half-size) 0 var(--main-button-half-size)
+    var(--main-button-size);
+  border-color: transparent transparent transparent black;
+}
