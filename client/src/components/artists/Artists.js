@@ -17,18 +17,21 @@ class Artists extends Component {
       artistContent = "artists";
     } else {
       // artistContent = artists[0].name;
-      artistContent = "oranges";
-      // postContent = posts.slice(0, 2);
+      artistContent = artists.map(artist => {
+        const name = artist.name;
+        const bio = artist.bio;
+
+        return (
+          <div className="artist--card">
+            <div className="artist--name">{name} </div>
+
+            <div className="artist--bio">{bio}</div>
+          </div>
+        );
+      });
     }
 
-    return (
-      <div className="records-page--artists">
-        {artistContent}
-
-        {/* <div className="records-page--artist__title">FKL</div>
-        <img className="records-page--artist__image" src={FKL} /> */}
-      </div>
-    );
+    return <div className="records-page--artists">{artistContent}</div>;
   }
 }
 

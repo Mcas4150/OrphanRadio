@@ -1,9 +1,16 @@
 .records-page--artist__title {
+}
+
+.records-page--artist__image {
+  height: 80vh;
+}
+
+.artist--name {
   font-size: 3rem;
   font-family: "GT-Super-Display-Light";
   font-weight: bold;
 }
 
-.records-page--artist__image {
-  height: 80vh;
+.artist--card {
+  margin: 15px;
 }

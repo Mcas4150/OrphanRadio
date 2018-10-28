@@ -47,12 +47,14 @@
 }
 
 .radio-page--carousel {
-  overflow-y: scroll;
-  height: 85vh;
 }
 
 .active {
   font-weight: bold;
+}
+
+.radio-page--carousel::-webkit-scrollbar {
+  width: 0.2em;
 }
 
 .radio-page--carousel::-webkit-scrollbar-track {
@@ -60,7 +62,7 @@
 }
 
 .radio-page--carousel::-webkit-scrollbar-thumb {
-  background: #888;
+  background: black;
 }
 
 .radio-page--carousel::-webkit-scrollbar-thumb:hover {

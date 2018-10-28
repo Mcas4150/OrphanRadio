@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { NavLink, Route, Redirect } from "react-router-dom";
 import NavBar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
-import Schedule from "../../components/schedule/Schedule";
+import Schedule from "../../components/schedule/Schedule2";
 import Archive from "../../components/archive/Archive";
 import Residents from "../../components/residents/Residents";
 import AloneIn from "../../components/aloneIn/AloneIn";

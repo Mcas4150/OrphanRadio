@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BackgroundCanvas from "../../components/backgroundCanvas/index";
+
 import NavBar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
