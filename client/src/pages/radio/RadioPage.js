@@ -28,6 +28,39 @@ export default class RadioPage extends Component {
       <StyleRoot>
         <div className="radio-page" style={styles.fadeIn}>
           <NavBar />
+          <div className="radio-page--mobile-sublinks">
+            <NavLink
+              className="radio-page--mobile-sublink"
+              activeClassName="active"
+              to={`/radio/schedule`}
+            >
+              Schedule
+            </NavLink>
+
+            <NavLink
+              className="radio-page--mobile-sublink"
+              activeClassName="active"
+              to={`/radio/archive`}
+            >
+              Archive
+            </NavLink>
+
+            <NavLink
+              className="radio-page--mobile-sublink"
+              activeClassName="active"
+              to={`/radio/residents`}
+            >
+              Residents
+            </NavLink>
+
+            <NavLink
+              className="radio-page--mobile-sublink"
+              activeClassName="active"
+              to={`/radio/aloneIn`}
+            >
+              Alone In
+            </NavLink>
+          </div>
           <div className="radio-page--main">
             <div className="radio-page--title">
               <div className="radio-page--title__text">RADIO.</div>

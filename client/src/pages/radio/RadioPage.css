@@ -6,6 +6,17 @@
   height: calc(100vh - 30px);
 }
 
+.radio-page--mobile-sublinks {
+  display: none;
+}
+
+.radio-page--mobile-sublink {
+  padding: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+
 .radio-page--main {
   display: grid;
   height: 85vh;
@@ -69,13 +80,38 @@
   background: #555;
 }
 
-@media (max-width: 649px) {
+@media (max-width: 800px) {
   .radio-page--title__text {
     transform: translateX(-40px) rotate(90deg);
     justify-content: right;
     font-size: 2rem;
   }
+
+  .radio-page--title {
+    display: grid;
+    height: 80vh;
+    width: 10vw;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "title-text nothing";
+  }
+
   .radio-page--sublinks {
-    font-size: 2rem;
+    display: none;
+  }
+
+  .radio-page--main {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .radio-page--mobile-sublinks {
+    display: flex;
+    justify-content: center;
+    top: 0;
+    position: absolute;
+    width: calc(100vw - 30px);
+    margin-top: 15px;
+    margin-left: 41px;
   }
 }

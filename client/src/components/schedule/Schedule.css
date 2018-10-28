@@ -106,39 +106,35 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .show-name {
-    font-size: 18px;
-    padding-bottom: 20px;
-  }
-
   .show-schedule {
     margin-top: 20px;
   }
   .schedule-container {
-    width: 85vw;
+    width: 80vw;
     margin: 0px 10px 0px 10px;
   }
 
+  .schedule-subcontainer {
+    padding: 15px;
+  }
+
+  .schedule--timezone__container {
+    display: none;
+  }
+
+  .show-name {
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+
   .show-time {
-    width: 120px;
-    font-size: 14px;
+    width: 100px;
+    font-size: 15px;
   }
   .days-header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    font-size: 19px;
-  }
-
-  @media only screen and (max-width: 320px) {
-    .show-name {
-      font-size: 14px;
-      padding-bottom: 10px;
-    }
-
-    .show-time {
-      width: 100px;
-      font-size: 12px;
-    }
+    font-size: 15px;
   }
 }
