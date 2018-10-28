@@ -26,6 +26,23 @@ export default class PresentsPage extends Component {
       <StyleRoot>
         <div className="presents-page" style={styles.fadeIn}>
           <NavBar />
+          <div className="presents-page--mobile-sublinks">
+            <NavLink
+              className="presents-page--mobile-sublink"
+              activeClassName="active"
+              to={`/presents/upcoming`}
+            >
+              Upcoming
+            </NavLink>
+            <br />
+            <NavLink
+              className="presents-page--mobile-sublink"
+              activeClassName="active"
+              to={`/presents/past`}
+            >
+              Past
+            </NavLink>
+          </div>
           <div className="presents-page--main">
             <div className="presents-page--title">
               <div className="presents-page--title__text">PRESENTS.</div>
