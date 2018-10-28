@@ -14,3 +14,30 @@
 .artist--card {
   margin: 15px;
 }
+
+.records-page--artists {
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.records-page--artists::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+.records-page--artists::-webkit-scrollbar-track {
+  background: white;
+}
+
+.records-page--artists::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+.records-page--artists::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media only screen and (max-width: 800px) {
+  .artist--name {
+    font-size: 2rem;
+  }
+}

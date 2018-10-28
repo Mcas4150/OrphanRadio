@@ -26,6 +26,23 @@ export default class RecordsPage extends Component {
       <StyleRoot>
         <div className="records-page" style={styles.fadeIn}>
           <NavBar />
+          <div className="records-page--mobile-sublinks">
+            <NavLink
+              className="records-page--mobile-sublink"
+              activeClassName="active"
+              to={`/records/artists`}
+            >
+              Artists
+            </NavLink>
+
+            <NavLink
+              className="records-page--mobile-sublink"
+              activeClassName="active"
+              to={`/records/releases`}
+            >
+              Releases
+            </NavLink>
+          </div>
           <div className="records-page--container">
             <div className="records-page--title">
               <div className="records-page--title__text">RECORDS.</div>

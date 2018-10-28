@@ -64,22 +64,6 @@
   font-weight: bold;
 }
 
-.radio-page--carousel::-webkit-scrollbar {
-  width: 0.2em;
-}
-
-.radio-page--carousel::-webkit-scrollbar-track {
-  background: white;
-}
-
-.radio-page--carousel::-webkit-scrollbar-thumb {
-  background: black;
-}
-
-.radio-page--carousel::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 @media (max-width: 800px) {
   .radio-page--title__text {
     transform: translateX(-40px) rotate(90deg);
@@ -110,8 +94,8 @@
     justify-content: center;
     top: 0;
     position: absolute;
-    width: calc(100vw - 30px);
+    width: calc(100vw - 150px);
     margin-top: 15px;
-    margin-left: 41px;
+    margin-left: 97px;
   }
 }
