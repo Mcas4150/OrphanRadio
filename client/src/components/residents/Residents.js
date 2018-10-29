@@ -17,7 +17,17 @@ class Residents extends Component {
       residentContent = "residents";
     } else {
       // residentContent = residents[0].name;
-      residentContent = "oranges";
+      residentContent = residents.map(resident => {
+        const name = resident.name;
+        const bio = resident.bio;
+
+        return (
+          <div className="resident--card">
+            <div className="resident--name">{name}</div>
+            <div className="resident--bio">{bio} </div>
+          </div>
+        );
+      });
       // postContent = posts.slice(0, 2);
     }
 

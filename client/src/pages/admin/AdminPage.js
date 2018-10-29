@@ -3,6 +3,7 @@ import NavBar from "../../components/layout/Navbar";
 import ArtistForm from "../../components/artists/ArtistsForm";
 import ReleaseForm from "../../components/releases/ReleasesForm";
 import ResidentForm from "../../components/residents/ResidentsForm";
+import ArchiveForm from "../../components/archive/ArchiveForm";
 import "./AdminPage.css";
 
 export default class AdminPage extends Component {
@@ -31,7 +32,10 @@ export default class AdminPage extends Component {
             </div>
           </div>
           <div className="admin--actions__add-archive">
-            <div className="admin--actions__form">Add Archive</div>
+            <div className="admin--actions__form">
+              Add Archive
+              <ArchiveForm />
+            </div>
           </div>
           <div className="admin--actions__add-upcoming">
             <div className="admin--actions__form">Add Upcoming</div>
