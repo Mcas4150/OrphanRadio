@@ -1,0 +1,31 @@
+.resident--name {
+  margin: 10px 0px;
+  font-size: 2rem;
+  font-family: "GT-Super-Display-Light";
+  font-weight: bold;
+}
+
+.resident--card {
+  text-align: initial;
+  display: inline-block;
+}
+
+.resident--grid {
+  display: grid;
+  grid-auto-columns: 1fr 2fr;
+  grid-template-areas: "left right";
+}
+
+.resident--card__left {
+  grid-area: left;
+}
+
+.resident--card__right {
+  grid-area: right;
+  padding: 0px 15px;
+}
+
+.records-page--residents {
+  height: 80vh;
+  overflow-y: scroll;
+}

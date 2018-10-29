@@ -20,12 +20,33 @@ class Residents extends Component {
       residentContent = residents.map(resident => {
         const name = resident.name;
         const bio = resident.bio;
+        const mix = `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${
+          resident.mix
+        }&color=%230a0a0a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`;
 
         return (
-          <div className="resident--card">
-            <div className="resident--name">{name}</div>
-            <div className="resident--bio">{bio} </div>
-          </div>
+          <React.Fragment>
+            <div className="resident--card">
+              <div className="resident--name">{name}</div>
+
+              <div className="resident--grid">
+                <div className="resident--card__left">
+                  <iframe
+                    width="100%"
+                    height="300"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay"
+                    src={mix}
+                  />
+                </div>
+                <div className="resident--card__right">
+                  <div className="resident--bio">{bio} </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+          </React.Fragment>
         );
       });
       // postContent = posts.slice(0, 2);
