@@ -58,9 +58,8 @@ router.post(
     const newResident = new Resident({
       name: req.body.name,
       bio: req.body.bio,
-      website: req.body.website,
-      instagram: req.user.instagram,
-      twitter: req.user.twitter
+      image: req.body.image,
+      mix: req.body.mix
     });
 
     newResident.save().then(resident => res.json(resident));

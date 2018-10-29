@@ -8,7 +8,7 @@ class Login extends Component {
   constructor() {
     super();
     this.state = {
-      username: "",
+      email: "",
       password: "",
       errors: {}
     };
@@ -37,7 +37,7 @@ class Login extends Component {
     e.preventDefault();
 
     const userData = {
-      username: this.state.username,
+      email: this.state.email,
       password: this.state.password
     };
 
@@ -56,16 +56,18 @@ class Login extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Are you an Orphan?</h1>
-
+              <h1 className="display-4 text-center">Log In</h1>
+              <p className="lead text-center">
+                Sign into your SneakyTrax account
+              </p>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="Username"
-                  name="username"
-                  type="username"
-                  value={this.state.username}
+                  placeholder="Email Address"
+                  name="email"
+                  type="email"
+                  value={this.state.email}
                   onChange={this.onChange}
-                  error={errors.username}
+                  error={errors.email}
                 />
 
                 <TextFieldGroup

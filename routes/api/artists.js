@@ -55,8 +55,8 @@ router.post(
       name: req.body.name,
       bio: req.body.bio,
       website: req.body.website,
-      instagram: req.user.instagram,
-      twitter: req.user.twitter
+      instagram: req.body.instagram,
+      twitter: req.body.twitter
     });
 
     newArtist.save().then(artist => res.json(artist));

@@ -9,8 +9,8 @@ class Register extends Component {
   constructor() {
     super();
     this.state = {
-      username: "",
-
+      name: "",
+      email: "",
       password: "",
       password2: "",
       errors: {}
@@ -22,7 +22,7 @@ class Register extends Component {
 
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/admin");
+      this.props.history.push("/dashboard");
     }
   }
 
@@ -40,8 +40,8 @@ class Register extends Component {
     e.preventDefault();
 
     const newUser = {
-      username: this.state.username,
-
+      name: this.state.name,
+      email: this.state.email,
       password: this.state.password,
       password2: this.state.password2
     };
@@ -57,17 +57,24 @@ class Register extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center"> New Orphan</h1>
+              <h1 className="display-4 text-center">Sign Up</h1>
 
               <form noValidate onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="Username"
-                  name="username"
-                  value={this.state.username}
+                  placeholder="Name"
+                  name="name"
+                  value={this.state.name}
                   onChange={this.onChange}
-                  error={errors.username}
+                  error={errors.name}
                 />
-
+                <TextFieldGroup
+                  placeholder="Email"
+                  name="email"
+                  type="email"
+                  value={this.state.email}
+                  onChange={this.onChange}
+                  error={errors.email}
+                />
                 <TextFieldGroup
                   placeholder="Password"
                   name="password"

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
@@ -18,6 +18,9 @@ const User = require("../../models/User");
 // @access  Public
 router.get("/test", (req, res) => res.json({ msg: "Users Works" }));
 
+// @route   POST api/users/register
+// @desc    Register user
+// @access  Public
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
 
@@ -26,13 +29,21 @@ router.post("/register", (req, res) => {
     return res.status(400).json(errors);
   }
 
-  User.findOne({ username: req.body.username }).then(user => {
+  User.findOne({ email: req.body.email }).then(user => {
     if (user) {
-      errors.username = "username already exists";
+      errors.email = "Email already exists";
       return res.status(400).json(errors);
     } else {
+      const avatar = gravatar.url(req.body.email, {
+        s: "200", // Size
+        r: "pg", // Rating
+        d: "mm" // Default
+      });
+
       const newUser = new User({
-        username: req.body.username,
+        name: req.body.name,
+        email: req.body.email,
+        avatar,
         password: req.body.password
       });
 
@@ -61,14 +72,14 @@ router.post("/login", (req, res) => {
     return res.status(400).json(errors);
   }
 
-  const username = req.body.username;
+  const email = req.body.email;
   const password = req.body.password;
 
   // Find user by email
-  User.findOne({ username }).then(user => {
+  User.findOne({ email }).then(user => {
     // Check for user
     if (!user) {
-      errors.username = "User not found";
+      errors.email = "User not found";
       return res.status(404).json(errors);
     }
 
@@ -76,7 +87,7 @@ router.post("/login", (req, res) => {
     bcrypt.compare(password, user.password).then(isMatch => {
       if (isMatch) {
         // User Matched
-        const payload = { id: user.id, username: user.username }; // Create JWT Payload
+        const payload = { id: user.id, name: user.name, avatar: user.avatar }; // Create JWT Payload
 
         // Sign Token
         jwt.sign(
@@ -107,7 +118,8 @@ router.get(
   (req, res) => {
     res.json({
       id: req.user.id,
-      username: req.user.username
+      name: req.user.name,
+      email: req.user.email
     });
   }
 );

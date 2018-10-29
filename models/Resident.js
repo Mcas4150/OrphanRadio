@@ -11,13 +11,10 @@ const ResidentSchema = new Schema({
     type: String,
     required: true
   },
-  website: {
+  image: {
     type: String
   },
-  instagram: {
-    type: String
-  },
-  twitter: {
+  mix: {
     type: String
   }
 });

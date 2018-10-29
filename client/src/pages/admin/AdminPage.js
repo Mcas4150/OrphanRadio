@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "../../components/layout/Navbar";
 import ArtistForm from "../../components/artists/ArtistsForm";
+import ReleaseForm from "../../components/releases/ReleasesForm";
 import "./AdminPage.css";
 
 export default class AdminPage extends Component {
@@ -17,7 +18,10 @@ export default class AdminPage extends Component {
             </div>
           </div>
           <div className="admin--actions__add-release">
-            <div className="admin--actions__form">Add Release</div>
+            <div className="admin--actions__form">
+              Add Release
+              <ReleaseForm />
+            </div>
           </div>
           <div className="admin--actions__add-resident">
             <div className="admin--actions__form">Add Resident</div>

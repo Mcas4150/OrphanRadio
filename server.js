@@ -7,7 +7,7 @@ const path = require("path");
 const users = require("./routes/api/users");
 const residents = require("./routes/api/residents");
 const artists = require("./routes/api/artists");
-// const tracks = require("./routes/api/tracks");
+const releases = require("./routes/api/releases");
 
 const app = express();
 
@@ -34,7 +34,7 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 app.use("/api/residents", residents);
 app.use("/api/artists", artists);
-// app.use("/api/tracks", tracks);
+app.use("/api/releases", releases);
 
 // Server statis assets if in production
 if (process.env.NODE_ENV === "production") {
