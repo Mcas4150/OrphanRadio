@@ -5,6 +5,12 @@
   font-weight: bold;
 }
 
+.resident--title {
+  font-size: 2rem;
+  font-family: "GT-Super-Display-Light";
+  font-weight: bold;
+}
+
 .resident--card {
   text-align: initial;
   display: inline-block;
@@ -28,4 +34,12 @@
 .records-page--residents {
   height: 80vh;
   overflow-y: scroll;
+}
+
+@media (max-width: 800px) {
+  .resident--grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "left right";
+  }
 }

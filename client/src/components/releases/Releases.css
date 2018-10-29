@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.releases--image {
+.release--image {
   margin-top: 15px;
 
   max-height: 55vh;
@@ -14,4 +14,29 @@
 .releases--title {
   margin-top: 15px;
   font-size: 1.5rem;
+}
+
+.release--title {
+  font-size: 1.25rem;
+  font-family: "GT-Super-Display-Light";
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.release--links {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.release--buy-link,
+.release--listen-link {
+  padding: 10px;
+}
+
+.releases--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

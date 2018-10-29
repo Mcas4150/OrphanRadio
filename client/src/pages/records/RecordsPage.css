@@ -41,6 +41,9 @@
 
 .records-page--carousel {
   text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .records-page--artist__title {
