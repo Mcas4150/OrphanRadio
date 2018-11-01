@@ -9,6 +9,7 @@ const residents = require("./routes/api/residents");
 const artists = require("./routes/api/artists");
 const releases = require("./routes/api/releases");
 const archives = require("./routes/api/archives");
+const upcomings = require("./routes/api/upcomings");
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use("/api/residents", residents);
 app.use("/api/artists", artists);
 app.use("/api/releases", releases);
 app.use("/api/archives", archives);
+app.use("/api/upcomings", upcomings);
 
 // Server statis assets if in production
 if (process.env.NODE_ENV === "production") {

@@ -22,7 +22,7 @@ class Residents extends Component {
         const bio = resident.bio;
         const mix = `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${
           resident.mix
-        }&color=%230a0a0a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`;
+        }&color=%230a0a0a&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true`;
 
         return (
           <React.Fragment>
@@ -41,7 +41,18 @@ class Residents extends Component {
                   />
                 </div>
                 <div className="resident--card__right">
-                  <div className="resident--bio">{bio} </div>
+                  <div className="resident--bio">
+                    {bio}
+
+                    {/* <iframe
+                      width="100%"
+                      height="20"
+                      scrolling="no"
+                      frameborder="no"
+                      allow="autoplay"
+                      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/424019046&color=%230a0a0a&inverse=false&auto_play=false&show_user=true"
+                    /> */}
+                  </div>
                 </div>
               </div>
             </div>

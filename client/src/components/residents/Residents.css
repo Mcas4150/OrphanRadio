@@ -5,12 +5,6 @@
   font-weight: bold;
 }
 
-.resident--title {
-  font-size: 2rem;
-  font-family: "GT-Super-Display-Light";
-  font-weight: bold;
-}
-
 .resident--card {
   text-align: initial;
   display: inline-block;

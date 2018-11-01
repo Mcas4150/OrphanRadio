@@ -4,6 +4,7 @@ import ArtistForm from "../../components/artists/ArtistsForm";
 import ReleaseForm from "../../components/releases/ReleasesForm";
 import ResidentForm from "../../components/residents/ResidentsForm";
 import ArchiveForm from "../../components/archive/ArchiveForm";
+import UpcomingForm from "../presents/UpcomingForm";
 import "./AdminPage.css";
 
 export default class AdminPage extends Component {
@@ -38,7 +39,10 @@ export default class AdminPage extends Component {
             </div>
           </div>
           <div className="admin--actions__add-upcoming">
-            <div className="admin--actions__form">Add Upcoming</div>
+            <div className="admin--actions__form">
+              Add Upcoming
+              <UpcomingForm />
+            </div>
           </div>
           <div className="admin--actions__add-past">
             <div className="admin--actions__form">Add Past</div>

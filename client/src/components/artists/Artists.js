@@ -20,13 +20,50 @@ class Artists extends Component {
       artistContent = artists.map(artist => {
         const name = artist.name;
         const bio = artist.bio;
+        const website = artist.website;
+        const instagram = artist.instagram;
+        const twitter = artist.twitter;
 
         return (
-          <div className="artist--card">
-            <div className="artist--name">{name} </div>
+          <React.Fragment>
+            <div className="artist--card">
+              <div className="artist--name">{name} </div>
+              <div className="artist--info">
+                <div className="artist--bio">
+                  <h3>Bio</h3>
+                  {bio}
+                </div>
+                <div className="artist--links">
+                  <h3>Links</h3>
 
-            <div className="artist--bio">{bio}</div>
-          </div>
+                  <a
+                    className="artist--sublinks"
+                    href={artist.website}
+                    target="_blank"
+                  >
+                    Website
+                  </a>
+                  <br />
+                  <a
+                    className="artist--sublinks"
+                    href={artist.instagram}
+                    target="_blank"
+                  >
+                    Instagram
+                  </a>
+                  <br />
+                  <a
+                    className="artist--sublinks"
+                    href={artist.twitter}
+                    target="_blank"
+                  >
+                    Twitter
+                  </a>
+                </div>
+              </div>
+            </div>
+            <hr />
+          </React.Fragment>
         );
       });
     }
