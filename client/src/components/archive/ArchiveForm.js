@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import InputGroup from "../common/InputGroup";
 import { addArchive } from "../../actions/archiveActions";
+import DatePicker from "react-datepicker";
+import moment from "moment";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 class ArchiveForm extends Component {
   constructor(props) {
@@ -16,6 +20,7 @@ class ArchiveForm extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onClick = this.onClick.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -39,7 +44,7 @@ class ArchiveForm extends Component {
     this.props.addArchive(newArchive);
     this.setState({
       name: "",
-      date: "",
+      date: moment(),
       mix: "",
       tracklist: ""
     });
@@ -53,6 +58,10 @@ class ArchiveForm extends Component {
     this.setState({
       hidden: false
     });
+  }
+
+  handleSelect(date) {
+    this.setState({ date: date });
   }
 
   render() {
@@ -76,12 +85,10 @@ class ArchiveForm extends Component {
                 onChange={this.onChange}
                 error={errors.name}
               />
-              <InputGroup
+              <DatePicker
                 placeholder="date"
-                name="date"
-                value={this.state.date}
-                onChange={this.onChange}
-                error={errors.date}
+                selected={this.state.date}
+                onSelect={this.handleSelect}
               />
               <InputGroup
                 placeholder="mix"

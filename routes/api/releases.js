@@ -58,7 +58,8 @@ router.post(
       title: req.body.title,
       image: req.body.image,
       listenLink: req.body.listenLink,
-      buyLink: req.body.buyLink
+      buyLink: req.body.buyLink,
+      date: req.body.date
     });
 
     newRelease.save().then(release => res.json(release));

@@ -19,7 +19,7 @@ export default function(state = initialState, action) {
         ...state,
         loading: true
       };
-    case GET_ARCHIVE:
+    case GET_ARCHIVES:
       return {
         ...state,
         archives: action.payload,

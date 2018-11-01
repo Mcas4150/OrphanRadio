@@ -19,6 +19,9 @@ const ReleaseSchema = new Schema({
   },
   buyLink: {
     type: String
+  },
+  date: {
+    type: Date
   }
 });
 

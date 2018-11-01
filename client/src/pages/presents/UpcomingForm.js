@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import InputGroup from "../../components/common/InputGroup";
 import { addUpcoming } from "../../actions/upcomingActions";
+import DatePicker from "react-datepicker";
+import moment from "moment";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 class UpcomingForm extends Component {
   constructor(props) {
@@ -16,6 +20,7 @@ class UpcomingForm extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onClick = this.onClick.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -33,13 +38,13 @@ class UpcomingForm extends Component {
       name: this.state.name,
       date: this.state.date,
       image: this.state.image,
-      tickets: this.state.ticekts
+      tickets: this.state.tickets
     };
 
     this.props.addUpcoming(newUpcoming);
     this.setState({
       name: "",
-      date: "",
+      date: moment(),
       image: "",
       tickets: ""
     });
@@ -53,6 +58,10 @@ class UpcomingForm extends Component {
     this.setState({
       hidden: false
     });
+  }
+
+  handleSelect(date) {
+    this.setState({ date: date });
   }
 
   render() {
@@ -76,12 +85,9 @@ class UpcomingForm extends Component {
                 onChange={this.onChange}
                 error={errors.name}
               />
-              <InputGroup
-                placeholder="date"
-                name="date"
-                value={this.state.date}
-                onChange={this.onChange}
-                error={errors.date}
+              <DatePicker
+                selected={this.state.date}
+                onSelect={this.handleSelect}
               />
               <InputGroup
                 placeholder="image"

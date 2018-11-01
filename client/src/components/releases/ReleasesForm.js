@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import InputGroup from "../common/InputGroup";
 import { addRelease } from "../../actions/releaseActions";
+import DatePicker from "react-datepicker";
+import moment from "moment";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 class ReleaseForm extends Component {
   constructor(props) {
@@ -16,6 +20,7 @@ class ReleaseForm extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onClick = this.onClick.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -34,7 +39,8 @@ class ReleaseForm extends Component {
       title: this.state.title,
       image: this.state.image,
       listenLink: this.state.listenLink,
-      buyLink: this.state.buyLink
+      buyLink: this.state.buyLink,
+      date: this.state.date
     };
 
     this.props.addRelease(newRelease);
@@ -43,7 +49,8 @@ class ReleaseForm extends Component {
       title: "",
       image: "",
       listenLink: "",
-      buyLink: ""
+      buyLink: "",
+      date: moment()
     });
   }
 
@@ -55,6 +62,10 @@ class ReleaseForm extends Component {
     this.setState({
       hidden: false
     });
+  }
+
+  handleSelect(date) {
+    this.setState({ date: date });
   }
 
   render() {
@@ -105,6 +116,11 @@ class ReleaseForm extends Component {
                 value={this.state.buyLink}
                 onChange={this.onChange}
                 error={errors.buyLink}
+              />
+              <DatePicker
+                placeholder="date"
+                selected={this.state.date}
+                onSelect={this.handleSelect}
               />
             </div>
             <button type="submit" className="btn btn-dark">
