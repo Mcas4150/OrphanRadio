@@ -99,7 +99,7 @@ class UpcomingForm extends Component {
               />
             </div>
             <button type="submit" className="btn btn-dark">
-              Add Artist
+              Add Upcoming
             </button>
           </form>
         </div>

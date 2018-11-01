@@ -1,8 +1,13 @@
+.upcoming--image {
+  margin-top: 15px;
+  max-height: 75vh;
+  box-shadow: 5px 5px 8px 0.25px lightgrey;
+}
+
 .presents-page--event__image {
   margin-top: 15px;
 
   max-height: 75vh;
-  box-shadow: 5px 5px 8px 0.25px lightgrey;
 }
 
 .presents-page--event__title {
