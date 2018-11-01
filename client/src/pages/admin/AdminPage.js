@@ -14,37 +14,37 @@ export default class AdminPage extends Component {
         <NavBar />
         Admin Page
         <div className="admin--actions__grid">
-          <div className="admin--actions__add-artist">
+          <div className="admin--card admin--actions__add-artist">
             <div className="admin--actions__form">
               Add Artist
               <ArtistForm />
             </div>
           </div>
-          <div className="admin--actions__add-release">
+          <div className="admin--card admin--actions__add-release">
             <div className="admin--actions__form">
               Add Release
               <ReleaseForm />
             </div>
           </div>
-          <div className="admin--actions__add-resident">
+          <div className="admin--card admin--actions__add-resident">
             <div className="admin--actions__form">
               Add Resident
               <ResidentForm />
             </div>
           </div>
-          <div className="admin--actions__add-archive">
+          <div className="admin--card admin--actions__add-archive">
             <div className="admin--actions__form">
               Add Archive
               <ArchiveForm />
             </div>
           </div>
-          <div className="admin--actions__add-upcoming">
+          <div className="admin--card admin--actions__add-upcoming">
             <div className="admin--actions__form">
               Add Upcoming
               <UpcomingForm />
             </div>
           </div>
-          <div className="admin--actions__add-past">
+          <div className="admin--card admin--actions__add-past">
             <div className="admin--actions__form">Add Past</div>
           </div>
         </div>
