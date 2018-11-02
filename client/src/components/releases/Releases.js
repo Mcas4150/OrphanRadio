@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import _ from "lodash";
 import Yasha from "../../img/YashaLanding.jpg";
 import Donnin from "../../img/max95.jpg";
 import { getReleases } from "../../actions/releaseActions";
@@ -13,6 +14,24 @@ class Releases extends Component {
 
   render() {
     const { releases } = this.props.release;
+
+    // const convertReleasesToArray = () => {
+    //   let ReleaseArray = [];
+    //   Object.keys(releases).forEach(function(key) {
+    //     ReleaseArray.push(key, releases[key]);
+    //   });
+    //   let newArray = _.chunk(ReleaseArray, 2);
+    //   let arrayLength = newArray.length;
+    //   let positionToRemove = arrayLength - 1;
+    //   newArray.splice(positionToRemove, 1);
+    //   return (
+    //     <div>
+    //       {newArray[0]}
+    //       pizza
+    //     </div>
+    //   );
+    // };
+
     let releaseContent;
     if (releases === null) {
       releaseContent = "releases";

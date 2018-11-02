@@ -10,7 +10,7 @@ export default class ArchiveItem extends Component {
   }
 
   handleExpand() {
-    if (this.state.expanded == false) {
+    if (this.state.expanded === false) {
       this.setState({ expanded: true });
     } else {
       this.setState({ expanded: false });
@@ -51,7 +51,7 @@ export default class ArchiveItem extends Component {
       );
     };
 
-    if (this.state.expanded == false) {
+    if (this.state.expanded === false) {
       icon = "+";
       expandedContent = null;
     } else {

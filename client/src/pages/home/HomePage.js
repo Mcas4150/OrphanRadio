@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import BackgroundCanvas from "../../components/backgroundCanvas/index";
+import BackgroundCanvas from "../../components/backgroundCanvas";
 
 import NavBar from "../../components/layout/Navbar";
-import Footer from "../../components/layout/Footer";
+
 import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
 import { fadeIn } from "react-animations";
 import Radium, { StyleRoot } from "radium";
@@ -23,20 +23,32 @@ export default class HomePage extends Component {
   render() {
     return (
       <StyleRoot>
-        <ReactCursorPosition
-          activationInteractionMouse={INTERACTIONS.HOVER} //default
-          // hoverDelayInMs={250} //default: 0
-          // hoverOffDelayInMs={150} //default: 0
-        >
-          <div className="homepage" style={styles.fadeIn}>
-            <NavBar />
-            <div className="homepage--container">
+        <div className="homepage" style={styles.fadeIn}>
+          <NavBar />
+          <div className="homepage--container">
+            <ReactCursorPosition
+              activationInteractionMouse={INTERACTIONS.HOVER}
+              mapChildProps={({
+                elementDimensions,
+                isActive,
+                isPositionOutside,
+                position
+              }) => {
+                return {
+                  elementDimensions,
+                  isActive,
+                  isOutside: isPositionOutside,
+                  point: position
+                };
+              }} //default
+              // hoverDelayInMs={250} //default: 0
+              // hoverOffDelayInMs={150} //default: 0
+            >
               <BackgroundCanvas />
-
-              <div className="homepage--orphan">Orphan.</div>
-            </div>
+            </ReactCursorPosition>
+            <div className="homepage--orphan">Orphan.</div>
           </div>
-        </ReactCursorPosition>
+        </div>
       </StyleRoot>
     );
   }

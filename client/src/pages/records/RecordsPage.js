@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../../components/layout/Navbar";
-import Footer from "../../components/layout/Footer";
+
 import Artists from "../../components/artists/Artists";
 import Releases from "../../components/releases/Releases";
 import { NavLink, Route, Redirect } from "react-router-dom";
