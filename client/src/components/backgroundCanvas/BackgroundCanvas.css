@@ -1,16 +1,23 @@
-canvas {
-  background: white;
+.logo-canvas {
+  width: 100vw;
   position: absolute;
+  height: 90vh;
   top: 35px;
   left: 0;
   color: blue;
-  z-index: 1;
-  opacity: 0.1;
-  max-width: 100%;
+  opacity: 1;
+  z-index: -1;
 }
 
 @media (max-width: 649px) {
-  .canvas {
-    max-width: 75%;
+  .logo-canvas {
+    width: 100vw;
+    position: absolute;
+    height: 90vh;
+    top: 35px;
+    left: 0;
+    color: blue;
+    opacity: 1;
+    z-index: -1;
   }
 }

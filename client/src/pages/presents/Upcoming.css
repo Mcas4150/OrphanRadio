@@ -4,6 +4,11 @@
   box-shadow: 5px 5px 8px 0.25px lightgrey;
 }
 
+.upcoming--container {
+  height: 80vh;
+  overflow-y: scroll;
+}
+
 .presents-page--event__image {
   margin-top: 15px;
 

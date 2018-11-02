@@ -10,6 +10,11 @@
   margin-right: 15px;
 }
 
+.archive-page--container {
+  height: 80vh;
+  overflow-y: auto;
+}
+
 .archive--name {
   display: flex;
 }

@@ -21,7 +21,7 @@ class Archive extends Component {
       ));
     }
 
-    return <div className="archive-page--archivess">{archiveContent}</div>;
+    return <div className="archive-page--container">{archiveContent}</div>;
   }
 }
 

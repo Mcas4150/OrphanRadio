@@ -41,6 +41,7 @@ h3 {
 }
 
 .records-page--artists {
+  padding: 15px;
   height: 80vh;
   overflow-y: scroll;
 }
