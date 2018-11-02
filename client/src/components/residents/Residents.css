@@ -26,8 +26,25 @@
 }
 
 .records-page--residents {
+  padding-right: 15px;
   height: 80vh;
   overflow-y: scroll;
+}
+
+.records-page--residents::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+.records-page--residents::-webkit-scrollbar-track {
+  background: grey;
+}
+
+.records-page--residents::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+.records-page--residents::-webkit-scrollbar-thumb:hover {
+  background: white;
 }
 
 @media (max-width: 800px) {

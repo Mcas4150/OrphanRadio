@@ -6,6 +6,7 @@ import residentReducer from "./residentReducer";
 import releaseReducer from "./releaseReducer";
 import archiveReducer from "./archiveReducer";
 import upcomingReducer from "./upcomingReducer";
+import pastReducer from "./pastReducer";
 
 export default combineReducers({
   radio: radioReducer,
@@ -14,5 +15,6 @@ export default combineReducers({
   resident: residentReducer,
   release: releaseReducer,
   archive: archiveReducer,
-  upcoming: upcomingReducer
+  upcoming: upcomingReducer,
+  past: pastReducer
 });

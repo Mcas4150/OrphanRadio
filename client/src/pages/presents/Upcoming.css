@@ -5,8 +5,25 @@
 }
 
 .upcoming--container {
+  padding-right: 15px;
   height: 80vh;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+
+.upcoming--container::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+.upcoming--container::-webkit-scrollbar-track {
+  background: grey;
+}
+
+.upcoming--container::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+.upcoming--container::-webkit-scrollbar-thumb:hover {
+  background: white;
 }
 
 .presents-page--event__image {

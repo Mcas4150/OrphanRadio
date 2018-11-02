@@ -11,8 +11,25 @@
 }
 
 .archive-page--container {
+  padding-right: 15px;
   height: 80vh;
   overflow-y: auto;
+}
+
+.archive-page--container::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+.archive-page--container::-webkit-scrollbar-track {
+  background: blue;
+}
+
+.archive-page--container::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+.archive-page--container::-webkit-scrollbar-thumb:hover {
+  background: white;
 }
 
 .archive--name {

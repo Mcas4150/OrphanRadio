@@ -1,0 +1,52 @@
+.past--image {
+  margin-top: 15px;
+  max-height: 75vh;
+  box-shadow: 5px 5px 8px 0.25px lightgrey;
+}
+
+.past--container {
+  padding-right: 15px;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.past--container::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+.past--container::-webkit-scrollbar-track {
+  background: grey;
+}
+
+.past--container::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+.past--container::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+.presents-page--event__image {
+  margin-top: 15px;
+
+  max-height: 75vh;
+}
+
+.presents-page--event__title {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 800px) {
+  .presents-page--event__image {
+    margin-top: 15px;
+
+    max-height: 65vh;
+    box-shadow: 5px 5px 8px 0.25px lightgrey;
+  }
+}

@@ -5,6 +5,7 @@ import ReleaseForm from "../../components/releases/ReleasesForm";
 import ResidentForm from "../../components/residents/ResidentsForm";
 import ArchiveForm from "../../components/archive/ArchiveForm";
 import UpcomingForm from "../presents/UpcomingForm";
+import PastForm from "../presents/PastForm";
 import "./AdminPage.css";
 
 export default class AdminPage extends Component {
@@ -45,7 +46,10 @@ export default class AdminPage extends Component {
             </div>
           </div>
           <div className="admin--card admin--actions__add-past">
-            <div className="admin--actions__form">Add Past</div>
+            <div className="admin--actions__form">
+              Add Past
+              <PastForm />
+            </div>
           </div>
         </div>
       </div>
