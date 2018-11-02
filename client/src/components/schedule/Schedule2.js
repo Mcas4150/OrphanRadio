@@ -50,21 +50,6 @@ class Schedule extends Component {
     // this.populateSchedule();
   }
 
-  // organizeWeek(stream, day) {
-  //   stream.monday.map(show => {
-  //     const name = show.name;
-  //     // const starts = this.showTimeParser(show.starts);
-
-  //     return (
-  //       <div className="artist--card">
-  //         <div className="artist--name">{name} pickle </div>
-
-  //         {/* <div className="show-time">{starts}</div> */}
-  //       </div>
-  //     );
-  //   });
-  // }
-
   scheduleApiCall() {
     fetch("https://bentennas.airtime.pro/api/week-info")
       .then(response => response.json())
@@ -304,20 +289,6 @@ class Schedule extends Component {
     const { currentWeekStream } = this.props.radio;
     let showContent;
     let monday;
-    // if (currentWeekStream === null) {
-    //   showContent = "no shows";
-    // } else {
-    //   showContent = (
-    //     <div className="schedule-week">
-    //       <div className="monday">
-    //         <div>{this.organizeWeek(currentWeekStream)}</div>
-    //       </div>
-    //     </div>
-    //   );
-    // }
-
-    // let showArray = this.convertShowScheduleToArray(currentWeekStream);
-    // let nextSevenDaysSchedule = this.deleteDaysInPast(showArray);
 
     return (
       <div className="schedule">

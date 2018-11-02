@@ -17,19 +17,46 @@ export default class ArchiveItem extends Component {
     }
   }
 
+  timeParser(date) {
+    let split = date.split("T", 1);
+    return split;
+  }
+
   render() {
     const { archive } = this.props;
-    const date = archive.date;
+    const date = this.timeParser(archive.date);
     const name = archive.name;
     let expandedContent;
     let icon;
+
+    const mix = `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${
+      archive.mix
+    }&color=%230a0a0a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false`;
+
+    const expandedCard = () => {
+      return (
+        <React.Fragment>
+          <div className="archive--mix">
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src={mix}
+            />
+          </div>
+          <div className="archive--tracklist" />
+        </React.Fragment>
+      );
+    };
 
     if (this.state.expanded == false) {
       icon = "+";
       expandedContent = null;
     } else {
       icon = "-";
-      expandedContent = "Mix";
+      expandedContent = expandedCard();
     }
 
     return (

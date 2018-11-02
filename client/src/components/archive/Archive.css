@@ -5,4 +5,17 @@
 
 .archive--expand {
   cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+.archive--name {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .archive--card {
+    grid-template-columns: 2fr 3fr 1fr;
+  }
 }
