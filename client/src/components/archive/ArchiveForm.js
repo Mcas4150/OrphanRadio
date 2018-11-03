@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import InputGroup from "../common/InputGroup";
+
 import { addArchive } from "../../actions/archiveActions";
 import DatePicker from "react-datepicker";
 import moment from "moment";

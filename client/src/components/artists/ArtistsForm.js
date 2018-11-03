@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import InputGroup from "../common/InputGroup";
+import TextFieldGroup from "../common/TextFieldGroup";
 import { addArtist } from "../../actions/artistActions";
 
 class ArtistForm extends Component {
@@ -78,7 +79,7 @@ class ArtistForm extends Component {
                 onChange={this.onChange}
                 error={errors.name}
               />
-              <InputGroup
+              <TextFieldGroup
                 placeholder="bio"
                 name="bio"
                 value={this.state.bio}
