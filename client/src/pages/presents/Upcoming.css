@@ -49,4 +49,7 @@ a {
     max-height: 65vh;
     box-shadow: 5px 5px 8px 0.25px lightgrey;
   }
+  .upcoming--image {
+    max-height: 60vh;
+  }
 }

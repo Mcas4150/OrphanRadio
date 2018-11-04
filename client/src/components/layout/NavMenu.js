@@ -21,6 +21,7 @@ export default class NavMenu extends Component {
     const styles = {
       container: {
         position: "absolute",
+        overflowY: "hidden",
         top: 0,
         right: 0,
         height: this.state.open ? "100%" : 0,
