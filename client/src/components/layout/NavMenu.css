@@ -1,6 +1,30 @@
+.navMenu {
+  position: absolute;
+  overflow-y: hidden;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 20vw;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: "list" "image";
+  background: black;
+  opacity: 1;
+
+  color: white;
+  transition: height 0.3s ease;
+  z-index: 2;
+}
+
+.navMenu--hidden {
+  display: hidden;
+}
+
 .navMenu--list {
+  grid-area: list;
   text-align: left;
   padding: 15px;
+  /* height: 70vh; */
 }
 
 .navMenu--link {
@@ -17,12 +41,17 @@
 }
 
 .navMenu--image-container {
+  grid-area: image;
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* height: 30vh; */
 }
 
 .orphanLogo {
-  width: 100%;
+  /* width: 100%; */
+  height: 30vh;
+  margin: 15px;
 }
 
 hr {
@@ -31,5 +60,47 @@ hr {
   animation-delay: 0.2;
 }
 
+@media (max-width: 800px) {
+  .navMenu {
+    position: absolute;
+    overflow-y: hidden;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 40vw;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: "list" "image";
+    background: black;
+    opacity: 1;
+
+    color: white;
+    transition: height 0.3s ease;
+    z-index: 2;
+  }
+}
+
 @media (max-width: 600px) {
+  .navMenu {
+    position: absolute;
+    overflow-y: hidden;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 60vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "list" "image";
+    background: black;
+    opacity: 1;
+
+    color: white;
+    transition: height 0.3s ease;
+    z-index: 2;
+  }
+
+  .orphanLogo {
+    /* width: 100%; */
+    height: 25vh;
+  }
 }

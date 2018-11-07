@@ -48,74 +48,64 @@ class Releases extends Component {
   render() {
     const { releases } = this.props.release;
 
-    // const convertReleasesToArray = () => {
-    //   let ReleaseArray = [];
-    //   Object.keys(releases).forEach(function(key) {
-    //     ReleaseArray.push(key, releases[key]);
-    //   });
-    //   let newArray = _.chunk(ReleaseArray, 2);
-    //   let arrayLength = newArray.length;
-    //   let positionToRemove = arrayLength - 1;
-    //   newArray.splice(positionToRemove, 1);
-    //   return (
-    //     <div>
-    //       {newArray[0]}
-    //       pizza
-    //     </div>
-    //   );
-    // };
-
     let releaseContent;
     if (releases === null) {
       releaseContent = "releases";
     } else {
-      // releaseContent = releases[0].name;
-      releaseContent = releases.map(release => {
-        const artist = release.artist;
-        const title = release.title;
-        const listenLink = release.listenLink;
-        const buyLink = release.buyLink;
+      const currentArtist =
+        releases.length && releases[this.state.currentReleaseIndex].artist;
+      const currentTitle =
+        releases.length && releases[this.state.currentReleaseIndex].title;
+      const currentListenLink =
+        releases.length && releases[this.state.currentReleaseIndex].listenLink;
+      const currentBuyLink =
+        releases.length && releases[this.state.currentReleaseIndex].buyLink;
+      const currentImage =
+        releases.length && releases[this.state.currentReleaseIndex].image;
 
-        return (
-          <React.Fragment>
-            <Arrow
-              direction="left"
-              clickFunction={this.previousSlide}
-              glyph="&#9664;"
-            />
-            <div className="release--card">
-              <div className="release--title">
-                {artist} - {title}{" "}
-              </div>
-              <img
-                className="release--image"
-                src={Donnin}
-                alt="Max 95, Donnin"
-              />
-              <div className="release--links">
-                <a
-                  className="release--listen-link"
-                  href={listenLink}
-                  target="_blank"
-                >
-                  Listen
-                </a>
-                <a className="release--buy-link" href={buyLink} target="_blank">
-                  Buy
-                </a>
-              </div>
+      return (
+        <div className="releases--container">
+          <Arrow
+            direction="left"
+            clickFunction={this.previousSlide}
+            glyph="&#9664;"
+          />
+          <div className="release--card">
+            <div className="release--title">
+              {currentArtist} - {currentTitle}{" "}
             </div>
-            <Arrow
-              direction="right"
-              clickFunction={this.nextSlide}
-              glyph="&#9654;"
+            <img
+              className="release--image"
+              src={currentImage}
+              alt="Max 95, Donnin"
             />
-          </React.Fragment>
-        );
-      });
+            <div className="release--links">
+              <a
+                className="release--listen-link"
+                href={currentListenLink}
+                target="_blank"
+              >
+                Listen
+              </a>
+              <a
+                className="release--buy-link"
+                href={currentBuyLink}
+                target="_blank"
+              >
+                Buy
+              </a>
+            </div>
+          </div>
+          <Arrow
+            direction="right"
+            clickFunction={this.nextSlide}
+            glyph="&#9654;"
+          />
+        </div>
+      );
     }
 
-    return <div className="releases--container">{releaseContent}</div>;
+    return { releaseContent };
   }
 }
 

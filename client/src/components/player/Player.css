@@ -1,7 +1,7 @@
 .marquee-container {
   display: flex;
+  align-self: center;
   margin-left: 15px;
-
   width: 15vw;
 }
 /* 
@@ -13,7 +13,6 @@
 
 @media (max-width: 649px) {
   .marquee-container {
-    width: 48vw;
     margin-left: 5px;
     margin-right: 5px;
   }

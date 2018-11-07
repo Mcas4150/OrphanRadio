@@ -107,8 +107,9 @@
 
 @media only screen and (max-width: 800px) {
   .show-schedule {
-    margin-top: 20px;
-    height: 63vh;
+    margin-top: 10px;
+    /* height: 63vh; */
+    padding-bottom: 15px;
   }
   .schedule-container {
     width: 80vw;
@@ -116,7 +117,7 @@
   }
 
   .schedule-subcontainer {
-    padding: 15px;
+    padding: 10px;
   }
 
   .schedule--timezone__container {
@@ -137,5 +138,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 15px;
+  }
+
+  .days-header-item {
+    padding: 3px;
+
+    /* margin: 5px 5px 5px 5px; */
   }
 }

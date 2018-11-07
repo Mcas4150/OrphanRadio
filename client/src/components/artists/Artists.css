@@ -63,11 +63,24 @@ h3 {
 }
 
 @media only screen and (max-width: 800px) {
+  .records-page--artists {
+    padding: 10px;
+  }
+
   .artist--name {
     font-size: 2rem;
   }
   .artist--bio {
     grid-area: bio;
     padding-right: 10px;
+  }
+  .artist--info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0fr;
+    grid-template-areas: "bio" "links";
+  }
+  .artist--links {
+    text-align: left;
   }
 }

@@ -44,6 +44,7 @@ export default class NavMenuButton extends Component {
       },
       lineMiddle: {
         opacity: this.state.open ? 0 : 1,
+        zIndex: this.state.open ? 0 : 3,
         transform: this.state.open ? "translateX(-16px)" : "none"
       },
       lineBottom: {

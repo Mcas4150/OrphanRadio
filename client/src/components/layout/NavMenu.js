@@ -9,40 +9,32 @@ export default class NavMenu extends Component {
     this.state = {
       open: this.props.open ? this.props.open : false
     };
+    // this.handleUnClick = this.handleUnClick.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.open !== this.state.open) {
-      this.setState({ open: nextProps.open });
-    }
-  }
+  //   handleUnClick(e){
+  // e.preventDefault;
+  // if (this.state.open === true)
+
+  //   }
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.open !== this.state.open) {
+  //     this.setState({ open: nextProps.open });
+  //   }
+  // }
 
   render() {
-    const styles = {
-      container: {
-        position: "absolute",
-        overflowY: "hidden",
-        top: 0,
-        right: 0,
-        height: this.state.open ? "100%" : 0,
-        width: "20vw",
-        display: "flex",
-        flexDirection: "column",
-        background: "black",
-        opacity: 1,
-        // color: "#fafafa",
-        color: "white",
-        transition: "height 0.3s ease",
-        zIndex: 2
-      }
-    };
-    return (
-      <div className="navMenu" style={styles.container}>
-        {this.state.open ? (
+    if (this.props.open === false) {
+      return <div className="nav-menu__hidden" />;
+    } else {
+      return (
+        <div className="navMenu">
           <div className="navMenu--list">
-            <Link className="navMenu--link" to="/home">
-              Orphan.
-            </Link>
+            <div className="navMenu--link__top">
+              <Link className="navMenu--link" to="/home">
+                Orphan.
+              </Link>
+            </div>
             <hr />
             <Link className="navMenu--link" to="/radio">
               Radio.
@@ -74,12 +66,12 @@ export default class NavMenu extends Component {
               Info.
             </Link>
             <br />
-            <div className="navMenu--image-container">
-              <img className="orphanLogo" src={OrphanLogo} alt="Orphan." />
-            </div>
           </div>
-        ) : null}
-      </div>
-    );
+          <div className="navMenu--image-container">
+            <img className="orphanLogo" src={OrphanLogo} alt="Orphan." />
+          </div>
+        </div>
+      );
+    }
   }
 }

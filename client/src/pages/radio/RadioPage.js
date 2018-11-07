@@ -53,13 +53,13 @@ export default class RadioPage extends Component {
               Residents
             </NavLink>
 
-            <NavLink
+            {/* <NavLink
               className="radio-page--mobile-sublink"
               activeClassName="active"
               to={`/radio/aloneIn`}
             >
               Alone In
-            </NavLink>
+            </NavLink> */}
           </div>
           <div className="radio-page--main">
             <div className="radio-page--title">

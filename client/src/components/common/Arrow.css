@@ -1,0 +1,8 @@
+.slide-arrow {
+  display: flex;
+  justify-content: center;
+}
+
+.slide-arrow:hover {
+  cursor: pointer;
+}

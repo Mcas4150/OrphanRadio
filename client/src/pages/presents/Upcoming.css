@@ -8,22 +8,23 @@
   padding-right: 15px;
   height: 80vh;
   overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
 }
 
-.upcoming--container::-webkit-scrollbar {
-  width: 0.2em;
+.stay-tuned--container {
+  display: flex;
+  align-items: center;
 }
+.stay-tuned {
+  height: 80vh;
+  font-size: 4rem;
 
-.upcoming--container::-webkit-scrollbar-track {
-  background: grey;
-}
-
-.upcoming--container::-webkit-scrollbar-thumb {
-  background: white;
-}
-
-.upcoming--container::-webkit-scrollbar-thumb:hover {
-  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .presents-page--event__image {

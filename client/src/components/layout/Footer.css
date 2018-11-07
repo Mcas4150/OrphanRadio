@@ -1,7 +1,7 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0px 15px 15px 15px;
+  padding: 0px 15px 0px 15px;
 
   font-size: 1.5rem;
   position: absolute;
@@ -26,7 +26,7 @@
 .footer--donate {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .footer-circle-container {

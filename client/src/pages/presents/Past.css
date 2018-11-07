@@ -8,6 +8,10 @@
   padding-right: 15px;
   height: 80vh;
   overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
 }
 
 .past--container::-webkit-scrollbar {

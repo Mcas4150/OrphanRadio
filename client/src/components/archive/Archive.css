@@ -41,3 +41,9 @@
     grid-template-columns: 2fr 3fr 1fr;
   }
 }
+
+@media (min-width: 1200px) {
+  .archive--card {
+    font-size: 1.25rem;
+  }
+}

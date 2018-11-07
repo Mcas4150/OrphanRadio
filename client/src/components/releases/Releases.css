@@ -1,5 +1,6 @@
 .releases--container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
 }
@@ -34,12 +35,6 @@
 .release--buy-link,
 .release--listen-link {
   padding: 10px;
-}
-
-.releases--container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 @media (max-width: 800px) {
