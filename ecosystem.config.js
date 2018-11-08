@@ -2,7 +2,10 @@ module.exports = {
   apps: [
     {
       name: "OrphanRadio",
-      script: "./server.js"
+      script: "./server.js",
+      env: {
+        NODE_ENV: "production"
+      }
     }
   ],
   deploy: {
@@ -12,8 +15,9 @@ module.exports = {
       key: "~/.ssh/Orphan2pair.pem",
       ref: "origin/master",
       repo: "git@github.com:Mcas4150/OrphanRadio.git",
-      path: "/var/www/OrphanRadio",
-      "post-deploy": "npm install && pm2 startOrRestart ecosystem.config.js"
+      path: "/home/ubuntu/OrphanRadio",
+      "post-deploy":
+        "npm run client-install && npm install && pm2 startOrRestart ecosystem.config.js"
     }
   }
 };
