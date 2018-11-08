@@ -15,7 +15,12 @@ export default class BackgroundCanvas extends Component {
     this.scene = new THREE.Scene();
     //ADD CAMERA
     this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 2000);
-    this.camera.position.z = 6;
+
+    if (width <= 600) {
+      this.camera.position.z = 10;
+    } else {
+      this.camera.position.z = 7;
+    }
 
     //ADD RENDERER
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -24,35 +29,42 @@ export default class BackgroundCanvas extends Component {
     this.mount.appendChild(this.renderer.domElement);
     //ADD CUBE
 
-    let square = this.makeSquare(0.45, 0.2);
-    let square2 = this.makeSquare(0.35, 0.2);
-    square2.translateZ(0.65);
+    let triY = 0.075;
+    let triTransY = 0.37;
+    let sqY = 0.15;
+    let sq1x = 0.6;
+    let sq2x = sq1x - 0.12;
+    let TransZ = 0.75;
 
-    let triangle = this.makeTriangle(0.3, 0.1);
-    triangle.translateY(0.5);
-    triangle.translateX(-2.25);
+    let square = this.makeSquare(sq1x, sqY);
+    let square2 = this.makeSquare(sq2x, sqY);
+    square2.translateZ(TransZ);
+
+    let triangle = this.makeTriangle(0.3, triY);
+    triangle.translateY(triTransY);
+    triangle.translateX(-3);
     triangle.rotateX(1.5708 * 2);
     triangle.rotateY(1.5708);
 
-    let triangle2 = this.makeTriangle(0.3, 0.1);
-    triangle2.translateY(0.5);
-    triangle2.translateX(2.25);
+    let triangle2 = this.makeTriangle(0.3, triY);
+    triangle2.translateY(triTransY);
+    triangle2.translateX(3);
     triangle2.rotateX(1.5708 * 2);
     triangle2.rotateY(1.5708);
 
-    let triangle3 = this.makeTriangle(0.24, 0.1);
-    triangle3.translateY(0.5);
-    triangle3.translateX(1.75);
-    triangle3.translateZ(0.65);
+    let triangle3 = this.makeTriangle(0.234, triY);
+    triangle3.translateY(triTransY);
+    triangle3.translateX(2.4);
+    triangle3.translateZ(TransZ);
     triangle3.rotateX(1.5708 * 2);
-    triangle3.rotateY(1.5708 * 0.87);
+    triangle3.rotateY(1.5708 * 0.835);
 
-    let triangle4 = this.makeTriangle(0.24, 0.1);
-    triangle4.translateY(0.5);
-    triangle4.translateX(-1.75);
-    triangle4.translateZ(0.65);
+    let triangle4 = this.makeTriangle(0.234, triY);
+    triangle4.translateY(triTransY);
+    triangle4.translateX(-2.4);
+    triangle4.translateZ(TransZ);
     triangle4.rotateX(1.5708 * 2);
-    triangle4.rotateY(1.5708 * 1.13);
+    triangle4.rotateY(1.5708 * 1.165);
 
     this.group = new THREE.Group();
     this.group.add(square, square2, triangle, triangle2, triangle3, triangle4);
@@ -109,8 +121,25 @@ export default class BackgroundCanvas extends Component {
     cancelAnimationFrame(this.frameId);
   };
   animate = () => {
-    this.group.rotation.x += 0.0025;
-    this.group.rotation.y += 0.0025;
+    // this.group.rotation.x += 0.0025;
+    const division = 30000;
+
+    // if (this.props.mouseX <= this.mount.clientWidth / 2) {
+    //   this.group.rotation.x -= 0.0025 + this.props.mouseX / division;
+    // } else {
+    //   this.group.rotation.x += 0.0025 + this.props.mouseX / division;
+    // }
+
+    // if (this.props.mouseY <= this.mount.clientHeight / 2) {
+    //   this.group.rotation.Y -= 0.0025 + this.props.mouseY / division;
+    // } else {
+    //   this.group.rotation.Y += 0.0025 + this.props.mouseY / division;
+    // }
+
+    this.group.rotation.y += 0.0025 + this.props.mouseY / 350000;
+    this.group.rotation.x += 0.0025 + this.props.mouseX / 350000;
+
+    // this.group.rotation.y += 0.0025 * (this.props.mouseY / 500);
     // this.group.rotation.x += this.props.point.x / 150000;
     // this.group.rotation.y += this.props.point.y / 150000;
     // this.group.rotation.z += 0.0025;
@@ -129,16 +158,9 @@ export default class BackgroundCanvas extends Component {
     return (
       <div
         className="logo-canvas"
-        // style={{
-        //   width: "80vw",
-        //   position: "absolute",
-        //   height: "65vh",
-        //   top: "35px",
-        //   left: 0,
-        //   color: "blue",
-        //   opacity: 1,
-        //   zIndex: -1
-        // }}
+        style={{
+          height: "calc(100vh -30px)"
+        }}
         ref={mount => {
           this.mount = mount;
         }}

@@ -24,7 +24,7 @@ export default class PresentsPage extends Component {
   render() {
     return (
       <StyleRoot>
-        <div className="presents-page" style={styles.fadeIn}>
+        <div className="presents-page">
           <NavBar />
           <div className="presents-page--mobile-sublinks">
             <NavLink

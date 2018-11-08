@@ -2,7 +2,7 @@
   background: linear-gradient(to left, white 88%, red);
   height: calc(100vh - 30px);
   display: grid;
-  grid-template-rows: 1fr 16fr 1fr;
+  grid-template-rows: 1fr 16fr;
   padding: 15px;
 }
 
@@ -63,9 +63,9 @@
 
 @media (max-width: 800px) {
   .presents-page--title__text {
-    transform: translateX(-65px) rotate(90deg);
+    transform: translateX(-50px) rotate(90deg);
     justify-content: right;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .presents-page--title {

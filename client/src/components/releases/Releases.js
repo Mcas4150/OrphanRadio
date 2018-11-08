@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import _ from "lodash";
 import Yasha from "../../img/YashaLanding.jpg";
-import Donnin from "../../img/max95.jpg";
+
 import { getReleases } from "../../actions/releaseActions";
 import { Arrow } from "../common/Arrow";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import ReleaseCard from "./ReleaseCard";
 import "./Releases.css";
 
 class Releases extends Component {
@@ -13,6 +15,7 @@ class Releases extends Component {
     super(props);
 
     this.state = {
+      appearCard: true,
       currentReleaseIndex: 0
     };
     this.nextSlide = this.nextSlide.bind(this);
@@ -21,7 +24,16 @@ class Releases extends Component {
 
   componentWillMount() {
     this.props.getReleases();
+    this.toggleAppear();
   }
+
+  componentDidMount() {}
+
+  toggleAppear = () => {
+    this.setState({
+      appearCard: !this.state.appearCard
+    });
+  };
 
   previousSlide(props) {
     const lastIndex = this.props.release.releases.length - 1;
@@ -47,6 +59,7 @@ class Releases extends Component {
 
   render() {
     const { releases } = this.props.release;
+    const { appearCard } = this.state;
 
     let releaseContent;
     if (releases === null) {
@@ -62,46 +75,40 @@ class Releases extends Component {
         releases.length && releases[this.state.currentReleaseIndex].buyLink;
       const currentImage =
         releases.length && releases[this.state.currentReleaseIndex].image;
+      const currentID =
+        releases.length && releases[this.state.currentReleaseIndex]._id;
 
       return (
-        <div className="releases--container">
-          <Arrow
-            direction="left"
-            clickFunction={this.previousSlide}
-            glyph="&#9664;"
-          />
-          <div className="release--card">
-            <div className="release--title">
-              {currentArtist} - {currentTitle}{" "}
-            </div>
-            <img
-              className="release--image"
-              src={currentImage}
-              alt="Max 95, Donnin"
+        <CSSTransition
+          in={appearCard}
+          appear={true}
+          timeout={300}
+          classNames="fade"
+        >
+          <div className="releases--container">
+            <Arrow
+              direction="left"
+              clickFunction={this.previousSlide}
+              glyph="&#9664;"
             />
-            <div className="release--links">
-              <a
-                className="release--listen-link"
-                href={currentListenLink}
-                target="_blank"
-              >
-                Listen
-              </a>
-              <a
-                className="release--buy-link"
-                href={currentBuyLink}
-                target="_blank"
-              >
-                Buy
-              </a>
-            </div>
+            <TransitionGroup>
+              <CSSTransition key={currentID} timeout={200} classNames="fade">
+                <ReleaseCard
+                  currentArtist={currentArtist}
+                  currentTitle={currentTitle}
+                  currentListenLink={currentListenLink}
+                  currentBuyLink={currentBuyLink}
+                  currentImage={currentImage}
+                />
+              </CSSTransition>
+            </TransitionGroup>
+            <Arrow
+              direction="right"
+              clickFunction={this.nextSlide}
+              glyph="&#9654;"
+            />
           </div>
-          <Arrow
-            direction="right"
-            clickFunction={this.nextSlide}
-            glyph="&#9654;"
-          />
-        </div>
+        </CSSTransition>
       );
     }
 

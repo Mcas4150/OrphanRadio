@@ -16,7 +16,10 @@ class Archive extends Component {
     if (archives === null) {
       archiveContent = "archives";
     } else {
-      archiveContent = archives.map(archive => (
+      const sortedArchives = archives.sort(function(a, b) {
+        return new Date(b.date) - new Date(a.date);
+      });
+      archiveContent = sortedArchives.map(archive => (
         <ArchiveItem key={archive._id} archive={archive} />
       ));
     }

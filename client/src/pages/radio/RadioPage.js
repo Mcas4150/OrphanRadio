@@ -26,7 +26,7 @@ export default class RadioPage extends Component {
   render() {
     return (
       <StyleRoot>
-        <div className="radio-page" style={styles.fadeIn}>
+        <div className="radio-page">
           <NavBar />
           <div className="radio-page--mobile-sublinks">
             <NavLink
@@ -97,13 +97,13 @@ export default class RadioPage extends Component {
                 Residents
               </NavLink>
               <br />
-              <NavLink
+              {/* <NavLink
                 className="radio-page--sublinks__link"
                 activeClassName="active"
                 to={`/radio/aloneIn`}
               >
                 Alone In
-              </NavLink>
+              </NavLink> */}
             </div>
           </div>
           {/* <Footer /> */}

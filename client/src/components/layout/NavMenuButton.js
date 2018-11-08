@@ -28,8 +28,7 @@ export default class NavMenuButton extends Component {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        cursor: "pointer",
-        padding: "4px"
+        cursor: "pointer"
       },
       line: {
         height: "2px",

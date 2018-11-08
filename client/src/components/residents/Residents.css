@@ -8,6 +8,7 @@
 .resident--card {
   text-align: initial;
   display: inline-block;
+  margin: 15px 0px;
 }
 
 .resident--grid {
@@ -50,7 +51,7 @@
 @media (max-width: 800px) {
   .resident--grid {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 0fr;
     grid-template-areas: "left" "right";
   }
   .resident--card__right {

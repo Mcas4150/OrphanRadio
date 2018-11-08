@@ -24,7 +24,7 @@ export default class RecordsPage extends Component {
   render() {
     return (
       <StyleRoot>
-        <div className="records-page" style={styles.fadeIn}>
+        <div className="records-page">
           <NavBar />
           <div className="records-page--mobile-sublinks">
             <NavLink

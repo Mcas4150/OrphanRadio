@@ -1,0 +1,41 @@
+.release--card {
+  /* position: absolute; */
+}
+
+.release--image {
+  margin-top: 15px;
+
+  max-height: 55vh;
+  box-shadow: 5px 5px 8px 0.25px lightgrey;
+}
+
+.releases--title {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.release--title {
+  font-size: 1.25rem;
+  font-family: "GT-Super-Display-Light";
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.release--links {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+  font-size: 1.25rem;
+}
+
+.release--buy-link,
+.release--listen-link {
+  padding: 10px;
+}
+
+@media (max-width: 800px) {
+  .release--image {
+    width: 65vw;
+  }
+}

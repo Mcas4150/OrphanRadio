@@ -55,5 +55,6 @@ a {
   }
   .past--image {
     max-height: 60vh;
+    max-width: 65vw;
   }
 }

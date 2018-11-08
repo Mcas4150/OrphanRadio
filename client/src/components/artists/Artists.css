@@ -43,7 +43,7 @@ h3 {
 .records-page--artists {
   padding: 15px;
   height: 80vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .records-page--artists::-webkit-scrollbar {
@@ -51,7 +51,7 @@ h3 {
 }
 
 .records-page--artists::-webkit-scrollbar-track {
-  background: black;
+  background: grey;
 }
 
 .records-page--artists::-webkit-scrollbar-thumb {
@@ -65,6 +65,10 @@ h3 {
 @media only screen and (max-width: 800px) {
   .records-page--artists {
     padding: 10px;
+    height: 70vh;
+  }
+  .artist--card {
+    margin: 10px;
   }
 
   .artist--name {

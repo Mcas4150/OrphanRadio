@@ -5,36 +5,43 @@
   align-items: center;
 }
 
-.release--image {
-  margin-top: 15px;
-
-  max-height: 55vh;
-  box-shadow: 5px 5px 8px 0.25px lightgrey;
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
 }
 
-.releases--title {
-  margin-top: 15px;
-  font-size: 1.5rem;
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 300ms linear;
 }
 
-.release--title {
-  font-size: 1.25rem;
-  font-family: "GT-Super-Display-Light";
-  font-weight: bold;
-  text-align: center;
-  margin: 20px 0px;
+.fade-enter {
+  display: none;
+  opacity: 0;
+  z-index: 1;
+  transform: translate(5em, 0);
 }
 
-.release--links {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0px;
-  font-size: 1.25rem;
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: translate(-5em, 0);
+  /* transition: opacity 300ms linear; */
+  /* transition: display 200ms linear; */
+  transition: transform 200ms ease;
 }
 
-.release--buy-link,
-.release--listen-link {
-  padding: 10px;
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms linear;
+}
+
+.fade-exit-done {
+  display: none;
+  opacity: 0;
 }
 
 @media (max-width: 800px) {
