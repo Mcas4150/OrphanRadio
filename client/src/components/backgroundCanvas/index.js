@@ -76,7 +76,7 @@ export default class BackgroundCanvas extends Component {
     this.start();
   }
 
-  componentWillUnMount() {
+  componentWillUnmount() {
     this.stop();
     this.mount.removeChild(this.renderer.domElement);
   }
