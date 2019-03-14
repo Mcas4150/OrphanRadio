@@ -15,7 +15,7 @@ export default class RetailPage extends Component {
           <NavBar />
         
           <div className="retail-page--mobile-sublinks">
-            <NavLink
+            {/* <NavLink
               className="retail-page--mobile-sublink"
               activeClassName="active"
               to={`/records/`}
@@ -29,7 +29,7 @@ export default class RetailPage extends Component {
               to={`/roster/`}
             >
               Roster
-            </NavLink>
+            </NavLink> */}
           </div>
           
           <div className="retail-page--main">
