@@ -21,10 +21,10 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import "./App.css";
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   // We execute the same script as before
   let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
 
 if (localStorage.jwtToken) {
@@ -53,8 +53,6 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-
-      
             <Route
               render={location => (
                 <TransitionGroup>
