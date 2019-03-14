@@ -1,0 +1,56 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position: fixed;
+  background: pink;
+  font-family: "GT-Super-Display-Light";
+  font-size: 20px;
+  padding: 15px;
+  width: 80%;
+  height: 75%;
+  top: 50%;
+  left: 50%;
+  color: #d1107b;
+  opacity: 0.85;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+}
+
+/* body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid #d1107b;
+} */
+
+.modal--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.modal--image {
+  width: 100%;
+}
+
+.modal--text {
+  padding: 0 15px;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .modal--grid {
+    grid-template-columns: 1fr;
+  }
+}

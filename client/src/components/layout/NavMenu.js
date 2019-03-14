@@ -36,10 +36,10 @@ export default class NavMenu extends Component {
               </Link>
             </div>
             <hr />
-            <Link className="navMenu--link" to="/radio">
+            {/* <Link className="navMenu--link" to="/radio">
               Radio.
-            </Link>
-            <br />
+            </Link> */}
+            {/* <br /> */}
             <Link className="navMenu--link" to="/records">
               Records.
             </Link>
@@ -47,24 +47,28 @@ export default class NavMenu extends Component {
             <Link className="navMenu--link" to="/presents">
               Presents.
             </Link>
-            <hr />
+            <br />
+            <Link className="navMenu--link" to="/shop">
+              Wears.
+            </Link>
+            {/* <hr />
             <div className="navMenu--link">Listen Live.</div>
             <hr />
             <Link className="navMenu--link" to="#">
               Shop.
-            </Link>
-            <br />
+            </Link> */}
+            {/* <br />
             <Link className="navMenu--link" to="#">
               Donate.
-            </Link>
+            </Link> */}
             <hr />
             <Link className="navMenu--link" to="#">
               Contact.
             </Link>
-            <br />
+            {/* <br />
             <Link className="navMenu--link" to="#">
               Info.
-            </Link>
+            </Link> */}
             <br />
           </div>
           <div className="navMenu--image-container">

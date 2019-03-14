@@ -48,7 +48,7 @@ export default class PresentsPage extends Component {
               <div className="presents-page--title__text">PRESENTS.</div>
             </div>
             <div className="presents-page--carousel">
-              <Redirect to={`/presents/upcoming`} component={Upcoming} />
+              {/* <Redirect to={`/presents/upcoming`} component={Upcoming} /> */}
               <Route path={`/presents/upcoming`} component={Upcoming} />
               <Route path={`/presents/past`} component={Past} />
             </div>

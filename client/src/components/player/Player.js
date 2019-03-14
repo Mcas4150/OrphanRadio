@@ -71,7 +71,7 @@ class Player extends Component {
       <React.Fragment>
         <audio ref={this.audioPlayer} id="audioPlayer" name="media">
           <source
-            src=" http://bentennas.out.airtime.pro:8000/bentennas_a"
+            src=" http://orphan.out.airtime.pro:8000/orphan_b"
             type="audio/mpeg"
           />
         </audio>
@@ -83,10 +83,9 @@ class Player extends Component {
           Play
         </Playbutton>
         <div className="marquee-container">
-          <marquee className="current-show" behavior="scroll" direction="left">
-            {" "}
-            {showContent}
-          </marquee>
+          {/* <marquee className="current-show" behavior="scroll" direction="left"> */}{" "}
+          {showContent}
+          {/* </marquee> */}
         </div>
       </React.Fragment>
     );

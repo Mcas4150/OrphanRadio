@@ -4,7 +4,7 @@ import { GET_CURRENT_SHOW, GET_CURRENT_WEEK } from "./types";
 
 export const getCurrentShow = () => dispatch => {
   axios
-    .get("https://bentennas.airtime.pro/api/live-info")
+    .get("https://orphan.airtime.pro/api/live-info")
     .then(res =>
       dispatch({
         type: GET_CURRENT_SHOW,
@@ -21,7 +21,7 @@ export const getCurrentShow = () => dispatch => {
 
 export const getCurrentWeek = () => dispatch => {
   axios
-    .get("https://bentennas.airtime.pro/api/week-info")
+    .get("https://orphan.airtime.pro/api/week-info")
     .then(res =>
       dispatch({
         type: GET_CURRENT_WEEK,

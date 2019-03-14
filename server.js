@@ -12,12 +12,14 @@ const releases = require("./routes/api/releases");
 const archives = require("./routes/api/archives");
 const upcomings = require("./routes/api/upcomings");
 const pasts = require("./routes/api/pasts");
+const formData = require("express-form-data");
 
 const app = express();
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(formData.parse());
 
 // DB Config
 const db = require("./config/keys").mongoURI;

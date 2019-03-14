@@ -48,7 +48,7 @@ export default class RecordsPage extends Component {
               <div className="records-page--title__text">RECORDS.</div>
             </div>
             <div className="records-page--carousel">
-              <Redirect to={`/records/artists`} component={Artists} />
+              {/* <Redirect to={`/records/artists`} component={Artists} /> */}
               <Route path={`/records/artists`} component={Artists} />
               <Route path={`/records/releases`} component={Releases} />
             </div>

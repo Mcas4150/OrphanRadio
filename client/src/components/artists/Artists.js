@@ -31,19 +31,10 @@ class Artists extends Component {
               <div className="artist--info">
                 <div className="artist--bio">
                   <h3>Bio</h3>
-                  {bio}
+                  <p className="artist--bio_p">{bio}</p>
                 </div>
                 <div className="artist--links">
                   <h3>Links</h3>
-
-                  <a
-                    className="artist--sublinks"
-                    href={artist.website}
-                    target="_blank"
-                  >
-                    Website
-                  </a>
-                  <br />
                   <a
                     className="artist--sublinks"
                     href={artist.instagram}

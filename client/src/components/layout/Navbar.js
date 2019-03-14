@@ -31,14 +31,14 @@ export default class NavBar extends Component {
           Orphan.
         </Link>
         <div className="navbar--links">
-          <NavLink
+          {/* <NavLink
             className="nav-link link--radio"
             exact
             activeClassName="active"
             to="/radio/schedule"
           >
             Radio.
-          </NavLink>
+          </NavLink> */}
           <NavLink
             className="nav-link link--records"
             exact
@@ -54,6 +54,14 @@ export default class NavBar extends Component {
             to="/presents/upcoming"
           >
             Presents.
+          </NavLink>
+          <NavLink
+            className="nav-link link--wares"
+            exact
+            activeClassName="active"
+            to="/wears/"
+          >
+            Wares.
           </NavLink>
         </div>
         <div className="navbar--panel">

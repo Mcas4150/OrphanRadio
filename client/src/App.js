@@ -5,7 +5,6 @@ import { Provider } from "react-redux";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
-import posed, { PoseGroup } from "react-pose";
 import NavBar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import AdminPage from "./pages/admin/AdminPage";
@@ -15,6 +14,7 @@ import BackgroundContainer from "./components/backgroundContainer";
 import RadioPage from "./pages/radio/RadioPage";
 import RecordsPage from "./pages/records/RecordsPage";
 import PresentsPage from "./pages/presents/PresentsPage";
+import WearsPage from "./pages/wears/WearsPage";
 import store from "./store";
 import PrivateRoute from "./components/common/PrivateRoute";
 import Login from "./components/auth/Login";
@@ -60,9 +60,10 @@ class App extends Component {
                   >
                     <Switch>
                       <Route exact path="/" component={BackgroundContainer} />
-                      <Route path="/radio" component={RadioPage} />
-                      <Route path="/records" component={RecordsPage} />
-                      <Route path="/presents" component={PresentsPage} />
+                      {/* <Route path="/radio" component={RadioPage} /> */}
+                      <Route path="/records/" component={RecordsPage} />
+                      <Route path="/presents/" component={PresentsPage} />
+                      <Route path="/wears/" component={WearsPage} />
                       <Route path="/home" component={BackgroundContainer} />
                       <Route path="/cursor" component={Example} />
                       <Route path="/login" component={Login} />

@@ -8,16 +8,15 @@ export default class Footer extends Component {
       <div className="footer">
         <div className="footer--stream">
           <div className="footer--stream__container">
-            Live
             <div className="footer-circle-container">
-              <div className="footer--stream__circle" />
+              {/* <div className="footer--stream__circle" /> */}
             </div>
             <div className="footer--stream__marquee">
               <Player />
             </div>
           </div>
         </div>
-        <div className="footer--donate">Donate</div>
+        {/* <div className="footer--donate">Donate</div> */}
       </div>
     );
   }

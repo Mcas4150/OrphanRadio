@@ -1,5 +1,4 @@
-.records-page--artist__title {
-}
+
 
 .records-page--artist__image {
   height: 80vh;
@@ -32,6 +31,10 @@ h3 {
 .artist--bio {
   grid-area: bio;
   padding-right: 35px;
+}
+
+.artist--bio_p{
+  white-space: normal;
 }
 
 .artist--links {

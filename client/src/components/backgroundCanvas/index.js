@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import OrbitControls from "three-orbitcontrols";
+
 import * as THREE from "three";
 import "./BackgroundCanvas.css";
 
 export default class BackgroundCanvas extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     const width = this.mount.clientWidth;
     const height = this.mount.clientHeight;
@@ -68,8 +64,11 @@ export default class BackgroundCanvas extends Component {
 
     this.group = new THREE.Group();
     this.group.add(square, square2, triangle, triangle2, triangle3, triangle4);
-    this.group.rotateZ(1.5708);
-    this.group.rotateX(1.5708);
+
+    //Auto-rotate script
+    // this.group.rotateZ(1.5708);
+    // this.group.rotateX(1.5708);
+
     // group.rotateX(0.8);
 
     this.scene.add(this.group);
