@@ -4,6 +4,7 @@
   padding: 15px;
   height: calc(100vh - 30px);
   max-height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .homepage--container {
@@ -24,5 +25,6 @@
   }
   .homepage {
     max-height: 100%;
+    height: calc(var(--vh, 1vh) * 100);
   }
 }

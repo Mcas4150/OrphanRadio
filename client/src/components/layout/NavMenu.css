@@ -19,8 +19,7 @@
 }
 
 .navMenu--hidden {
-  -webkit-transition: width 1s ease;
-  transition: width 1s ease;
+
   width: 0vw;
 }
 
