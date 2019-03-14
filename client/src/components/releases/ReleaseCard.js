@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import "./ReleaseCard.css";
 
 export default class ReleaseCard extends Component {
-  constructor(props) {
-    super(props);
-  }
+
 
   render() {
     return (
@@ -22,6 +20,7 @@ export default class ReleaseCard extends Component {
             className="release--listen-link"
             href={this.props.currentListenLink}
             target="_blank"
+            rel="noopener noreferrer"
           >
             Listen
           </a>
@@ -29,6 +28,7 @@ export default class ReleaseCard extends Component {
             className="release--buy-link"
             href={this.props.currentBuyLink}
             target="_blank"
+            rel="noopener noreferrer"
           >
             Buy
           </a>

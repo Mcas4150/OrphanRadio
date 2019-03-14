@@ -30,7 +30,6 @@ class Artists extends Component {
   };
 
   changeArtist(index) {
-    const { currentArtistIndex } = this.state;
     this.setState({
       currentArtistIndex: index
     });
@@ -41,7 +40,6 @@ class Artists extends Component {
     const { appearCard } = this.state;
     const index = this.state.currentArtistIndex;
     let artistContent;
-    let artistLinks;
     if (artists === null) {
       artistContent = "artists";
     } else {
@@ -59,47 +57,54 @@ class Artists extends Component {
         >
           <div className="records-page--artists">
             <div className="artists--container">
-            <div className="card--container">
-              <TransitionGroup>
-                <CSSTransition key={CurrentID} timeout={200} classNames="fade">
-                  <div className="artist--card">
-                    <div className="artist--image__container">
-                      <a
-                        href={CurrentInstagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          className="artist--image"
-                          src={CurrentImage}
-                          alt={CurrentName}
-                        />
-                      </a>
-                    </div>
-                    {/* <div className="artist--name">{CurrentName} </div> */}
-                    <div className="artist--info">
-                      <div className="artist--bio">
-                        <p className="artist--bio_p">{CurrentBio}</p>
+              <div className="card--container">
+                <TransitionGroup>
+                  <CSSTransition
+                    key={CurrentID}
+                    timeout={200}
+                    classNames="fade"
+                  >
+                    <div className="artist--card">
+                      <div className="artist--image__container">
+                        <a
+                          href={CurrentInstagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            className="artist--image"
+                            src={CurrentImage}
+                            alt={CurrentName}
+                          />
+                        </a>
+                      </div>
+                      <div className="artist--info">
+                        <div className="artist--bio">
+                          <p className="artist--bio_p">{CurrentBio}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </CSSTransition>
-              </TransitionGroup>{" "}
+                  </CSSTransition>
+                </TransitionGroup>{" "}
               </div>
               <div className="artists--sublinks">
                 {artists.map((artist, index) => {
                   return (
-               <React.Fragment>
+                    <React.Fragment>
                       <div
                         key={index}
-                        className={ this.state.currentArtistIndex == index ? "artists--sublinks__link sublink active-link" : "artists--sublinks__link sublink"}
-                        onClick={()=>this.changeArtist(index)}
+                        className={
+                          this.state.currentArtistIndex === index
+                            ? "artists--sublinks__link sublink active-link"
+                            : "artists--sublinks__link sublink"
+                        }
+                        onClick={() => this.changeArtist(index)}
                       >
                         {artist.name}
                       </div>
-                      
-                  
-                    <br /></React.Fragment>
+
+                      <br />
+                    </React.Fragment>
                   );
                 })}
               </div>
@@ -109,7 +114,6 @@ class Artists extends Component {
       );
     }
     return { artistContent };
-
   }
 }
 

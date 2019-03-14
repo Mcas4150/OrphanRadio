@@ -8,8 +8,6 @@ const path = require("path");
 const users = require("./routes/api/users");
 const artists = require("./routes/api/artists");
 const releases = require("./routes/api/releases");
-const upcomings = require("./routes/api/upcomings");
-const pasts = require("./routes/api/pasts");
 const formData = require("express-form-data");
 
 const app = express();
@@ -24,9 +22,10 @@ const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB
 
-
 mongoose
-  .connect("mongodb://mcas4150:Leafpad4@ds151612.mlab.com:51612/orphan", {useNewUrlParser: true} )
+  .connect("mongodb://mcas4150:Leafpad4@ds151612.mlab.com:51612/orphan", {
+    useNewUrlParser: true
+  })
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
@@ -40,8 +39,6 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 app.use("/api/artists", artists);
 app.use("/api/releases", releases);
-app.use("/api/upcomings", upcomings);
-app.use("/api/pasts", pasts);
 
 // Server statis assets if in production
 if (process.env.NODE_ENV === "production") {

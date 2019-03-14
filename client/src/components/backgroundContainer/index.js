@@ -5,9 +5,7 @@ import "./BackgroundContainer.css";
 import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
 
 export default class BackgroundContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
+
   render() {
     return (
       <ReactCursorPosition

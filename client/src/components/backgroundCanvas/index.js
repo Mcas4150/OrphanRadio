@@ -121,7 +121,7 @@ export default class BackgroundCanvas extends Component {
   };
   animate = () => {
     // this.group.rotation.x += 0.0025;
-    const division = 30000;
+    // const division = 30000;
 
     // if (this.props.mouseX <= this.mount.clientWidth / 2) {
     //   this.group.rotation.x -= 0.0025 + this.props.mouseX / division;

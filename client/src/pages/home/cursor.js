@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
+import ReactCursorPosition from "react-cursor-position";
 import BackgroundCanvas from "../../components/backgroundCanvas/index";
-import HomePage from "./HomePage";
 
 export default class Example extends Component {
   render() {

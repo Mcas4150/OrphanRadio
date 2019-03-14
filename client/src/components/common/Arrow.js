@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Arrow.css";
 
 export const Arrow = ({ direction, clickFunction, glyph }) => (

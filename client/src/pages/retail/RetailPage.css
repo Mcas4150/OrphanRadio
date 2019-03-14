@@ -61,19 +61,20 @@
 .retail-page--carousel {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.retail--image{
-max-width:100%;
+.retail--image {
+  max-width: 100%;
 }
 
-.retail--price{
+.retail--price {
   font-size: 2rem;
 }
 
-.retail--price:hover{
+.retail--price:hover {
   font-size: 2.25rem;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .active {
@@ -86,14 +87,6 @@ max-width:100%;
     justify-content: right;
     font-size: 1.5rem;
   }
-
-  /* .retail-page--title {
-    display: grid;
-    height: 80vh;
-    width: 10vw;
-    grid-template-columns: 1fr 5fr;
-    grid-template-areas: "title-text nothing";
-  } */
 
   .retail-page--sublinks {
     display: none;

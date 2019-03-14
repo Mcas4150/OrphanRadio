@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import NavMenu from "./NavMenu";
-import NavMenuItem from "./NavMenuItem";
 import NavMenuButton from "./NavMenuButton";
-
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
 import "./Navbar.css";
 
 export default class NavBar extends Component {

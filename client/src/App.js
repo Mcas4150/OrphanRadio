@@ -8,14 +8,13 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 import Footer from "./components/layout/Footer";
 import AdminPage from "./pages/admin/AdminPage";
-import HomePage from "./pages/home/HomePage";
+
 import Example from "./pages/home/cursor";
 import BackgroundContainer from "./components/backgroundContainer";
 import RosterPage from "./pages/roster/RosterPage";
 import RecordsPage from "./pages/records/RecordsPage";
 import RetailPage from "./pages/retail/RetailPage";
 import store from "./store";
-import PrivateRoute from "./components/common/PrivateRoute";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
