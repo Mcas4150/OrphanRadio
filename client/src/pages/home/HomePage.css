@@ -3,6 +3,7 @@
   grid-template-rows: 1fr 16fr;
   padding: 15px;
   height: calc(100vh - 30px);
+  max-height: 100%;
 }
 
 .homepage--container {
@@ -20,5 +21,8 @@
 @media (max-width: 649px) {
   .homepage--orphan {
     font-size: 5rem;
+  }
+  .homepage {
+    max-height: 100%;
   }
 }
