@@ -50,7 +50,7 @@ class App extends Component {
         <Router>
           <div className="App">
             {/* <NavBar /> */}
-            {/* <BackgroundContainer/> */}
+      
             <Route
               render={location => (
                 <TransitionGroup>

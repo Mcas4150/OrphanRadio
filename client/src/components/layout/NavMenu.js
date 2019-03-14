@@ -51,8 +51,15 @@ export default class NavMenu extends Component {
             <Link className="navMenu--link" to="#">
               Contact.
             </Link>
-   
+
             <br />
+
+            <a href="https://soundcloud.com/orphan_radio_records">
+              <i class="fab fa-soundcloud" />
+            </a>
+            <a href="https://www.instagram.com/orphan.___/">
+              <i class="fab fa-instagram" />
+            </a>
           </div>
           <div className="navMenu--image-container">
             <img className="orphanLogo" src={OrphanLogo} alt="Orphan." />

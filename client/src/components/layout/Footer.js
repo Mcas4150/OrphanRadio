@@ -16,7 +16,7 @@ export default class Footer extends Component {
             </div>
           </div>
         </div>
-        {/* <div className="footer--donate">Donate</div> */}
+        <div className="footer--donate">Donate.</div>
       </div>
     );
   }

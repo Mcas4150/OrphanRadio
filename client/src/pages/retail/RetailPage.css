@@ -1,5 +1,5 @@
 .retail-page {
-  background: linear-gradient(to left, white 85%, #ffd803);
+  background: linear-gradient(to left, white 85%, yellow);
   display: grid;
   grid-template-rows: 1fr 16fr;
   padding: 15px;

@@ -43,7 +43,7 @@ export default class NavBar extends Component {
             className="nav-link link--records"
             exact
             activeClassName="active-records"
-            to="/records/artists"
+            to="/records/"
           >
             Records.
           </NavLink>

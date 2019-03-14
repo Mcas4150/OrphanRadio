@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import _ from "lodash";
-import Yasha from "../../img/YashaLanding.jpg";
-
 import { getReleases } from "../../actions/releaseActions";
 import { Arrow } from "../common/Arrow";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -15,7 +12,7 @@ class Releases extends Component {
     super(props);
 
     this.state = {
-      appearCard: true,
+      appearCard: false,
       currentReleaseIndex: 0
     };
     this.nextSlide = this.nextSlide.bind(this);
@@ -24,10 +21,11 @@ class Releases extends Component {
 
   componentWillMount() {
     this.props.getReleases();
-    this.toggleAppear();
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.toggleAppear();
+  }
 
   toggleAppear = () => {
     this.setState({

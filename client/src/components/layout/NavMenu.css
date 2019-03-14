@@ -60,6 +60,10 @@ hr {
   animation-delay: 0.2;
 }
 
+.fab {
+  color: white;
+}
+
 @media (max-width: 800px) {
   .navMenu {
     position: absolute;

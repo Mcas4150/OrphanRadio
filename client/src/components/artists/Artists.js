@@ -16,10 +16,10 @@ class Artists extends Component {
     if (artists === null) {
       artistContent = "artists";
     } else {
-      // artistContent = artists[0].name;
       artistContent = artists.map(artist => {
         const name = artist.name;
         const bio = artist.bio;
+        const image = artist.image;
         const website = artist.website;
         const instagram = artist.instagram;
         const twitter = artist.twitter;
@@ -27,13 +27,17 @@ class Artists extends Component {
         return (
           <React.Fragment>
             <div className="artist--card">
+              <div className="artist--image__container">
+                <a href={instagram} target="_blank" rel="noopener noreferrer">
+                  <img className="artist--image" src={image} alt={name} />
+                </a>
+              </div>
               <div className="artist--name">{name} </div>
               <div className="artist--info">
                 <div className="artist--bio">
-                  <h3>Bio</h3>
                   <p className="artist--bio_p">{bio}</p>
                 </div>
-                <div className="artist--links">
+                {/* <div className="artist--links">
                   <h3>Links</h3>
                   <a
                     className="artist--sublinks"
@@ -50,10 +54,9 @@ class Artists extends Component {
                   >
                     Twitter
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
-            <hr />
           </React.Fragment>
         );
       });

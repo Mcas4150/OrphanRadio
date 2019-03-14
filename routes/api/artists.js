@@ -54,6 +54,7 @@ router.post(
     const newArtist = new Artist({
       name: req.body.name,
       bio: req.body.bio,
+      image: req.body.image,
       website: req.body.website,
       instagram: req.body.instagram,
       twitter: req.body.twitter
