@@ -12,7 +12,8 @@
     "heroku-postbuild": "NODE_ENV=production cd client && npm install --only=dev && npm install && npm run build"
   },
   "engines": {
-    "node": "10.4.1"
+    "node": "10.4.1",
+    "npm" : "6.4."
   },
   "author": "Mike Cassidy",
   "license": "MIT",
