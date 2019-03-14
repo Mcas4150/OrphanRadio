@@ -20,19 +20,19 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "concurrently": "^3.6.0",
-    "dotenv": "^6.1.0",
+    "dotenv": "^6.2.0",
     "express": "^4.16.3",
-    "express-form-data": "^2.0.6",
-    "gravatar": "^1.6.0",
-    "jsonwebtoken": "^8.3.0",
-    "mongoose": "^5.1.7",
+    "express-form-data": "^2.0.8",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.19",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "react-transition-group": "^1.2.1",
-    "three-orbitcontrols": "^2.96.3",
+    "three-orbitcontrols": "^2.102.1",
     "validator": "^9.4.1"
   },
   "devDependencies": {
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.18.10"
   }
 }
