@@ -31,37 +31,30 @@ export default class NavBar extends Component {
           Orphan.
         </Link>
         <div className="navbar--links">
-          {/* <NavLink
-            className="nav-link link--radio"
+          <NavLink
+            className="nav-link link--presents"
             exact
-            activeClassName="active"
-            to="/radio/schedule"
+            activeClassName="active-roster"
+            to="/roster/"
           >
-            Radio.
-          </NavLink> */}
+            Roster.
+          </NavLink>
           <NavLink
             className="nav-link link--records"
             exact
-            activeClassName="active"
+            activeClassName="active-records"
             to="/records/artists"
           >
             Records.
           </NavLink>
-          <NavLink
-            className="nav-link link--presents"
-            exact
-            activeClassName="active"
-            to="/presents/upcoming"
-          >
-            Presents.
-          </NavLink>
+          
           <NavLink
             className="nav-link link--wares"
             exact
-            activeClassName="active"
-            to="/wears/"
+            activeClassName="active-retail"
+            to="/retail/"
           >
-            Wares.
+            Retail.
           </NavLink>
         </div>
         <div className="navbar--panel">

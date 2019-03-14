@@ -11,10 +11,10 @@ import AdminPage from "./pages/admin/AdminPage";
 import HomePage from "./pages/home/HomePage";
 import Example from "./pages/home/cursor";
 import BackgroundContainer from "./components/backgroundContainer";
-import RadioPage from "./pages/radio/RadioPage";
+import RosterPage from "./pages/roster/RosterPage";
 import RecordsPage from "./pages/records/RecordsPage";
 import PresentsPage from "./pages/presents/PresentsPage";
-import WearsPage from "./pages/wears/WearsPage";
+import RetailPage from "./pages/retail/RetailPage";
 import store from "./store";
 import PrivateRoute from "./components/common/PrivateRoute";
 import Login from "./components/auth/Login";
@@ -50,6 +50,7 @@ class App extends Component {
         <Router>
           <div className="App">
             {/* <NavBar /> */}
+            {/* <BackgroundContainer/> */}
             <Route
               render={location => (
                 <TransitionGroup>
@@ -62,8 +63,8 @@ class App extends Component {
                       <Route exact path="/" component={BackgroundContainer} />
                       {/* <Route path="/radio" component={RadioPage} /> */}
                       <Route path="/records/" component={RecordsPage} />
-                      <Route path="/presents/" component={PresentsPage} />
-                      <Route path="/wears/" component={WearsPage} />
+                      <Route path="/roster/" component={RosterPage} />
+                      <Route path="/retail/" component={RetailPage} />
                       <Route path="/home" component={BackgroundContainer} />
                       <Route path="/cursor" component={Example} />
                       <Route path="/login" component={Login} />

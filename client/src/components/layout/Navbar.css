@@ -25,15 +25,17 @@
   color: black;
 }
 
-.link--wares:hover {
-  color: blue;
+.link--wares:hover, .active-retail {
+   color: #ffd803;
 }
 
-.link--records:hover {
-  color: yellow;
+.link--records:hover, .active-records {
+  /* color: #d4107c; */
+color: blue; 
 }
 
-.link--presents:hover {
+.link--presents:hover, .active-roster {
+  /* color: #46bfad; */
   color: red;
 }
 

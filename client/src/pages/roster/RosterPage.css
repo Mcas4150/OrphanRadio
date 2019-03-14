@@ -1,0 +1,52 @@
+.roster-page {
+  background: linear-gradient(to left, white 85%, red);
+  /* background: linear-gradient(to left, white 85%, #46bfad); */
+  display: grid;
+  grid-template-rows: 1fr 16fr;
+  padding: 15px;
+  height: calc(100vh - 30px);
+}
+
+.roster-page--container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.roster-page--title {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "title-text nothing";
+}
+
+.roster-page--title__text {
+  transform: rotate(90deg);
+  transform: translateX(-80px) rotate(90deg);
+
+  justify-content: right;
+  font-size: 3rem;
+  align-self: center;
+
+  grid-area: title-text;
+}
+
+
+
+
+@media (max-width: 800px) {
+  .roster-page--container {
+    grid-template-columns: 1fr 8fr;
+  }
+
+  .roster-page--title__text {
+    transform: translateX(-50px) rotate(90deg);
+    justify-content: right;
+    font-size: 1.5rem;
+  }
+  .roster-page--title {
+    display: grid;
+    height: 80vh;
+    width: 10vw;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "title-text nothing";
+  }
+}

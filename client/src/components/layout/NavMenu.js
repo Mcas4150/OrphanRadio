@@ -36,39 +36,22 @@ export default class NavMenu extends Component {
               </Link>
             </div>
             <hr />
-            {/* <Link className="navMenu--link" to="/radio">
-              Radio.
-            </Link> */}
-            {/* <br /> */}
             <Link className="navMenu--link" to="/records">
               Records.
             </Link>
             <br />
-            <Link className="navMenu--link" to="/presents">
-              Presents.
+            <Link className="navMenu--link" to="/roster">
+              Roster.
             </Link>
             <br />
-            <Link className="navMenu--link" to="/shop">
-              Wears.
+            <Link className="navMenu--link" to="/retail">
+              Retail.
             </Link>
-            {/* <hr />
-            <div className="navMenu--link">Listen Live.</div>
-            <hr />
-            <Link className="navMenu--link" to="#">
-              Shop.
-            </Link> */}
-            {/* <br />
-            <Link className="navMenu--link" to="#">
-              Donate.
-            </Link> */}
             <hr />
             <Link className="navMenu--link" to="#">
               Contact.
             </Link>
-            {/* <br />
-            <Link className="navMenu--link" to="#">
-              Info.
-            </Link> */}
+   
             <br />
           </div>
           <div className="navMenu--image-container">

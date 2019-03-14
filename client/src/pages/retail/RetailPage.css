@@ -1,36 +1,36 @@
-.wears-page {
-  background: linear-gradient(to left, white 88%, blue);
+.retail-page {
+  background: linear-gradient(to left, white 85%, #ffd803);
   display: grid;
   grid-template-rows: 1fr 16fr;
   padding: 15px;
   height: calc(100vh - 30px);
 }
 
-.wears-page--mobile-sublinks {
+.retail-page--mobile-sublinks {
   display: none;
 }
 
-.wears-page--mobile-sublink {
+.retail-page--mobile-sublink {
   padding: 5px;
   font-size: 18px;
   text-decoration: none;
   color: black;
 }
 
-.wears-page--main {
+.retail-page--main {
   display: grid;
   height: 85vh;
   grid-template-columns: 1fr 4fr 1fr;
 }
 
-.wears-page--title {
+.retail-page--title {
   display: grid;
   height: 85vh;
   grid-template-columns: 1fr 4fr;
   grid-template-areas: "title-text nothing";
 }
 
-.wears-page--title__text {
+.retail-page--title__text {
   transform: rotate(90deg);
   transform: translateX(-61px) rotate(90deg);
 
@@ -41,7 +41,7 @@
   grid-area: title-text;
 }
 
-.wears-page--sublinks {
+.retail-page--sublinks {
   height: 85vh;
   display: flex;
   justify-content: flex-end;
@@ -51,13 +51,13 @@
   text-align: right;
 }
 
-.wears-page--sublinks__link {
+.retail-page--sublinks__link {
   display: contents;
   text-decoration: none;
   color: black;
 }
 
-.wears-page--carousel {
+.retail-page--carousel {
 }
 
 .active {
@@ -65,13 +65,13 @@
 }
 
 @media (max-width: 800px) {
-  .wears-page--title__text {
+  .retail-page--title__text {
     transform: translateX(-30px) rotate(90deg);
     justify-content: right;
     font-size: 1.5rem;
   }
 
-  .wears-page--title {
+  .retail-page--title {
     display: grid;
     height: 80vh;
     width: 10vw;
@@ -79,17 +79,17 @@
     grid-template-areas: "title-text nothing";
   }
 
-  .wears-page--sublinks {
+  .retail-page--sublinks {
     display: none;
   }
 
-  .wears-page--main {
+  .retail-page--main {
     display: grid;
     height: 80vh;
     grid-template-columns: 1fr 4fr;
   }
 
-  .wears-page--mobile-sublinks {
+  .retail-page--mobile-sublinks {
     display: flex;
     justify-content: center;
     top: 0;

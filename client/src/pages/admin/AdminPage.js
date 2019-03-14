@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import NavBar from "../../components/layout/Navbar";
 import ArtistForm from "../../components/artists/ArtistsForm";
 import ReleaseForm from "../../components/releases/ReleasesForm";
-import ResidentForm from "../../components/residents/ResidentsForm";
-import ArchiveForm from "../../components/archive/ArchiveForm";
 import UpcomingForm from "../presents/UpcomingForm";
 import PastForm from "../presents/PastForm";
 import "./AdminPage.css";
@@ -25,18 +23,6 @@ export default class AdminPage extends Component {
             <div className="admin--actions__form">
               Add Release
               <ReleaseForm />
-            </div>
-          </div>
-          <div className="admin--card admin--actions__add-resident">
-            <div className="admin--actions__form">
-              Add Resident
-              <ResidentForm />
-            </div>
-          </div>
-          <div className="admin--card admin--actions__add-archive">
-            <div className="admin--actions__form">
-              Add Archive
-              <ArchiveForm />
             </div>
           </div>
           <div className="admin--card admin--actions__add-upcoming">

@@ -6,10 +6,8 @@ const passport = require("passport");
 const path = require("path");
 
 const users = require("./routes/api/users");
-const residents = require("./routes/api/residents");
 const artists = require("./routes/api/artists");
 const releases = require("./routes/api/releases");
-const archives = require("./routes/api/archives");
 const upcomings = require("./routes/api/upcomings");
 const pasts = require("./routes/api/pasts");
 const formData = require("express-form-data");
@@ -40,10 +38,8 @@ require("./config/passport")(passport);
 
 // Use Routes
 app.use("/api/users", users);
-app.use("/api/residents", residents);
 app.use("/api/artists", artists);
 app.use("/api/releases", releases);
-app.use("/api/archives", archives);
 app.use("/api/upcomings", upcomings);
 app.use("/api/pasts", pasts);
 

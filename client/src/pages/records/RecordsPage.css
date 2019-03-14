@@ -1,5 +1,5 @@
 .records-page {
-  background: linear-gradient(to left, white 85%, yellow);
+  background: linear-gradient(to left, white 85%, blue);
   display: grid;
   grid-template-rows: 1fr 16fr;
   padding: 15px;

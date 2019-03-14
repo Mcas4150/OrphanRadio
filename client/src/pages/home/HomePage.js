@@ -94,7 +94,7 @@ export default class HomePage extends Component {
 }
 
 const Modal = ({ handleClose, show, children }) => {
-  const showHideClassName = show ? "modal display-block" : "modal display-none";
+  // const showHideClassName = show ? "modal display-block" : "modal display-none";
 
   return (
     <div className={show ? "modal display-block" : "modal display-none"}>
