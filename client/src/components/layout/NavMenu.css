@@ -12,12 +12,16 @@
   opacity: 1;
 
   color: white;
-  transition: height 0.3s ease;
+  /* transition: height 0.3s ease; */
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
   z-index: 2;
 }
 
 .navMenu--hidden {
-  display: hidden;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+  width: 0vw;
 }
 
 .navMenu--list {
@@ -34,6 +38,7 @@
   transition: "color 0.2s ease-in-out";
   animation: "0.5s slideIn forwards";
   animation-delay: 0.2s;
+  text-decoration: none;
 }
 
 .navMenu--link:hover {

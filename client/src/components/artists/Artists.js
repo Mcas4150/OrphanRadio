@@ -1,68 +1,115 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import FKL from "../../img/FKL.jpg";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { getArtists } from "../../actions/artistActions";
 import "./Artists.css";
 
 class Artists extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      appearCard: false,
+      currentArtistIndex: 0
+    };
+    this.changeArtist = this.changeArtist.bind(this);
+  }
+
   componentWillMount() {
     this.props.getArtists();
   }
 
+  componentDidMount() {
+    this.toggleAppear();
+  }
+
+  toggleAppear = () => {
+    this.setState({
+      appearCard: !this.state.appearCard
+    });
+  };
+
+  changeArtist(index) {
+    const { currentArtistIndex } = this.state;
+    this.setState({
+      currentArtistIndex: index
+    });
+  }
+
   render() {
     const { artists } = this.props.artist;
+    const { appearCard } = this.state;
+    const index = this.state.currentArtistIndex;
     let artistContent;
+    let artistLinks;
     if (artists === null) {
       artistContent = "artists";
     } else {
-      artistContent = artists.map(artist => {
-        const name = artist.name;
-        const bio = artist.bio;
-        const image = artist.image;
-        const website = artist.website;
-        const instagram = artist.instagram;
-        const twitter = artist.twitter;
-
-        return (
-          <React.Fragment>
-            <div className="artist--card">
-              <div className="artist--image__container">
-                <a href={instagram} target="_blank" rel="noopener noreferrer">
-                  <img className="artist--image" src={image} alt={name} />
-                </a>
+      const CurrentName = artists.length && artists[index].name;
+      const CurrentBio = artists.length && artists[index].bio;
+      const CurrentImage = artists.length && artists[index].image;
+      const CurrentInstagram = artists.length && artists[index].instagram;
+      const CurrentID = artists.length && artists[index]._id;
+      return (
+        <CSSTransition
+          in={appearCard}
+          appear={true}
+          timeout={300}
+          classNames="fade"
+        >
+          <div className="records-page--artists">
+            <div className="artists--container">
+            <div className="card--container">
+              <TransitionGroup>
+                <CSSTransition key={CurrentID} timeout={200} classNames="fade">
+                  <div className="artist--card">
+                    <div className="artist--image__container">
+                      <a
+                        href={CurrentInstagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="artist--image"
+                          src={CurrentImage}
+                          alt={CurrentName}
+                        />
+                      </a>
+                    </div>
+                    {/* <div className="artist--name">{CurrentName} </div> */}
+                    <div className="artist--info">
+                      <div className="artist--bio">
+                        <p className="artist--bio_p">{CurrentBio}</p>
+                      </div>
+                    </div>
+                  </div>
+                </CSSTransition>
+              </TransitionGroup>{" "}
               </div>
-              <div className="artist--name">{name} </div>
-              <div className="artist--info">
-                <div className="artist--bio">
-                  <p className="artist--bio_p">{bio}</p>
-                </div>
-                {/* <div className="artist--links">
-                  <h3>Links</h3>
-                  <a
-                    className="artist--sublinks"
-                    href={artist.instagram}
-                    target="_blank"
-                  >
-                    Instagram
-                  </a>
-                  <br />
-                  <a
-                    className="artist--sublinks"
-                    href={artist.twitter}
-                    target="_blank"
-                  >
-                    Twitter
-                  </a>
-                </div> */}
+              <div className="artists--sublinks">
+                {artists.map((artist, index) => {
+                  return (
+               <React.Fragment>
+                      <div
+                        key={index}
+                        className={ this.state.currentArtistIndex == index ? "artists--sublinks__link sublink active-link" : "artists--sublinks__link sublink"}
+                        onClick={()=>this.changeArtist(index)}
+                      >
+                        {artist.name}
+                      </div>
+                      
+                  
+                    <br /></React.Fragment>
+                  );
+                })}
               </div>
             </div>
-          </React.Fragment>
-        );
-      });
+          </div>
+        </CSSTransition>
+      );
     }
+    return { artistContent };
 
-    return <div className="records-page--artists">{artistContent}</div>;
   }
 }
 

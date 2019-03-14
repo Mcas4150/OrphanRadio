@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
-import NavBar from "./components/layout/Navbar";
+
 import Footer from "./components/layout/Footer";
 import AdminPage from "./pages/admin/AdminPage";
 import HomePage from "./pages/home/HomePage";
@@ -13,7 +13,6 @@ import Example from "./pages/home/cursor";
 import BackgroundContainer from "./components/backgroundContainer";
 import RosterPage from "./pages/roster/RosterPage";
 import RecordsPage from "./pages/records/RecordsPage";
-import PresentsPage from "./pages/presents/PresentsPage";
 import RetailPage from "./pages/retail/RetailPage";
 import store from "./store";
 import PrivateRoute from "./components/common/PrivateRoute";
@@ -49,7 +48,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            {/* <NavBar /> */}
+
       
             <Route
               render={location => (
