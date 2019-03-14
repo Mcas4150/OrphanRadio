@@ -42,8 +42,6 @@
   margin-left: 15px;
   animation: fader 3s infinite;
   animation-timing-function: ease-out;
-  /* animation-duration: 2000ms;
-  animation-fill-mode: forwards; */
 }
 
 @keyframes fader {
