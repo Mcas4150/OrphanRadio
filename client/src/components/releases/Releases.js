@@ -17,6 +17,7 @@ class Releases extends Component {
     };
     this.nextSlide = this.nextSlide.bind(this);
     this.previousSlide = this.previousSlide.bind(this);
+    this.changeRelease = this.changeRelease.bind(this);
   }
 
   componentWillMount() {
@@ -32,6 +33,12 @@ class Releases extends Component {
       appearCard: !this.state.appearCard
     });
   };
+
+  changeRelease(index) {
+    this.setState({
+      currentReleaseIndex: index
+    });
+  }
 
   previousSlide(props) {
     const lastIndex = this.props.release.releases.length - 1;
@@ -67,6 +74,8 @@ class Releases extends Component {
         releases.length && releases[this.state.currentReleaseIndex].artist;
       const currentTitle =
         releases.length && releases[this.state.currentReleaseIndex].title;
+      const currentCatalog =
+        releases.length && releases[this.state.currentReleaseIndex].catalog;
       const currentListenLink =
         releases.length && releases[this.state.currentReleaseIndex].listenLink;
       const currentBuyLink =
@@ -84,27 +93,49 @@ class Releases extends Component {
           classNames="fade"
         >
           <div className="releases--container">
-            <Arrow
+            {/* <Arrow
               direction="left"
               clickFunction={this.previousSlide}
               glyph="&#9664;"
-            />
+            /> */}
             <TransitionGroup>
               <CSSTransition key={currentID} timeout={200} classNames="fade">
                 <ReleaseCard
                   currentArtist={currentArtist}
                   currentTitle={currentTitle}
                   currentListenLink={currentListenLink}
+                  currentCatalog={currentCatalog}
                   currentBuyLink={currentBuyLink}
                   currentImage={currentImage}
                 />
               </CSSTransition>
             </TransitionGroup>
-            <Arrow
+            <div className="releases--sublinks">
+              {releases.map((release, index) => {
+                return (
+                  <React.Fragment>
+                    <div
+                      key={index}
+                      className={
+                        this.state.currentReleaseIndex === index
+                          ? "releases--sublinks__link sublink active-link"
+                          : "releases--sublinks__link sublink"
+                      }
+                      onClick={() => this.changeRelease(index)}
+                    >
+                      {release.catalog}
+                    </div>
+
+                    <br />
+                  </React.Fragment>
+                );
+              })}
+            </div>
+            {/* <Arrow
               direction="right"
               clickFunction={this.nextSlide}
               glyph="&#9654;"
-            />
+            /> */}
           </div>
         </CSSTransition>
       );

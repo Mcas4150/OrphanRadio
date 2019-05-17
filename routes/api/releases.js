@@ -58,6 +58,7 @@ router.post(
       title: req.body.title,
       image: req.body.image,
       listenLink: req.body.listenLink,
+      catalog: req.body.catalog,
       buyLink: req.body.buyLink,
       date: req.body.date
     });

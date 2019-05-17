@@ -1,5 +1,4 @@
-
-a{
+a {
   text-decoration: none;
   color: black;
 }
@@ -8,6 +7,10 @@ a{
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
+}
+
+.releases--sublinks :hover {
+  cursor: pointer;
 }
 
 .fade-appear {

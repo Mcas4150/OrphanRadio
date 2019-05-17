@@ -39,6 +39,7 @@ class ReleaseForm extends Component {
       title: this.state.title,
       image: this.state.image,
       listenLink: this.state.listenLink,
+      catalog: this.state.catalog,
       buyLink: this.state.buyLink,
       date: this.state.date
     };
@@ -49,6 +50,7 @@ class ReleaseForm extends Component {
       title: "",
       image: "",
       listenLink: "",
+      catalog: "",
       buyLink: "",
       date: moment()
     });
@@ -109,6 +111,13 @@ class ReleaseForm extends Component {
                 value={this.state.listenLink}
                 onChange={this.onChange}
                 error={errors.listenLink}
+              />
+              <InputGroup
+                placeholder="catalog"
+                name="catalog"
+                value={this.state.catalog}
+                onChange={this.onChange}
+                error={errors.catalog}
               />
               <InputGroup
                 placeholder="buyLink"

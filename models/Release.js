@@ -17,6 +17,9 @@ const ReleaseSchema = new Schema({
   listenLink: {
     type: String
   },
+  catalog:{
+    type: String
+  },
   buyLink: {
     type: String
   },
