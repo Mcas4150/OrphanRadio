@@ -1,8 +1,6 @@
 .navbar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* padding: 15px 15px 0px 15px; */
-
   font-size: 1.55rem;
 }
 
@@ -31,7 +29,7 @@
 
 .link--records:hover, .active-records {
   /* color: #d4107c; */
-color: blue; 
+color: blue;
 }
 
 .link--presents:hover, .active-roster {
