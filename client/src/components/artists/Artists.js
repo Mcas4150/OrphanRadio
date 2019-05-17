@@ -39,43 +39,48 @@ class Artists extends Component {
     const { artists } = this.props.artist;
     const { appearCard } = this.state;
     const index = this.state.currentArtistIndex;
-
-    return (
-      <CSSTransition
-        in={appearCard}
-        appear={true}
-        timeout={300}
-        classNames="fade"
-      >
-        <div className="records-page--artists">
-          {artists &&
-          (
-
+    let artistContent;
+    if (artists === null) {
+      artistContent = "artists";
+    } else {
+      const CurrentName = artists.length && artists[index].name;
+      const CurrentBio = artists.length && artists[index].bio;
+      const CurrentImage = artists.length && artists[index].image;
+      const CurrentInstagram = artists.length && artists[index].instagram;
+      const CurrentID = artists.length && artists[index]._id;
+      return (
+        <CSSTransition
+          in={appearCard}
+          appear={true}
+          timeout={300}
+          classNames="fade"
+        >
+          <div className="records-page--artists">
             <div className="artists--container">
               <div className="card--container">
                 <TransitionGroup>
                   <CSSTransition
-                    // key={artists[index]._id}
+                    key={CurrentID}
                     timeout={200}
                     classNames="fade"
                   >
                     <div className="artist--card">
                       <div className="artist--image__container">
                         <a
-                          href={artists[index].instagram}
+                          href={CurrentInstagram}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <img
                             className="artist--image"
-                            src={artists[index].image}
-                            alt={artists[index].name}
+                            src={CurrentImage}
+                            alt={CurrentName}
                           />
                         </a>
-                      </div>
-                      <div className="artist--info">
-                        <div className="artist--bio">
-                          <p className="artist--bio_p">{artists[index].bio}</p>
+                        <div className="artist--info">
+                          <div className="artist--bio">
+                            <p className="artist--bio_p">{CurrentBio}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -104,10 +109,11 @@ class Artists extends Component {
                 })}
               </div>
             </div>
-          )}
-        </div>
-      </CSSTransition>
-    );
+          </div>
+        </CSSTransition>
+      );
+    }
+    return { artistContent };
   }
 }
 

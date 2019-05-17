@@ -79,6 +79,10 @@ h3 {
   margin: 10px;
 }
 
+.artists--sublinks__link:hover {
+  cursor: pointer;
+}
+
 .card--container {
   grid-area: cardContainer;
   display: flex;
