@@ -5,8 +5,9 @@ import { Provider } from "react-redux";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
-
+import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
 import Footer from "./components/layout/Footer";
+import NavMenu from "./components/layout/NavMenu";
 import AdminPage from "./pages/admin/AdminPage";
 
 import Example from "./pages/home/cursor";
@@ -14,6 +15,7 @@ import BackgroundContainer from "./components/backgroundContainer";
 import RosterPage from "./pages/roster/RosterPage";
 import RecordsPage from "./pages/records/RecordsPage";
 import RetailPage from "./pages/retail/RetailPage";
+import HomePage from "./pages/home/HomePage";
 import store from "./store";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
@@ -62,12 +64,12 @@ class App extends Component {
                     classNames="fade"
                   >
                     <Switch>
-                      <Route exact path="/" component={BackgroundContainer} />
+                      <Route exact path="/" component={HomePage} />
                       {/* <Route path="/radio" component={RadioPage} /> */}
                       <Route path="/records/" component={RecordsPage} />
                       <Route path="/roster/" component={RosterPage} />
                       <Route path="/retail/" component={RetailPage} />
-                      <Route path="/home" component={BackgroundContainer} />
+                      <Route path="/home" component={HomePage} />
                       <Route path="/cursor" component={Example} />
                       <Route path="/login" component={Login} />
                       <Route path="/register" component={Register} />
@@ -80,6 +82,26 @@ class App extends Component {
               )}
             />
 
+            <ReactCursorPosition
+              activationInteractionMouse={INTERACTIONS.HOVER}
+              mapChildProps={({
+                elementDimensions,
+                isActive,
+                isPositionOutside,
+                position
+              }) => {
+                return {
+                  elementDimensions,
+                  isActive,
+                  isOutside: isPositionOutside,
+                  point: position
+                };
+              }} //default
+              // hoverDelayInMs={250} //default: 0
+              // hoverOffDelayInMs={150} //default: 0
+            >
+              <NavMenu />
+            </ReactCursorPosition>
             <Footer />
           </div>
         </Router>

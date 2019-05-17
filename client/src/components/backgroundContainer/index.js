@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import HomePage from "../../pages/home/HomePage";
+import NavMenu from "../layout/NavMenu";
+import Footer from "../layout/Footer";
+
 import "./BackgroundContainer.css";
 
 import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
 
 export default class BackgroundContainer extends Component {
-
   render() {
     return (
       <ReactCursorPosition
@@ -26,7 +28,9 @@ export default class BackgroundContainer extends Component {
         // hoverDelayInMs={250} //default: 0
         // hoverOffDelayInMs={150} //default: 0
       >
-        <HomePage />
+        <NavMenu />
+        {/* <HomePage />
+        <Footer /> */}
       </ReactCursorPosition>
     );
   }

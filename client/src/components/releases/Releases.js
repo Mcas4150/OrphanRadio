@@ -131,11 +131,6 @@ class Releases extends Component {
                 );
               })}
             </div>
-            {/* <Arrow
-              direction="right"
-              clickFunction={this.nextSlide}
-              glyph="&#9654;"
-            /> */}
           </div>
         </CSSTransition>
       );

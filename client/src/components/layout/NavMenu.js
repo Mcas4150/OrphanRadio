@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { Link} from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import OrphanLogo from "../../img/orphanlogo.png";
 import "./NavMenu.css";
+import BackgroundCanvas from "../backgroundCanvas";
 
 export default class NavMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: this.props.open ? this.props.open : false
+      open: true
     };
     // this.handleUnClick = this.handleUnClick.bind(this);
   }
@@ -28,6 +29,7 @@ export default class NavMenu extends Component {
       return <div className="nav-menu__hidden" />;
     } else {
       return (
+
         <div className="navMenu" onClick={this.handleUnClick()}>
           <div className="navMenu--list">
             <div className="navMenu--link__top">
@@ -36,17 +38,30 @@ export default class NavMenu extends Component {
               </Link>
             </div>
             <hr />
-            <Link className="navMenu--link" to="/records">
+            <NavLink
+             className="navMenu--link"
+            exact
+            activeClassName="active-records"
+            to="/records/"
+          >
               Records.
-            </Link>
+            </NavLink>
             <br />
-            <Link className="navMenu--link" to="/roster">
+            <NavLink
+            className="navMenu--link"
+            exact
+            activeClassName="active-roster"
+            to="/roster/"
+          >
               Roster.
-            </Link>
+            </NavLink>
             <br />
-            <Link className="navMenu--link" to="/retail">
+            <NavLink className="navMenu--link"
+            exact
+            activeClassName="active-retail"
+            to="/retail">
               Retail.
-            </Link>
+            </NavLink>
             <hr />
             <Link className="navMenu--link" to="#">
               Contact.
@@ -62,9 +77,14 @@ export default class NavMenu extends Component {
             </a>
           </div>
           <div className="navMenu--image-container">
-            <img className="orphanLogo" src={OrphanLogo} alt="Orphan." />
+            <BackgroundCanvas
+              mouseX={this.props.point.x}
+              mouseY={this.props.point.y}
+            />
+            {/* <img className="orphanLogo" src={OrphanLogo} alt="Orphan." /> */}
           </div>
         </div>
+        // </ReactCursorPosition>
       );
     }
   }

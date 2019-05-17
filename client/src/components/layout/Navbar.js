@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import NavMenu from "./NavMenu";
 import NavMenuButton from "./NavMenuButton";
+import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
 import "./Navbar.css";
 
 export default class NavBar extends Component {
@@ -26,42 +27,8 @@ export default class NavBar extends Component {
         <Link className="navbar--brand" to="/home">
           Orphan.
         </Link>
-        <div className="navbar--links">
-          <NavLink
-            className="nav-link link--presents"
-            exact
-            activeClassName="active-roster"
-            to="/roster/"
-          >
-            Roster.
-          </NavLink>
-          <NavLink
-            className="nav-link link--records"
-            exact
-            activeClassName="active-records"
-            to="/records/"
-          >
-            Records.
-          </NavLink>
-          
-          <NavLink
-            className="nav-link link--wares"
-            exact
-            activeClassName="active-retail"
-            to="/retail/"
-          >
-            Retail.
-          </NavLink>
-        </div>
-        <div className="navbar--panel">
-          <NavMenuButton
-            open={this.state.menuOpen}
-            onClick={() => this.handleMenuClick()}
-            color="black"
-          />
-
-          <NavMenu open={this.state.menuOpen} />
-        </div>
+        <div className="navbar--links" />
+        <div className="navbar--panel" />
       </div>
     );
   }

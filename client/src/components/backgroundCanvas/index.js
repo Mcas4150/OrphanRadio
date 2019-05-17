@@ -5,8 +5,10 @@ import "./BackgroundCanvas.css";
 
 export default class BackgroundCanvas extends Component {
   componentDidMount() {
-    const width = this.mount.clientWidth;
-    const height = this.mount.clientHeight;
+    // const width = this.mount.clientWidth /2  ;
+    const width = 250 ;
+    // const height = this.mount.clientHeight;
+    const height = 250;
     //ADD SCENE
     this.scene = new THREE.Scene();
     //ADD CAMERA
@@ -20,7 +22,7 @@ export default class BackgroundCanvas extends Component {
 
     //ADD RENDERER
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
-    this.renderer.setClearColor("#fff");
+    this.renderer.setClearColor("#000");
     this.renderer.setSize(width, height);
     this.mount.appendChild(this.renderer.domElement);
     //ADD CUBE
@@ -94,7 +96,7 @@ export default class BackgroundCanvas extends Component {
 
     let edges = new THREE.EdgesGeometry(geometry);
     let material = new THREE.LineBasicMaterial({
-      color: "#0000ff",
+      color: "#fff",
       linewidth
     });
     return new THREE.LineSegments(edges, material);
@@ -105,7 +107,7 @@ export default class BackgroundCanvas extends Component {
     geometry.scale(x, y, z);
     let edges = new THREE.EdgesGeometry(geometry);
     let material = new THREE.LineBasicMaterial({
-      color: "#0000ff",
+      color: "#fff",
       linewidth
     });
     return new THREE.LineSegments(edges, material);

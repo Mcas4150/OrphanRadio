@@ -19,13 +19,12 @@
 }
 
 .navMenu--hidden {
-
   width: 0vw;
 }
 
 .navMenu--list {
   grid-area: list;
-  text-align: left;
+  text-align: right;
   padding: 15px;
   /* height: 70vh; */
 }

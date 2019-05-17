@@ -1,13 +1,16 @@
 .logo-canvas {
-  width: 100vw;
-  position: absolute;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  top: 0px;
-  left: 0px;
-  color: blue;
-  opacity: 1;
-  z-index: -1;
+    /* width: 100vw; */
+    position: absolute;
+    /* height: 100vh; */
+    height: 250px;
+    /* width: 250px; */
+    height: calc(1vh * 100);
+    height: calc(var(--vh, 1vh) * 100);
+    /* top: 0px; */
+    /* left: 0px; */
+    color: white;
+    opacity: 1;
+    z-index: -1;
 }
 
 @media (max-width: 649px) {
@@ -20,7 +23,7 @@
     height: calc(var(--vh, 1vh) * 100);
     top: 0px;
     left: 0px;
-    color: blue;
+    color: white;
     opacity: 1;
     z-index: -1;
   }
