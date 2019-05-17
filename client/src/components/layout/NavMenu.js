@@ -62,19 +62,7 @@ export default class NavMenu extends Component {
             to="/retail">
               Retail.
             </NavLink>
-            <hr />
-            <Link className="navMenu--link" to="#">
-              Contact.
-            </Link>
 
-            <br />
-
-            <a href="https://soundcloud.com/orphan_radio_records">
-              <i class="fab fa-soundcloud" />
-            </a>
-            <a href="https://www.instagram.com/orphan.___/">
-              <i class="fab fa-instagram" />
-            </a>
           </div>
           <div className="navMenu--image-container">
             <BackgroundCanvas
@@ -83,6 +71,17 @@ export default class NavMenu extends Component {
             />
             {/* <img className="orphanLogo" src={OrphanLogo} alt="Orphan." /> */}
           </div>
+
+
+
+            <br />
+
+            <a className="social" href="https://soundcloud.com/orphan_radio_records">
+              <i className="fab fa-soundcloud" />
+            </a>
+            <a className="social" href="https://www.instagram.com/orphan.___/">
+              <i className="fab fa-instagram" />
+            </a>
         </div>
         // </ReactCursorPosition>
       );

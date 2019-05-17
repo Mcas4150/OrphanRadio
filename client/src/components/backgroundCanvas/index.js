@@ -5,10 +5,10 @@ import "./BackgroundCanvas.css";
 
 export default class BackgroundCanvas extends Component {
   componentDidMount() {
-    // const width = this.mount.clientWidth /2  ;
-    const width = 250 ;
+    const width = 300;
+    // const width = 250 ;
     // const height = this.mount.clientHeight;
-    const height = 250;
+    const height = 300;
     //ADD SCENE
     this.scene = new THREE.Scene();
     //ADD CAMERA
