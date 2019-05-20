@@ -98,20 +98,25 @@ class Releases extends Component {
               clickFunction={this.previousSlide}
               glyph="&#9664;"
             /> */}
-            <TransitionGroup>
-              <CSSTransition key={currentID} timeout={200} classNames="fade">
-                <ReleaseCard
-                  currentArtist={currentArtist}
-                  currentTitle={currentTitle}
-                  currentListenLink={currentListenLink}
-                  currentCatalog={currentCatalog}
-                  currentBuyLink={currentBuyLink}
-                  currentImage={currentImage}
-                />
-              </CSSTransition>
-            </TransitionGroup>
-            <div className="releases--sublinks">
+            {/* <TransitionGroup>
+              <CSSTransition key={currentID} timeout={200} classNames="fade"> */}
               {releases.map((release, index) => {
+                return (
+                <ReleaseCard
+                key = {index}
+                  currentArtist={release.artist}
+                  currentTitle={release.title}
+                  currentListenLink={release.listenLink}
+                  currentCatalog={release.catalog}
+                  currentBuyLink={release.buyLink}
+                  currentImage={release.image}
+                />
+                );
+              })}
+              {/* </CSSTransition>
+            </TransitionGroup> */}
+            <div className="releases--sublinks">
+              {/* {releases.map((release, index) => {
                 return (
                   <React.Fragment>
                     <div
@@ -129,7 +134,7 @@ class Releases extends Component {
                     <br />
                   </React.Fragment>
                 );
-              })}
+              })} */}
             </div>
           </div>
         </CSSTransition>

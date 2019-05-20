@@ -71,6 +71,15 @@ hr {
   font-size: 35px;
 }
 
+.social :hover{
+  color: gray;
+}
+
+.social-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 @media (max-width: 800px) {
   .navMenu {
     position: absolute;
