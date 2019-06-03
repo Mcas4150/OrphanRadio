@@ -17,6 +17,7 @@
 .homepage--orphan {
   font-size: 12rem;
   font-family: "FugueRegular";
+  color: white;
 }
 
 @media (max-width: 649px) {

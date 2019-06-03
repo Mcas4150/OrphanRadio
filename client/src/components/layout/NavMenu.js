@@ -38,7 +38,7 @@ export default class NavMenu extends Component {
             </div>
             <hr />
             <NavLink
-              className="navMenu--link"
+              className="navMenu--link link-records"
               exact
               activeClassName="active-records"
               to="/records/"
@@ -47,7 +47,7 @@ export default class NavMenu extends Component {
             </NavLink>
             <br />
             <NavLink
-              className="navMenu--link"
+              className="navMenu--link link-roster"
               exact
               activeClassName="active-roster"
               to="/roster/"
@@ -56,7 +56,7 @@ export default class NavMenu extends Component {
             </NavLink>
             <br />
             <NavLink
-              className="navMenu--link"
+              className="navMenu--link link-retail"
               exact
               activeClassName="active-retail"
               to="/retail"
@@ -65,10 +65,10 @@ export default class NavMenu extends Component {
             </NavLink>
           </div>
           <div className="navMenu--image-container">
-            {/* <BackgroundCanvas
+            <BackgroundCanvas
               mouseX={this.props.point.x}
               mouseY={this.props.point.y}
-            /> */}
+            />
             {/* <img className="orphanLogo" src={OrphanLogo} alt="Orphan." /> */}
           </div>
 

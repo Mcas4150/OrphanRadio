@@ -8,7 +8,7 @@ export default class RecordsPage extends Component {
   render() {
     return (
       <div className="records-page">
-        <NavBar color={"#00559D"} />
+        <NavBar color={"blue"} />
         <div className="records-page--container">
           <div className="records-page--title">
             <div className="records-page--title__text">RECORDS.</div>

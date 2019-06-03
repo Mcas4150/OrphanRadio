@@ -15,7 +15,11 @@
   padding: 5px;
   font-size: 18px;
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+.retail--price {
+  color: white;
 }
 
 .retail-page--main {
@@ -34,7 +38,7 @@
 .retail-page--title__text {
   transform: rotate(90deg);
   transform: translateX(-61px) rotate(90deg);
-
+  padding: 15px;
   justify-content: right;
   font-size: 3rem;
   align-self: center;
@@ -55,7 +59,7 @@
 .retail-page--sublinks__link {
   display: contents;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .retail-page--carousel {

@@ -20,7 +20,7 @@ export default class HomePage extends Component {
   render() {
     return (
       <div className="homepage">
-        <NavBar />
+        <NavBar color={"white"}/>
         <div className="homepage--container">
           {/* <BackgroundCanvas
               mouseX={this.props.point.x}

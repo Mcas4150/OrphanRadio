@@ -23,8 +23,8 @@ export default class LeftCanvas extends Component {
     // ctx.fillRect(0, 0, 100, 1000);
     ctx.moveTo(0,0);
     ctx.lineTo(350,0);
-    ctx.lineTo(75, 50);
-    ctx.lineTo(75, window.innerHeight - 50);
+    ctx.lineTo(75, 75);
+    ctx.lineTo(75, window.innerHeight - 75);
     ctx.lineTo(350, window.innerHeight);
     ctx.lineTo(0, window.innerHeight );
     ctx.lineTo(0,0);

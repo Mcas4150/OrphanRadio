@@ -1,9 +1,9 @@
 .records-page {
   /* background: linear-gradient(to left, white 85%, blue); */
   /* background: #00559D; */
-  background: white;
-
+  background: black;
   color: white;
+  /* color: white; */
   display: grid;
   grid-template-rows: 1fr 16fr;
   /* padding: 15px; */
@@ -36,7 +36,7 @@
 .records-page--title__text {
   transform: rotate(90deg);
   transform: translateX(-100px) rotate(90deg);
-
+  padding: 15px;
   justify-content: right;
   font-size: 3rem;
   align-self: center;

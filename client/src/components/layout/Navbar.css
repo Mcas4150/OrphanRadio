@@ -24,7 +24,7 @@
 }
 
 .link--wares:hover, .active-retail {
-   color: #ffd803;
+   color: yellow;
 }
 
 .link--records:hover, .active-records {
