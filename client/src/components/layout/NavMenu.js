@@ -65,10 +65,10 @@ export default class NavMenu extends Component {
             </NavLink>
           </div>
           <div className="navMenu--image-container">
-            <BackgroundCanvas
+            {/* <BackgroundCanvas
               mouseX={this.props.point.x}
               mouseY={this.props.point.y}
-            />
+            /> */}
             {/* <img className="orphanLogo" src={OrphanLogo} alt="Orphan." /> */}
           </div>
 

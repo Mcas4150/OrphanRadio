@@ -1,9 +1,9 @@
 .roster-page {
-  background: linear-gradient(to left, white 85%, red);
+  /* background: linear-gradient(to left, white 85%, red); */
   /* background: linear-gradient(to left, white 85%, #46bfad); */
   display: grid;
   grid-template-rows: 1fr 16fr;
-  padding: 15px;
+  /* padding: 15px; */
   height: calc(100vh - 30px);
   height: calc((var(--vh, 1vh) * 100) - 30px);
 }

@@ -6,7 +6,7 @@ export default class RetailPage extends Component {
   render() {
     return (
       <div className="retail-page">
-        <NavBar />
+        <NavBar color={"yellow"}/>
 
         <div className="retail-page--mobile-sublinks" />
 

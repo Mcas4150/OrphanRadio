@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BackgroundCanvas from "../../components/backgroundCanvas";
 import NavBar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
+import LeftCanvas from "../../components/layout/LeftCanvas";
 import "./HomePage.css";
 
 export default class HomePage extends Component {
@@ -25,7 +26,12 @@ export default class HomePage extends Component {
               mouseX={this.props.point.x}
               mouseY={this.props.point.y}
             /> */}
-          <div className="homepage--orphan">Orphan.</div>
+            {/* <LeftCanvas/> */}
+          <div className="homepage--orphan">Orphan.
+
+
+
+          </div>
         </div>
         {/* <Footer /> */}
       </div>

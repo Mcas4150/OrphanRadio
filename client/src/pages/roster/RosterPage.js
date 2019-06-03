@@ -9,7 +9,7 @@ export default class RosterPage extends Component {
     return (
 
         <div className="roster-page">
-          <NavBar />
+          <NavBar color={"red"} />
           <div className="roster-page--container">
             <div className="roster-page--title">
               <div className="roster-page--title__text">ROSTER.</div>
@@ -17,7 +17,7 @@ export default class RosterPage extends Component {
           <Artists/>
           </div>
         </div>
-     
+
     );
   }
 }

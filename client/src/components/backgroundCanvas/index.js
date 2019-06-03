@@ -5,7 +5,7 @@ import "./BackgroundCanvas.css";
 
 export default class BackgroundCanvas extends Component {
   componentDidMount() {
-    const width = 300;
+    const width = 200;
     // const width = 250 ;
     // const height = this.mount.clientHeight;
     const height = 300;
@@ -72,7 +72,7 @@ export default class BackgroundCanvas extends Component {
     // this.group.rotateX(1.5708);
 
     // group.rotateX(0.8);
-
+    // this.group.rotation.y = 120
     this.scene.add(this.group);
 
     this.start();
@@ -137,7 +137,7 @@ export default class BackgroundCanvas extends Component {
     //   this.group.rotation.Y += 0.0025 + this.props.mouseY / division;
     // }
 
-    this.group.rotation.y += 0.0025 + this.props.mouseY / 350000;
+    // this.group.rotation.y += 0.0025 + this.props.mouseY / 350000;
     this.group.rotation.x += 0.0025 + this.props.mouseX / 350000;
 
     // this.group.rotation.y += 0.0025 * (this.props.mouseY / 500);
@@ -160,7 +160,7 @@ export default class BackgroundCanvas extends Component {
       <div
         className="logo-canvas"
         style={{
-          height: "calc(100vh -30px)"
+          // height: "calc(40vh -30px)"
         }}
         ref={mount => {
           this.mount = mount;
