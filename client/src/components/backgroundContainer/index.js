@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import HomePage from "../../pages/home/HomePage";
+// import HomePage from "../../pages/home/HomePage";
 import NavMenu from "../layout/NavMenu";
-import Footer from "../layout/Footer";
+// import Footer from "../layout/Footer";
 
 import "./BackgroundContainer.css";
 

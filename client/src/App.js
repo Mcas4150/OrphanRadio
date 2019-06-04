@@ -11,7 +11,7 @@ import NavMenu from "./components/layout/NavMenu";
 import AdminPage from "./pages/admin/AdminPage";
 
 import Example from "./pages/home/cursor";
-import BackgroundContainer from "./components/backgroundContainer";
+
 import RosterPage from "./pages/roster/RosterPage";
 import RecordsPage from "./pages/records/RecordsPage";
 import RetailPage from "./pages/retail/RetailPage";

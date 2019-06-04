@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import BackgroundCanvas from "../../components/backgroundCanvas";
-import Player from "../player/Player";
+// import BackgroundCanvas from "../../components/backgroundCanvas";
+
 import "./Footer.css";
 
 export default class Footer extends Component {
-  constructor(props) {
-    super(props);
-  }
+
 
   render() {
     return (

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Link, NavLink } from "react-router-dom";
-import NavMenu from "./NavMenu";
+// import { Link, NavLink } from "react-router-dom";
+// import NavMenu from "./NavMenu";
 import LeftCanvas from "./LeftCanvas";
-import NavMenuButton from "./NavMenuButton";
-import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
+// import NavMenuButton from "./NavMenuButton";
+// import ReactCursorPosition, { INTERACTIONS } from "react-cursor-position";
 import "./Navbar.css";
 
 export default class NavBar extends Component {

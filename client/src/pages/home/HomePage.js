@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import BackgroundCanvas from "../../components/backgroundCanvas";
 import NavBar from "../../components/layout/Navbar";
-import Footer from "../../components/layout/Footer";
-import LeftCanvas from "../../components/layout/LeftCanvas";
+// import Footer from "../../components/layout/Footer";
 import "./HomePage.css";
 
 export default class HomePage extends Component {

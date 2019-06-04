@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
-import OrphanLogo from "../../img/orphanlogo.png";
 import "./NavMenu.css";
 import BackgroundCanvas from "../backgroundCanvas";
 

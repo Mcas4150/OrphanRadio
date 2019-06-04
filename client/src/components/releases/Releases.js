@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getReleases } from "../../actions/releaseActions";
-import { Arrow } from "../common/Arrow";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+// import { Arrow } from "../common/Arrow";
+// import { CSSTransition, TransitionGroup } from "react-transition-group";
 import ReleaseCard from "./ReleaseCard";
 import "./Releases.css";
 
@@ -64,34 +64,34 @@ class Releases extends Component {
 
   render() {
     const { releases } = this.props.release;
-    const { appearCard } = this.state;
+    // const { appearCard } = this.state;
 
     let releaseContent;
     if (releases === null) {
       releaseContent = "releases";
     } else {
-      const currentArtist =
-        releases.length && releases[this.state.currentReleaseIndex].artist;
-      const currentTitle =
-        releases.length && releases[this.state.currentReleaseIndex].title;
-      const currentCatalog =
-        releases.length && releases[this.state.currentReleaseIndex].catalog;
-      const currentListenLink =
-        releases.length && releases[this.state.currentReleaseIndex].listenLink;
-      const currentBuyLink =
-        releases.length && releases[this.state.currentReleaseIndex].buyLink;
-      const currentImage =
-        releases.length && releases[this.state.currentReleaseIndex].image;
-      const currentID =
-        releases.length && releases[this.state.currentReleaseIndex]._id;
+      // const currentArtist =
+      //   releases.length && releases[this.state.currentReleaseIndex].artist;
+      // const currentTitle =
+      //   releases.length && releases[this.state.currentReleaseIndex].title;
+      // const currentCatalog =
+      //   releases.length && releases[this.state.currentReleaseIndex].catalog;
+      // const currentListenLink =
+      //   releases.length && releases[this.state.currentReleaseIndex].listenLink;
+      // const currentBuyLink =
+      //   releases.length && releases[this.state.currentReleaseIndex].buyLink;
+      // const currentImage =
+      //   releases.length && releases[this.state.currentReleaseIndex].image;
+      // const currentID =
+      //   releases.length && releases[this.state.currentReleaseIndex]._id;
 
       return (
-        <CSSTransition
-          in={appearCard}
-          appear={true}
-          timeout={300}
-          classNames="fade"
-        >
+        // <CSSTransition
+        //   in={appearCard}
+        //   appear={true}
+        //   timeout={300}
+        //   classNames="fade"
+        // >
           <div className="releases--container">
             {/* <Arrow
               direction="left"
@@ -137,7 +137,7 @@ class Releases extends Component {
               })} */}
             </div>
           </div>
-        </CSSTransition>
+        //</CSSTransition>
       );
     }
 
