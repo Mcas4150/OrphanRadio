@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getReleases } from "../../actions/releaseActions";
-// import { Arrow } from "../common/Arrow";
-// import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Arrow } from "../common/Arrow";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import ReleaseCard from "./ReleaseCard";
 import "./Releases.css";
 
@@ -64,59 +64,55 @@ class Releases extends Component {
 
   render() {
     const { releases } = this.props.release;
-    // const { appearCard } = this.state;
+    const { appearCard } = this.state;
 
     let releaseContent;
     if (releases === null) {
       releaseContent = "releases";
     } else {
-      // const currentArtist =
-      //   releases.length && releases[this.state.currentReleaseIndex].artist;
-      // const currentTitle =
-      //   releases.length && releases[this.state.currentReleaseIndex].title;
-      // const currentCatalog =
-      //   releases.length && releases[this.state.currentReleaseIndex].catalog;
-      // const currentListenLink =
-      //   releases.length && releases[this.state.currentReleaseIndex].listenLink;
-      // const currentBuyLink =
-      //   releases.length && releases[this.state.currentReleaseIndex].buyLink;
-      // const currentImage =
-      //   releases.length && releases[this.state.currentReleaseIndex].image;
-      // const currentID =
-      //   releases.length && releases[this.state.currentReleaseIndex]._id;
+      const currentArtist =
+        releases.length && releases[this.state.currentReleaseIndex].artist;
+      const currentTitle =
+        releases.length && releases[this.state.currentReleaseIndex].title;
+      const currentCatalog =
+        releases.length && releases[this.state.currentReleaseIndex].catalog;
+      const currentListenLink =
+        releases.length && releases[this.state.currentReleaseIndex].listenLink;
+      const currentBuyLink =
+        releases.length && releases[this.state.currentReleaseIndex].buyLink;
+      const currentImage =
+        releases.length && releases[this.state.currentReleaseIndex].image;
+      const currentID =
+        releases.length && releases[this.state.currentReleaseIndex]._id;
 
       return (
-        // <CSSTransition
-        //   in={appearCard}
-        //   appear={true}
-        //   timeout={300}
-        //   classNames="fade"
-        // >
+        <CSSTransition
+          in={appearCard}
+          appear={true}
+          timeout={300}
+          classNames="fade"
+        >
           <div className="releases--container">
-            {/* <Arrow
+            <Arrow
               direction="left"
               clickFunction={this.previousSlide}
               glyph="&#9664;"
-            /> */}
-            {/* <TransitionGroup>
-              <CSSTransition key={currentID} timeout={200} classNames="fade"> */}
-              {releases.map((release, index) => {
-                return (
+            />
+            <TransitionGroup>
+              <CSSTransition key={currentID} timeout={200} classNames="fade">
                 <ReleaseCard
-                key = {index}
-                  currentArtist={release.artist}
-                  currentTitle={release.title}
-                  currentListenLink={release.listenLink}
-                  currentCatalog={release.catalog}
-                  currentBuyLink={release.buyLink}
-                  currentImage={release.image}
+                  key={this.state.currentReleaseIndex}
+                  currentArtist={currentArtist}
+                  currentTitle={currentTitle}
+                  currentListenLink={currentListenLink}
+                  currentCatalog={currentCatalog}
+                  currentBuyLink={currentBuyLink}
+                  currentImage={currentImage}
                 />
-                );
-              })}
-              {/* </CSSTransition>
-            </TransitionGroup> */}
+              </CSSTransition>
+            </TransitionGroup>
             <div className="releases--sublinks">
-              {/* {releases.map((release, index) => {
+              {releases.map((release, index) => {
                 return (
                   <React.Fragment>
                     <div
@@ -134,10 +130,10 @@ class Releases extends Component {
                     <br />
                   </React.Fragment>
                 );
-              })} */}
+              })}
             </div>
           </div>
-        //</CSSTransition>
+        </CSSTransition>
       );
     }
 
