@@ -40,6 +40,7 @@ h3 {
   grid-template-rows: 3fr 1fr;
   grid-template-areas: "bio links";
   text-align: justify;
+  font-size:1.25em;
 }
 
 .artist--bio {

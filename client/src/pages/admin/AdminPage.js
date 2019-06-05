@@ -12,12 +12,7 @@ export default class AdminPage extends Component {
         <NavBar />
         Admin Page
         <div className="admin--actions__grid">
-          <div className="admin--card admin--actions__add-artist">
-            <div className="admin--actions__form">
-              Add Artist
-              <ArtistForm />
-            </div>
-          </div>
+         
           <div className="admin--card admin--actions__add-release">
             <div className="admin--actions__form">
               Add Release
