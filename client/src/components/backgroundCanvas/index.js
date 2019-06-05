@@ -68,10 +68,11 @@ export default class BackgroundCanvas extends Component {
     this.group.add(square, square2, triangle, triangle2, triangle3, triangle4);
 
     //Auto-rotate script
-    // this.group.rotateZ(1.5708);
-    // this.group.rotateX(1.5708);
+    this.group.rotateZ(1.5708 * 3);
+    this.group.rotateX(1.5708);
 
-    // group.rotateX(0.8);
+
+    // this.group.rotate(120);
     // this.group.rotation.y = 120
     this.scene.add(this.group);
 
@@ -137,9 +138,9 @@ export default class BackgroundCanvas extends Component {
     //   this.group.rotation.Y += 0.0025 + this.props.mouseY / division;
     // }
 
-    // this.group.rotation.y += 0.0025 + this.props.mouseY / 350000;
-    this.group.rotation.x += 0.0025 + this.props.mouseX / 350000;
-
+    // this.group.rotation.y += 0.0025 + this.props.mouseY / 3500;
+    // this.group.rotation.x += 0.00525 + this.props.mouseX / 35000;
+this.group.rotateX(0.008);
     // this.group.rotation.y += 0.0025 * (this.props.mouseY / 500);
     // this.group.rotation.x += this.props.point.x / 150000;
     // this.group.rotation.y += this.props.point.y / 150000;

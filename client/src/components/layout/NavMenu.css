@@ -4,7 +4,8 @@
   top: 0;
   right: 0;
   height: 100%;
-  width: 15vw;
+  max-width: 15vw;
+  min-width: 175px;
   display: grid;
   grid-template-rows: 3fr 1fr;
   grid-template-areas: "list" "image";

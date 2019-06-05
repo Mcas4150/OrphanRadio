@@ -87,7 +87,7 @@ class Artists extends Component {
                   </CSSTransition>
                 </TransitionGroup>{" "}
               </div>
-              {/* <div className="artists--sublinks">
+              <div className="artists--sublinks">
                 {artists.map((artist, index) => {
                   return (
                     <React.Fragment>
@@ -107,7 +107,7 @@ class Artists extends Component {
                     </React.Fragment>
                   );
                 })}
-              </div> */}
+              </div>
             </div>
           </div>
         </CSSTransition>

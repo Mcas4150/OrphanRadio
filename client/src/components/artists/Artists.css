@@ -72,7 +72,8 @@ h3 {
   font-size: 3rem;
   font-family: "GT-Super-Display-Light";
   text-align: right;
-  color: black;
+  color: white;
+  z-index: 2;
 }
 
 .artists--sublinks__link {

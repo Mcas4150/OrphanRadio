@@ -71,8 +71,8 @@ export default class NavMenu extends Component {
             {/* <img className="orphanLogo" src={OrphanLogo} alt="Orphan." /> */}
           </div>
 
-          <br />
-          <hr />
+         
+
           <div className="social-row">
             <a
               className="social"
