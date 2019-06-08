@@ -14,6 +14,7 @@
 .records-page--container {
   display: grid;
   grid-template-columns: 2fr 6fr 2fr;
+  align-items: center;
 }
 
 .records-page--mobile-sublinks {
