@@ -89,7 +89,7 @@ class NavMenu extends Component {
             </NavLink>
           </div>
 
-          {/* <div className="navMenu--releaseLinks-container">
+          <div className="navMenu--releaseLinks-container">
             {releases.map((release, index) => {
               return (
                 <React.Fragment>
@@ -102,44 +102,50 @@ class NavMenu extends Component {
                     }
                     onClick={() => this.changeRelease(index)}
                   >
-                    {release.catalog}
+                    {release.catalog}.
                   </div>
 
                   <br />
                 </React.Fragment>
               );
             })}
-          </div> */}
-          <div className="navMenu--image-container">
-            <BackgroundCanvas
-              mouseX={this.props.point.x}
-              mouseY={this.props.point.y}
-            />
-            {/* <img className="orphanLogo" src={OrphanLogo} alt="Orphan." /> */}
           </div>
 
-          <div className="social-row">
-            <a
-              className="social"
-              href="https://soundcloud.com/orphan_radio_records"
-            >
-              <i className="fab fa-soundcloud" />
-            </a>
-            <a className="social" href="https://www.instagram.com/orphan.___/">
-              <i className="fab fa-instagram" />
-            </a>
-            <a
-              className="social"
-              href="https://orphanrecordsradio.bandcamp.com/"
-            >
-              <i className="fab fa-bandcamp" />
-            </a>
-            <a
-              className="social"
-              href="https://www.facebook.com/orphanradiorecords/"
-            >
-              <i className="fab fa-facebook" />
-            </a>
+          <div className="navMenu--footer-container">
+            <div className="navMenu--image-container">
+              <BackgroundCanvas
+                mouseX={this.props.point.x}
+                mouseY={this.props.point.y}
+              />
+              {/* <img className="orphanLogo" src={OrphanLogo} alt="Orphan." /> */}
+            </div>
+
+            <div className="social-row">
+              <a
+                className="social"
+                href="https://soundcloud.com/orphan_radio_records"
+              >
+                <i className="fab fa-soundcloud" />
+              </a>
+              <a
+                className="social"
+                href="https://www.instagram.com/orphan.___/"
+              >
+                <i className="fab fa-instagram" />
+              </a>
+              <a
+                className="social"
+                href="https://orphanrecordsradio.bandcamp.com/"
+              >
+                <i className="fab fa-bandcamp" />
+              </a>
+              <a
+                className="social"
+                href="https://www.facebook.com/orphanradiorecords/"
+              >
+                <i className="fab fa-facebook" />
+              </a>
+            </div>
           </div>
         </div>
         // </ReactCursorPosition>

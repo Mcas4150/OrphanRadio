@@ -73,7 +73,7 @@ class Releases extends Component {
           classNames="fade"
         >
           <div className="releases--container">
-            <div className="releases--sublinks">
+            {/* <div className="releases--sublinks">
               {releases.map((release, index) => {
                 return (
                   <React.Fragment>
@@ -91,7 +91,7 @@ class Releases extends Component {
                   </React.Fragment>
                 );
               })}
-            </div>
+            </div> */}
             <TransitionGroup>
               <CSSTransition key={currentID} timeout={200} classNames="fade">
                 <ReleaseCard

@@ -7,7 +7,7 @@
   max-width: 15vw;
   min-width: 200px;
   display: grid;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "list" "image";
   background: black;
   opacity: 1;
@@ -67,6 +67,11 @@
   align-items: center;
   justify-content: center;
   /* height: 30vh; */
+}
+
+.navMenu--releaseLinks-container{
+  text-align: right;
+  padding: 15px;
 }
 
 .orphanLogo {
