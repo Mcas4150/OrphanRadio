@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getReleases } from "../../actions/releaseActions";
-import { Arrow } from "../common/Arrow";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import ReleaseCard from "./ReleaseCard";
 import "./Releases.css";
@@ -15,8 +14,6 @@ class Releases extends Component {
       appearCard: false,
       currentReleaseIndex: 0
     };
-    // this.nextSlide = this.nextSlide.bind(this);
-    // this.previousSlide = this.previousSlide.bind(this);
     this.changeRelease = this.changeRelease.bind(this);
   }
 
