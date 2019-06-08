@@ -19,6 +19,8 @@
   z-index: 2;
 }
 
+
+
 .navMenu--hidden {
   width: 0vw;
 }
@@ -39,7 +41,9 @@
   animation-delay: 0.2s;
   text-decoration: none;
 }
-
+.navMenu--link__top{
+  font-size: 3rem;
+}
 /* .navMenu--link:hover {
   color: gray;
 } */

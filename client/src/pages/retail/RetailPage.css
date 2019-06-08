@@ -37,12 +37,12 @@
 
 .retail-page--title__text {
   transform: rotate(90deg);
-  transform: translateX(-61px) rotate(90deg);
+  transform: translateX(-65px) rotate(90deg);
   padding: 15px;
   justify-content: right;
   font-size: 3rem;
   align-self: center;
-
+  z-index: 3;
   grid-area: title-text;
 }
 

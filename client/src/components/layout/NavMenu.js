@@ -30,11 +30,10 @@ export default class NavMenu extends Component {
       return (
         <div className="navMenu" onClick={this.handleUnClick()}>
           <div className="navMenu--list">
-            <div className="navMenu--link__top">
-              <Link className="navMenu--link" to="/home">
-                Orphan.
-              </Link>
-            </div>
+            <Link className="navMenu--link navMenu--link__top" to="/home">
+              Orphan.
+            </Link>
+
             <hr />
             <NavLink
               className="navMenu--link link-records"
@@ -62,6 +61,15 @@ export default class NavMenu extends Component {
             >
               Retail.
             </NavLink>
+            <br />
+            <NavLink
+              className="navMenu--link link-ragers"
+              exact
+              activeClassName="active-ragers"
+              to="/ragers"
+            >
+              Ragers.
+            </NavLink>
           </div>
           <div className="navMenu--image-container">
             <BackgroundCanvas
@@ -70,8 +78,6 @@ export default class NavMenu extends Component {
             />
             {/* <img className="orphanLogo" src={OrphanLogo} alt="Orphan." /> */}
           </div>
-
-         
 
           <div className="social-row">
             <a

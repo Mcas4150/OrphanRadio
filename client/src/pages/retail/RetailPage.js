@@ -6,7 +6,7 @@ export default class RetailPage extends Component {
   render() {
     return (
       <div className="retail-page">
-        <NavBar color={"yellow"}/>
+        <NavBar color={"yellow"} />
 
         <div className="retail-page--mobile-sublinks" />
 
@@ -16,17 +16,18 @@ export default class RetailPage extends Component {
           </div>
           <div className="retail-page--carousel">
             <div className="retail--item">
-              <img
-                className="retail--image"
-                src="https://f4.bcbits.com/img/0015763424_36.jpg"
-                alt="t-shirt"
-              />
               <a
                 href="https://orphanrecordsradio.bandcamp.com/merch/womanhood-long-sleeve-tee"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="retail--price">$35</div>
+                {" "}
+                <img
+                  className="retail--image"
+                  src="https://f4.bcbits.com/img/0015763424_36.jpg"
+                  alt="t-shirt"
+                />
+                <div className="retail--price">$30</div>
               </a>
             </div>
           </div>

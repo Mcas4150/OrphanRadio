@@ -38,7 +38,7 @@ export default class LeftCanvas extends Component {
 
   render() {
     // return <canvas ref="canvas" width={300} height={this.state.height} />;
-    return <canvas ref="canvas" width={350} height={1000} style={{position: "fixed",
+    return <canvas ref="canvas" width={350} height={1000} style={{position: "fixed", zIndex: "2",
       left: 0}} />;
   }
 }

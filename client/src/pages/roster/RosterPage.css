@@ -27,7 +27,7 @@
   justify-content: right;
   font-size: 3rem;
   align-self: center;
-
+  z-index: 3;
   grid-area: title-text;
 }
 

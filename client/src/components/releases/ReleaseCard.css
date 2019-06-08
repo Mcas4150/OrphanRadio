@@ -1,5 +1,5 @@
 .release--card {
-  /* position: absolute; */
+display: grid;
 }
 
 .release--image {
@@ -22,6 +22,7 @@
 }
 
 .release--links {
+  color: white;
   display: flex;
   justify-content: center;
   margin: 20px 0px;

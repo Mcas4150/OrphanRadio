@@ -20,6 +20,9 @@ const ReleaseSchema = new Schema({
   catalog:{
     type: String
   },
+  text:{
+    type: String
+  },
   buyLink: {
     type: String
   },

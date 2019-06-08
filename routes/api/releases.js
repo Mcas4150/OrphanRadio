@@ -56,6 +56,7 @@ router.post(
     const newRelease = new Release({
       artist: req.body.artist,
       title: req.body.title,
+      text: req.body.text,
       image: req.body.image,
       listenLink: req.body.listenLink,
       catalog: req.body.catalog,

@@ -15,8 +15,8 @@ class Releases extends Component {
       appearCard: false,
       currentReleaseIndex: 0
     };
-    this.nextSlide = this.nextSlide.bind(this);
-    this.previousSlide = this.previousSlide.bind(this);
+    // this.nextSlide = this.nextSlide.bind(this);
+    // this.previousSlide = this.previousSlide.bind(this);
     this.changeRelease = this.changeRelease.bind(this);
   }
 
@@ -40,27 +40,27 @@ class Releases extends Component {
     });
   }
 
-  previousSlide(props) {
-    const lastIndex = this.props.release.releases.length - 1;
-    const { currentReleaseIndex } = this.state;
-    const shouldResetIndex = currentReleaseIndex === 0;
-    const index = shouldResetIndex ? lastIndex : currentReleaseIndex - 1;
+  // previousSlide(props) {
+  //   const lastIndex = this.props.release.releases.length - 1;
+  //   const { currentReleaseIndex } = this.state;
+  //   const shouldResetIndex = currentReleaseIndex === 0;
+  //   const index = shouldResetIndex ? lastIndex : currentReleaseIndex - 1;
 
-    this.setState({
-      currentReleaseIndex: index
-    });
-  }
+  //   this.setState({
+  //     currentReleaseIndex: index
+  //   });
+  // }
 
-  nextSlide(props) {
-    const lastIndex = this.props.release.releases.length - 1;
-    const { currentReleaseIndex } = this.state;
-    const shouldResetIndex = currentReleaseIndex === lastIndex;
-    const index = shouldResetIndex ? 0 : currentReleaseIndex + 1;
+  // nextSlide(props) {
+  //   const lastIndex = this.props.release.releases.length - 1;
+  //   const { currentReleaseIndex } = this.state;
+  //   const shouldResetIndex = currentReleaseIndex === lastIndex;
+  //   const index = shouldResetIndex ? 0 : currentReleaseIndex + 1;
 
-    this.setState({
-      currentReleaseIndex: index
-    });
-  }
+  //   this.setState({
+  //     currentReleaseIndex: index
+  //   });
+  // }
 
   render() {
     const { releases } = this.props.release;
@@ -82,6 +82,8 @@ class Releases extends Component {
         releases.length && releases[this.state.currentReleaseIndex].buyLink;
       const currentImage =
         releases.length && releases[this.state.currentReleaseIndex].image;
+        const currentText =
+        releases.length && releases[this.state.currentReleaseIndex].text;
       const currentID =
         releases.length && releases[this.state.currentReleaseIndex]._id;
 
@@ -93,11 +95,7 @@ class Releases extends Component {
           classNames="fade"
         >
           <div className="releases--container">
-            <Arrow
-              direction="left"
-              clickFunction={this.previousSlide}
-              glyph="&#9664;"
-            />
+
             <TransitionGroup>
               <CSSTransition key={currentID} timeout={200} classNames="fade">
                 <ReleaseCard
@@ -108,6 +106,7 @@ class Releases extends Component {
                   currentCatalog={currentCatalog}
                   currentBuyLink={currentBuyLink}
                   currentImage={currentImage}
+                  currentText={currentText}
                 />
               </CSSTransition>
             </TransitionGroup>

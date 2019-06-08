@@ -15,6 +15,7 @@ import Example from "./pages/home/cursor";
 import RosterPage from "./pages/roster/RosterPage";
 import RecordsPage from "./pages/records/RecordsPage";
 import RetailPage from "./pages/retail/RetailPage";
+import RagersPage from "./pages/ragers/RagersPage";
 import HomePage from "./pages/home/HomePage";
 import store from "./store";
 import Login from "./components/auth/Login";
@@ -69,6 +70,7 @@ class App extends Component {
                       <Route path="/records/" component={RecordsPage} />
                       <Route path="/roster/" component={RosterPage} />
                       <Route path="/retail/" component={RetailPage} />
+                      <Route path="/ragers/" component={RagersPage} />
                       <Route path="/home" component={HomePage} />
                       <Route path="/cursor" component={Example} />
                       <Route path="/login" component={Login} />
