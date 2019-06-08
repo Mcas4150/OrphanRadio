@@ -3,14 +3,20 @@ a {
   color: white;
 }
 .releases--container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 5fr; */
   justify-content: center;
   align-items: center;
 }
 
 .releases--sublinks :hover {
   cursor: pointer;
+}
+
+.releases--sublinks{
+  display: flex;
+  justify-content: space-around;
+
 }
 
 .fade-appear {

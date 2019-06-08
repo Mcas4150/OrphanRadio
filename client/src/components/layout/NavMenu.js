@@ -1,15 +1,24 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import "./NavMenu.css";
 import BackgroundCanvas from "../backgroundCanvas";
+import { getReleases } from "../../actions/releaseActions";
 
-export default class NavMenu extends Component {
+class NavMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: true
+      open: true,
+      currentReleaseIndex: 0
     };
     // this.handleUnClick = this.handleUnClick.bind(this);
+    this.changeRelease = this.changeRelease.bind(this);
+  }
+
+  componentWillMount() {
+    this.props.getReleases();
   }
 
   handleUnClick() {
@@ -23,7 +32,15 @@ export default class NavMenu extends Component {
     }
   }
 
+  changeRelease(index) {
+    this.setState({
+      currentReleaseIndex: index
+    });
+  }
+
   render() {
+    const { releases } = this.props.release;
+
     if (this.props.open === false) {
       return <div className="nav-menu__hidden" />;
     } else {
@@ -53,7 +70,7 @@ export default class NavMenu extends Component {
               Roster.
             </NavLink>
             <br />
-            <NavLink
+            {/* <NavLink
               className="navMenu--link link-retail"
               exact
               activeClassName="active-retail"
@@ -61,7 +78,7 @@ export default class NavMenu extends Component {
             >
               Retail.
             </NavLink>
-            <br />
+            <br /> */}
             <NavLink
               className="navMenu--link link-ragers"
               exact
@@ -71,6 +88,28 @@ export default class NavMenu extends Component {
               Ragers.
             </NavLink>
           </div>
+
+          {/* <div className="navMenu--releaseLinks-container">
+            {releases.map((release, index) => {
+              return (
+                <React.Fragment>
+                  <div
+                    key={index}
+                    className={
+                      this.state.currentReleaseIndex === index
+                        ? "releases--sublinks__link sublink active-link"
+                        : "releases--sublinks__link sublink"
+                    }
+                    onClick={() => this.changeRelease(index)}
+                  >
+                    {release.catalog}
+                  </div>
+
+                  <br />
+                </React.Fragment>
+              );
+            })}
+          </div> */}
           <div className="navMenu--image-container">
             <BackgroundCanvas
               mouseX={this.props.point.x}
@@ -108,3 +147,17 @@ export default class NavMenu extends Component {
     }
   }
 }
+
+NavMenu.propTypes = {
+  getReleases: PropTypes.func.isRequired,
+  release: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  release: state.release
+});
+
+export default connect(
+  mapStateToProps,
+  { getReleases }
+)(NavMenu);

@@ -6,16 +6,15 @@ export default class ReleaseCard extends Component {
     return (
       <div className="release--card">
         <div className="release--image-container">
-          <div className="release--title">
-            {this.props.currentArtist} - {this.props.currentTitle}{" "}
-          </div>
-
           <img
             className="release--image"
             src={this.props.currentImage}
             alt="Max 95, Donnin"
           />
           <div className="release--links">
+            <div className="release--title">
+              {this.props.currentArtist} - {this.props.currentTitle}{" "}
+            </div>
             <a
               className="release--listen-link"
               href={this.props.currentListenLink}
@@ -34,9 +33,7 @@ export default class ReleaseCard extends Component {
           </a> */}
           </div>
         </div>
-        <div className="release--text-container">
-          {this.props.currentText}
-          </div>
+        <div className="release--text-container">{this.props.currentText}</div>
       </div>
     );
   }

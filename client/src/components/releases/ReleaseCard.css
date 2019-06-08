@@ -1,9 +1,10 @@
 .release--card {
 display: grid;
+grid-template-columns: 1fr 2fr;
 }
 
 .release--image {
-  margin-top: 15px;
+  margin-top: 20px;
 
   max-height: 55vh;
 }
@@ -19,6 +20,12 @@ display: grid;
   font-weight: bold;
   text-align: center;
   margin: 20px 0px;
+}
+
+.release--text-container{
+  padding: 20px 30px;
+  font-size:1.15rem;
+  white-space: pre-wrap;
 }
 
 .release--links {

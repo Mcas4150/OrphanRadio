@@ -40,28 +40,6 @@ class Releases extends Component {
     });
   }
 
-  // previousSlide(props) {
-  //   const lastIndex = this.props.release.releases.length - 1;
-  //   const { currentReleaseIndex } = this.state;
-  //   const shouldResetIndex = currentReleaseIndex === 0;
-  //   const index = shouldResetIndex ? lastIndex : currentReleaseIndex - 1;
-
-  //   this.setState({
-  //     currentReleaseIndex: index
-  //   });
-  // }
-
-  // nextSlide(props) {
-  //   const lastIndex = this.props.release.releases.length - 1;
-  //   const { currentReleaseIndex } = this.state;
-  //   const shouldResetIndex = currentReleaseIndex === lastIndex;
-  //   const index = shouldResetIndex ? 0 : currentReleaseIndex + 1;
-
-  //   this.setState({
-  //     currentReleaseIndex: index
-  //   });
-  // }
-
   render() {
     const { releases } = this.props.release;
     const { appearCard } = this.state;
@@ -82,7 +60,7 @@ class Releases extends Component {
         releases.length && releases[this.state.currentReleaseIndex].buyLink;
       const currentImage =
         releases.length && releases[this.state.currentReleaseIndex].image;
-        const currentText =
+      const currentText =
         releases.length && releases[this.state.currentReleaseIndex].text;
       const currentID =
         releases.length && releases[this.state.currentReleaseIndex]._id;
@@ -95,21 +73,6 @@ class Releases extends Component {
           classNames="fade"
         >
           <div className="releases--container">
-
-            <TransitionGroup>
-              <CSSTransition key={currentID} timeout={200} classNames="fade">
-                <ReleaseCard
-                  key={this.state.currentReleaseIndex}
-                  currentArtist={currentArtist}
-                  currentTitle={currentTitle}
-                  currentListenLink={currentListenLink}
-                  currentCatalog={currentCatalog}
-                  currentBuyLink={currentBuyLink}
-                  currentImage={currentImage}
-                  currentText={currentText}
-                />
-              </CSSTransition>
-            </TransitionGroup>
             <div className="releases--sublinks">
               {releases.map((release, index) => {
                 return (
@@ -125,12 +88,24 @@ class Releases extends Component {
                     >
                       {release.catalog}
                     </div>
-
-                    <br />
                   </React.Fragment>
                 );
               })}
             </div>
+            <TransitionGroup>
+              <CSSTransition key={currentID} timeout={200} classNames="fade">
+                <ReleaseCard
+                  key={this.state.currentReleaseIndex}
+                  currentArtist={currentArtist}
+                  currentTitle={currentTitle}
+                  currentListenLink={currentListenLink}
+                  currentCatalog={currentCatalog}
+                  currentBuyLink={currentBuyLink}
+                  currentImage={currentImage}
+                  currentText={currentText}
+                />
+              </CSSTransition>
+            </TransitionGroup>
           </div>
         </CSSTransition>
       );
