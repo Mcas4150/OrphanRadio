@@ -14,7 +14,7 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "proptypes": "^1.1.0",
-    "radium": "^0.25.1",
+    "radium": "^0.25.2",
     "react": "^16.8.6",
     "react-animations": "^1.0.0",
     "react-cursor-position": "^3.0.3",

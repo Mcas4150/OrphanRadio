@@ -13,9 +13,9 @@ export default class ReleaseCard extends Component {
           />
           <div className="release--links">
             <div className="release--title">
-              {this.props.currentArtist} - {this.props.currentTitle}{" "}
-            </div>
-            <a
+            {this.props.currentArtist} - {this.props.currentTitle}{" "}
+          </div>
+          <a
               className="release--listen-link"
               href={this.props.currentListenLink}
               target="_blank"
@@ -33,7 +33,9 @@ export default class ReleaseCard extends Component {
           </a> */}
           </div>
         </div>
-        <div className="release--text-container">{this.props.currentText}</div>
+        <div className="release--text-container">
+          {this.props.currentText}
+        </div>
       </div>
     );
   }

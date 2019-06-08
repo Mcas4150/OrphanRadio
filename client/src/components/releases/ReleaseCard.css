@@ -15,11 +15,11 @@ grid-template-columns: 1fr 2fr;
 }
 
 .release--title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-family: "GT-Super-Display-Light";
   font-weight: bold;
   text-align: center;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
 .release--text-container{

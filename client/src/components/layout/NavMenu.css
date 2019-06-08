@@ -60,6 +60,10 @@
   color: yellow;
 }
 
+.link-ragers:hover{
+  color: yellow;
+}
+
 
 .navMenu--image-container {
   grid-area: image;

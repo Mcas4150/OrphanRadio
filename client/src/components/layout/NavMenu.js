@@ -104,8 +104,6 @@ class NavMenu extends Component {
                   >
                     {release.catalog}.
                   </div>
-
-                  <br />
                 </React.Fragment>
               );
             })}
@@ -129,16 +127,17 @@ class NavMenu extends Component {
               </a>
               <a
                 className="social"
-                href="https://www.instagram.com/orphan.___/"
-              >
-                <i className="fab fa-instagram" />
-              </a>
-              <a
-                className="social"
                 href="https://orphanrecordsradio.bandcamp.com/"
               >
                 <i className="fab fa-bandcamp" />
               </a>
+              <a
+                className="social"
+                href="https://www.instagram.com/orphan.___/"
+              >
+                <i className="fab fa-instagram" />
+              </a>
+
               <a
                 className="social"
                 href="https://www.facebook.com/orphanradiorecords/"

@@ -6,8 +6,8 @@ export default class RagersPage extends Component {
   render() {
     return (
       <div className="ragers-page">
-        <NavBar color={"#43BCA9"} />
-
+        {/* <NavBar color={"#43BCA9"} /> */}
+        <NavBar color={"yellow"} />
         <div className="ragers-page--mobile-sublinks" />
 
         <div className="ragers-page--main">
