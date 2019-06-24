@@ -18,16 +18,7 @@ app.use(bodyParser.json());
 app.use(formData.parse());
 
 // DB Config
-const db = require("./config/keys").mongoURI;
 
-// Connect to MongoDB
-
-mongoose
-  .connect("mongodb://mcas4150:Leafpad4@ds151612.mlab.com:51612/orphan", {
-    useNewUrlParser: true
-  })
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
 
 // Passport middleware
 app.use(passport.initialize());
@@ -36,7 +27,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 // Use Routes
-app.use("/api/users", users);
+// app.use("/api/users", users);
 app.use("/api/artists", artists);
 app.use("/api/releases", releases);
 
@@ -50,5 +41,14 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const port = process.env.PORT || 5000;
+// Connect to MongoDB
+const db = require("./config/keys").mongoURI;
+
+mongoose
+  .connect("mongodb://mcas4150:Leafpad4@ds151612.mlab.com:51612/orphan", {
+    useNewUrlParser: true
+  })
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

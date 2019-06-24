@@ -57,27 +57,7 @@ class Artists extends Component {
                   <div className="artist--info">
                     <div className="artist--bio">
                       <p className="artist--bio_p">
-                        Orphan. in 2015 with friends Sage Redman and Billy
-                        Meddleton. The three began throwing bi-monthly parties
-                        in Deptford; their aim was to feature the unsung heroes,
-                        the seminal artists that weren’t often regulars in the
-                        crowded London club circuit. Come 2017 the trio found
-                        themselves divided by an ocean - Joe and Sage forced to
-                        relocate in Seattle after her visa expiration, and Billy
-                        to Berlin. Despite the distance, Orphan. carried on with
-                        events in each location (hosting the likes of DJ Python,
-                        Equiknoxx, DEBIT, Lapalux, Sylvere and many more) and
-                        launched Orphan. Radio in Seattle as an ode to the
-                        London stations they'd come to miss. Orphan. Radio's
-                        focus was to showcase local artists and DJs,
-                        highlighting the diverse music community in Seattle, as
-                        well as feature touring national and international
-                        artists with their own distinctive flare. Guests
-                        included Shanti Celeste, Octo Octa, DJ Manny & DJ Taye,
-                        Moodhuts’ Neo Image & Local Artist and many more. After
-                        two solid years on air the station closed its doors to
-                        make way for a new chapter in the Orphan. storybook.
-                        Orphan. now operates out of New York and Berlin.{" "}
+                        Retail
                       </p>
                     </div>
                   </div>

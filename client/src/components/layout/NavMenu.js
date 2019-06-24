@@ -50,7 +50,6 @@ class NavMenu extends Component {
             <Link className="navMenu--link navMenu--link__top" to="/home">
               Orphan.
             </Link>
-
             <hr />
             <NavLink
               className="navMenu--link link-records"
@@ -60,17 +59,25 @@ class NavMenu extends Component {
             >
               Records.
             </NavLink>
-            <br />
-            <NavLink
+            {/* <NavLink
               className="navMenu--link link-roster"
               exact
               activeClassName="active-roster"
               to="/roster/"
             >
               Roster.
-            </NavLink>
+            </NavLink> */}
             <br />
-            {/* <NavLink
+            <NavLink
+              className="navMenu--link link-ragers"
+              exact
+              activeClassName="active-ragers"
+              to="/ragers"
+            >
+              Events.
+            </NavLink>{" "}
+            <br />
+            <NavLink
               className="navMenu--link link-retail"
               exact
               activeClassName="active-retail"
@@ -78,35 +85,29 @@ class NavMenu extends Component {
             >
               Retail.
             </NavLink>
-            <br /> */}
-            <NavLink
-              className="navMenu--link link-ragers"
-              exact
-              activeClassName="active-ragers"
-              to="/ragers"
-            >
-              Ragers.
-            </NavLink>
           </div>
 
           <div className="navMenu--releaseLinks-container">
-            {releases.map((release, index) => {
-              return (
-                <React.Fragment>
-                  <div
-                    key={index}
-                    className={
-                      this.state.currentReleaseIndex === index
-                        ? "releases--sublinks__link sublink active-link"
-                        : "releases--sublinks__link sublink"
-                    }
-                    onClick={() => this.changeRelease(index)}
-                  >
-                    {release.catalog}.
-                  </div>
-                </React.Fragment>
-              );
-            })}
+            {releases &&
+              releases.map((release, index) => {
+                return (
+                  <React.Fragment>
+                    <div
+                      key={index}
+                      className={
+                        this.state.currentReleaseIndex === index
+                          ? "releases--sublinks__link sublink active-link"
+                          : "releases--sublinks__link sublink"
+                      }
+                      // style={{ color: release.color }}
+                      style={{ color: "black" }}
+                      onClick={() => this.changeRelease(index)}
+                    >
+                      {release.catalog}.
+                    </div>
+                  </React.Fragment>
+                );
+              })}
           </div>
 
           <div className="navMenu--footer-container">

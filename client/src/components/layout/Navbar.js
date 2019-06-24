@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Transition } from 'react-transition-group';
 // import { Link, NavLink } from "react-router-dom";
 // import NavMenu from "./NavMenu";
 import LeftCanvas from "./LeftCanvas";

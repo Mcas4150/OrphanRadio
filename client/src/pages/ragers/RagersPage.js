@@ -12,7 +12,7 @@ export default class RagersPage extends Component {
 
         <div className="ragers-page--main">
           <div className="ragers-page--title">
-            <div className="ragers-page--title__text">RAGERS.</div>
+            <div className="ragers-page--title__text">EVENTS.</div>
           </div>
           <div className="ragers-page--carousel">
             <div className="ragers--item">

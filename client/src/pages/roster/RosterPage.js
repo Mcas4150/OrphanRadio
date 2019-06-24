@@ -12,7 +12,7 @@ export default class RosterPage extends Component {
           <NavBar color={"red"} />
           <div className="roster-page--container">
             <div className="roster-page--title">
-              <div className="roster-page--title__text">ROSTER.</div>
+              <div className="roster-page--title__text">RETAIL.</div>
             </div>
           <Artists/>
           </div>

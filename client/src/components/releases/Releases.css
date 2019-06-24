@@ -15,6 +15,7 @@ a {
 
 .releases--sublinks{
   display: flex;
+  color:black;
   justify-content: space-around;
 
 }

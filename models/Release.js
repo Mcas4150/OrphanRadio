@@ -17,6 +17,8 @@ const ReleaseSchema = new Schema({
   listenLink: {
     type: String
   },
+  color: {}
+  ,
   catalog:{
     type: String
   },

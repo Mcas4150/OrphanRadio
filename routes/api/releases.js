@@ -58,6 +58,7 @@ router.post(
       title: req.body.title,
       text: req.body.text,
       image: req.body.image,
+      color: req.body.color,
       listenLink: req.body.listenLink,
       catalog: req.body.catalog,
       buyLink: req.body.buyLink,

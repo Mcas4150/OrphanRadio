@@ -39,6 +39,7 @@ class ReleaseForm extends Component {
       title: this.state.title,
       image: this.state.image,
       listenLink: this.state.listenLink,
+      color: this.state.color,
       catalog: this.state.catalog,
       buyLink: this.state.buyLink,
       date: this.state.date
@@ -50,6 +51,7 @@ class ReleaseForm extends Component {
       title: "",
       image: "",
       listenLink: "",
+      color: "",
       catalog: "",
       buyLink: "",
       date: moment()
