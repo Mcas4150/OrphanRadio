@@ -77,7 +77,7 @@
 }
 
 .retail--price:hover {
-  font-size: 2.25rem;
+  color: red;
   cursor: pointer;
 }
 

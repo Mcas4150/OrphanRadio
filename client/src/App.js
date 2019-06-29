@@ -66,9 +66,11 @@ class App extends Component {
                   >
                     <Switch>
                       <Route exact path="/" component={HomePage} />
-                      {/* <Route path="/radio" component={RadioPage} /> */}
+
                       <Route path="/records/" component={RecordsPage} />
-                      <Route path="/roster/" component={RosterPage} />
+
+                    
+
                       <Route path="/retail/" component={RetailPage} />
                       <Route path="/ragers/" component={RagersPage} />
                       <Route path="/home" component={HomePage} />

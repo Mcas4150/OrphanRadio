@@ -51,6 +51,8 @@ class Releases extends Component {
         releases.length && releases[this.state.currentReleaseIndex].title;
       const currentCatalog =
         releases.length && releases[this.state.currentReleaseIndex].catalog;
+      const currentColor =
+        releases.length && releases[this.state.currentReleaseIndex].color;
       const currentListenLink =
         releases.length && releases[this.state.currentReleaseIndex].listenLink;
       const currentBuyLink =
@@ -70,7 +72,7 @@ class Releases extends Component {
           classNames="fade"
         >
           <div className="releases--container">
-            <div className="releases--sublinks">
+            {/* <div className="releases--sublinks">
               {releases.map((release, index) => {
                 return (
                   <React.Fragment>
@@ -81,6 +83,12 @@ class Releases extends Component {
                           ? "releases--sublinks__link sublink active-link"
                           : "releases--sublinks__link sublink"
                       }
+                      style={{
+                        color:
+                          this.state.currentReleaseIndex === index
+                            ? release.color
+                            : "white"
+                      }}
                       onClick={() => this.changeRelease(index)}
                     >
                       {release.catalog}
@@ -88,7 +96,7 @@ class Releases extends Component {
                   </React.Fragment>
                 );
               })}
-            </div>
+            </div> */}
             <TransitionGroup>
               <CSSTransition key={currentID} timeout={200} classNames="fade">
                 <ReleaseCard

@@ -12,7 +12,7 @@
 }
 
 .navbar--panel {
-  display: flex;
+  display:none;
   justify-content: flex-end;
 }
 
@@ -20,19 +20,26 @@
   margin-left: 8px;
   margin-right: 8px;
   text-decoration: none;
-  color: black;
 }
 
-.link--wares:hover, .active-retail {
-   color: yellow;
+.link--wares:hover,
+.active-retail {
+  color: red;
 }
 
-.link--records:hover, .active-records {
+.link--wares:hover,
+.active-ragers {
+  color: yellow;
+}
+
+.link--records:hover,
+.active-records {
   /* color: #d4107c; */
-color: #00559D;
+  color: #00559d;
 }
 
-.link--presents:hover, .active-roster {
+.link--presents:hover,
+.active-roster {
   /* color: #46bfad; */
   color: red;
 }
@@ -79,4 +86,16 @@ color: #00559D;
 
     font-size: 1.55rem;
   }
+
+  .navbar--panel {
+    color: white;
+    display:flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  /* .logo-left {
+   z-index:  -5 ;
+  } */
 }

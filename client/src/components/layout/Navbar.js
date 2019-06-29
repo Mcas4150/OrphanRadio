@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Transition } from 'react-transition-group';
+import { Transition } from "react-transition-group";
 // import { Link, NavLink } from "react-router-dom";
 // import NavMenu from "./NavMenu";
 import LeftCanvas from "./LeftCanvas";
@@ -26,13 +26,17 @@ export default class NavBar extends Component {
   render() {
     return (
       <div className="navbar">
-        <LeftCanvas color={this.props.color}/>
+        <div className="logo-left">
+          <LeftCanvas color={this.props.color} />
+        </div>
         {/* <Link className="navbar--brand" to="/home">
-
+          </div>
 
         </Link> */}
         <div className="navbar--links" />
-        <div className="navbar--panel" />
+        <div className="navbar--panel">
+          Link
+          </div>
       </div>
     );
   }

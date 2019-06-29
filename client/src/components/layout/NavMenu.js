@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { Route, Switch } from "react-router";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "./NavMenu.css";
@@ -59,14 +60,6 @@ class NavMenu extends Component {
             >
               Records.
             </NavLink>
-            {/* <NavLink
-              className="navMenu--link link-roster"
-              exact
-              activeClassName="active-roster"
-              to="/roster/"
-            >
-              Roster.
-            </NavLink> */}
             <br />
             <NavLink
               className="navMenu--link link-ragers"
@@ -86,37 +79,47 @@ class NavMenu extends Component {
               Retail.
             </NavLink>
           </div>
-
-          <div className="navMenu--releaseLinks-container">
-            {releases &&
-              releases.map((release, index) => {
-                return (
-                  <React.Fragment>
-                    <div
-                      key={index}
-                      className={
-                        this.state.currentReleaseIndex === index
-                          ? "releases--sublinks__link sublink active-link"
-                          : "releases--sublinks__link sublink"
-                      }
-                      // style={{ color: release.color }}
-                      style={{ color: "black" }}
-                      onClick={() => this.changeRelease(index)}
-                    >
-                      {release.catalog}.
-                    </div>
-                  </React.Fragment>
-                );
-              })}
+          <div className="links-container">
+            <Switch>
+              <Route
+                path="/records/"
+                render={() => (
+                  <div>
+                    {releases &&
+                      releases.map((release, index) => {
+                        return (
+                          <React.Fragment>
+                            <div
+                              key={index}
+                              className={
+                                this.state.currentReleaseIndex === index
+                                  ? "releases--sublinks__link sublink active-link"
+                                  : "releases--sublinks__link sublink"
+                              }
+                              style={{
+                                color:
+                                  this.state.currentReleaseIndex === index
+                                    ? release.color
+                                    : "white"
+                              }}
+                              onClick={() => this.changeRelease(index)}
+                            >
+                              {release.catalog}.
+                            </div>
+                          </React.Fragment>
+                        );
+                      })}
+                  </div>
+                )}
+              />
+            </Switch>
           </div>
-
           <div className="navMenu--footer-container">
             <div className="navMenu--image-container">
               <BackgroundCanvas
                 mouseX={this.props.point.x}
                 mouseY={this.props.point.y}
               />
-              {/* <img className="orphanLogo" src={OrphanLogo} alt="Orphan." /> */}
             </div>
 
             <div className="social-row">

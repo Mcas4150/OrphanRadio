@@ -10,27 +10,42 @@ export default class LeftCanvas extends Component {
 
   componentDidMount() {
     this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
+    window.addEventListener("resize", this.updateWindowDimensions);
     this.updateCanvas();
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
+    window.removeEventListener("resize", this.updateWindowDimensions);
   }
 
   updateCanvas() {
     const ctx = this.refs.canvas.getContext("2d");
+    const height = window.innerHeight;
     // ctx.fillRect(0, 0, 100, 1000);
-    ctx.moveTo(0,0);
-    ctx.lineTo(350,0);
-    ctx.lineTo(75, 75);
-    ctx.lineTo(75, window.innerHeight - 75);
-    ctx.lineTo(350, window.innerHeight);
-    ctx.lineTo(0, window.innerHeight );
-    ctx.lineTo(0,0);
+    ctx.moveTo(0, 0);
+    ctx.lineTo(height / 2, 0);
+    ctx.lineTo(height / 10, height / 10);
+    ctx.lineTo(height / 10, height - height / 10);
+    ctx.lineTo(height / 2, height);
+    ctx.lineTo(0, height);
+    ctx.lineTo(0, 0);
     ctx.fillStyle = this.props.color;
     ctx.fill();
   }
+
+  // updateCanvas() {
+  //   const ctx = this.refs.canvas.getContext("2d");
+  //   // ctx.fillRect(0, 0, 100, 1000);
+  //   ctx.moveTo(0,0);
+  //   ctx.lineTo(window.innerWidth  ,0);
+  //   ctx.lineTo(50, 50);
+  //   ctx.lineTo(50, window.innerHeight - 75);
+  //   ctx.lineTo(window.innerWidth , window.innerHeight);
+  //   ctx.lineTo(0, window.innerHeight );
+  //   ctx.lineTo(0,0);
+  //   ctx.fillStyle = this.props.color;
+  //   ctx.fill();
+  // }
 
   updateWindowDimensions() {
     this.setState({ width: window.innerWidth, height: window.innerHeight });
@@ -38,7 +53,14 @@ export default class LeftCanvas extends Component {
 
   render() {
     // return <canvas ref="canvas" width={300} height={this.state.height} />;
-    return <canvas ref="canvas" width={350} height={1000} style={{position: "fixed", zIndex: "2",
-      left: 0}} />;
+    return (
+      <canvas
+        ref="canvas"
+        width={window.innerHeight/2
+        }
+        height={window.innerHeight}
+        style={{ position: "fixed", zIndex: "2", left: 0 }}
+      />
+    );
   }
 }

@@ -12,7 +12,7 @@
   background: black;
   opacity: 1;
 
-  color: white;
+
   /* transition: height 0.3s ease; */
   /* -webkit-transition: width 1s ease;
   transition: width 1s ease; */
@@ -57,7 +57,7 @@
 }
 
 .link-retail:hover{
-  color: yellow;
+  color: red;
 }
 
 .link-ragers:hover{
@@ -73,7 +73,7 @@
   /* height: 30vh; */
 }
 
-.navMenu--releaseLinks-container{
+.links-container{
   text-align: right;
   padding: 15px;
 }
@@ -129,7 +129,8 @@ hr {
 
 @media (max-width: 600px) {
   .navMenu {
-    position: absolute;
+    display: none;
+    /* position: absolute;
     overflow-y: hidden;
     top: 0;
     right: 0;
@@ -143,7 +144,7 @@ hr {
 
     color: white;
     transition: height 0.3s ease;
-    z-index: 2;
+    z-index: 2; */
   }
 
   .orphanLogo {

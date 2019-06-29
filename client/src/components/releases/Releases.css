@@ -1,6 +1,6 @@
 a {
   text-decoration: none;
-  color: white;
+
 }
 .releases--container {
   /* display: grid;
@@ -15,9 +15,9 @@ a {
 
 .releases--sublinks{
   display: flex;
-  color:black;
-  justify-content: space-around;
 
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .fade-appear {
