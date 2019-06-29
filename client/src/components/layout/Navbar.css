@@ -90,7 +90,7 @@
   .navbar--panel {
     color: white;
     height: 100px;
-    width: 100px;
+    width: 50px;
     display:flex;
     justify-content: flex-end;
   }

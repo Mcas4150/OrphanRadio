@@ -87,6 +87,8 @@
 @media (max-width: 800px) {
   .records-page--container {
     grid-template-columns: 8fr;
+    padding: 15px;
+
   }
 
   .records-page--title__text {
