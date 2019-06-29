@@ -13,8 +13,11 @@
 
 .records-page--container {
   display: grid;
-  grid-template-columns: 2fr 6fr 2fr;
+  grid-template-columns: 2fr 6fr 1.5fr;
   align-items: center;
+
+
+
 }
 
 .records-page--mobile-sublinks {
