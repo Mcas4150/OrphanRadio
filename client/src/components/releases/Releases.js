@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getReleases } from "../../actions/releaseActions";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import ReleaseCard from "./ReleaseCard";
 import "./Releases.css";
 
 class Releases extends Component {
@@ -41,38 +41,31 @@ class Releases extends Component {
     const { releases } = this.props.release;
     const { appearCard } = this.state;
 
-    let releaseContent;
-    if (releases === null) {
-      releaseContent = "releases";
-    } else {
-      const currentArtist =
-        releases.length && releases[this.state.currentReleaseIndex].artist;
-      const currentTitle =
-        releases.length && releases[this.state.currentReleaseIndex].title;
-      const currentCatalog =
-        releases.length && releases[this.state.currentReleaseIndex].catalog;
-      const currentColor =
-        releases.length && releases[this.state.currentReleaseIndex].color;
-      const currentListenLink =
-        releases.length && releases[this.state.currentReleaseIndex].listenLink;
-      const currentBuyLink =
-        releases.length && releases[this.state.currentReleaseIndex].buyLink;
-      const currentImage =
-        releases.length && releases[this.state.currentReleaseIndex].image;
-      const currentText =
-        releases.length && releases[this.state.currentReleaseIndex].text;
-      const currentID =
-        releases.length && releases[this.state.currentReleaseIndex]._id;
+    // let releaseContent;
+    // if (releases === null) {
+    //   releaseContent = "releases";
+    // } else {
+    //   const currentArtist =
+    //     releases.length && releases[this.state.currentReleaseIndex].artist;
+    //   const currentTitle =
+    //     releases.length && releases[this.state.currentReleaseIndex].title;
+    //   const currentCatalog =
+    //     releases.length && releases[this.state.currentReleaseIndex].catalog;
+    //   const currentListenLink =
+    //     releases.length && releases[this.state.currentReleaseIndex].listenLink;
+    //   const currentBuyLink =
+    //     releases.length && releases[this.state.currentReleaseIndex].buyLink;
+    //   const currentImage =
+    //     releases.length && releases[this.state.currentReleaseIndex].image;
+    //   const currentText =
+    //     releases.length && releases[this.state.currentReleaseIndex].text;
+    //   const currentID =
+    //     releases.length && releases[this.state.currentReleaseIndex]._id;
 
-      return (
-        <CSSTransition
-          in={appearCard}
-          appear={true}
-          timeout={300}
-          classNames="fade"
-        >
-          <div className="releases--container">
-            {/* <div className="releases--sublinks">
+    return (
+   
+        <div className="releases--container">
+          {/* <div className="releases--sublinks">
               {releases.map((release, index) => {
                 return (
                   <React.Fragment>
@@ -97,7 +90,7 @@ class Releases extends Component {
                 );
               })}
             </div> */}
-            <TransitionGroup>
+          {/* <TransitionGroup>
               <CSSTransition key={currentID} timeout={200} classNames="fade">
                 <ReleaseCard
                   key={this.state.currentReleaseIndex}
@@ -110,13 +103,27 @@ class Releases extends Component {
                   currentText={currentText}
                 />
               </CSSTransition>
-            </TransitionGroup>
+            </TransitionGroup> */}
+          <div className="releases--grid">
+            {releases &&
+              releases.map((release, index) => {
+                return (
+                  <Link
+                    className="navbar--brand"
+                    to={`/records/${release._id}`}
+                  >
+                    <img
+                      className="release--image"
+                      src={release.image}
+                      alt={release.title}
+                    />
+                  </Link>
+                );
+              })}
           </div>
-        </CSSTransition>
-      );
-    }
+        </div>
 
-    return { releaseContent };
+    );
   }
 }
 

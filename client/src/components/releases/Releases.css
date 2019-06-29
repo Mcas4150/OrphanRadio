@@ -3,10 +3,20 @@ a {
 
 }
 .releases--container {
-  /* display: grid;
-  grid-template-columns: 1fr 5fr; */
+
   justify-content: center;
   align-items: center;
+}
+
+.release--image {
+  width: 275px;
+  height: 275px;
+}
+
+.releases--grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
 .releases--sublinks :hover {
@@ -60,7 +70,10 @@ a {
 }
 
 @media (max-width: 800px) {
-  .release--image {
-    width: 65vw;
+
+
+  .releases--grid{
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

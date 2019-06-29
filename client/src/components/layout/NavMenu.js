@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "./NavMenu.css";
 import BackgroundCanvas from "../backgroundCanvas";
-import { getReleases } from "../../actions/releaseActions";
+import { getReleases, getRelease } from "../../actions/releaseActions";
 
 class NavMenu extends Component {
   constructor(props) {
@@ -34,9 +34,7 @@ class NavMenu extends Component {
   }
 
   changeRelease(index) {
-    this.setState({
-      currentReleaseIndex: index
-    });
+    this.props.getRelease(index);
   }
 
   render() {
@@ -68,7 +66,7 @@ class NavMenu extends Component {
               to="/ragers"
             >
               Events.
-            </NavLink>{" "}
+            </NavLink>
             <br />
             <NavLink
               className="navMenu--link link-retail"
@@ -80,39 +78,21 @@ class NavMenu extends Component {
             </NavLink>
           </div>
           <div className="links-container">
-            <Switch>
-              <Route
-                path="/records/"
-                render={() => (
-                  <div>
-                    {releases &&
-                      releases.map((release, index) => {
-                        return (
-                          <React.Fragment>
-                            <div
-                              key={index}
-                              className={
-                                this.state.currentReleaseIndex === index
-                                  ? "releases--sublinks__link sublink active-link"
-                                  : "releases--sublinks__link sublink"
-                              }
-                              style={{
-                                color:
-                                  this.state.currentReleaseIndex === index
-                                    ? release.color
-                                    : "white"
-                              }}
-                              onClick={() => this.changeRelease(index)}
-                            >
-                              {release.catalog}.
-                            </div>
-                          </React.Fragment>
-                        );
-                      })}
-                  </div>
-                )}
-              />
-            </Switch>
+            {releases &&
+              releases.map((release, index) => {
+                return (
+                  <NavLink
+                    className={"releases--sublinks__link sublink"}
+                    exact
+                    activeClassName="releases--sublinks__link sublink active-link"
+                    to={{ pathname: `/records/${release._id}` }}
+                  >
+                    <div onClick={() => this.changeRelease(release._id)}>
+                      {release.catalog}.
+                    </div>
+                  </NavLink>
+                );
+              })}
           </div>
           <div className="navMenu--footer-container">
             <div className="navMenu--image-container">
@@ -159,6 +139,7 @@ class NavMenu extends Component {
 
 NavMenu.propTypes = {
   getReleases: PropTypes.func.isRequired,
+  getRelease: PropTypes.func.isRequired,
   release: PropTypes.object.isRequired
 };
 
@@ -168,5 +149,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getReleases }
+  { getReleases, getRelease }
 )(NavMenu);

@@ -12,7 +12,6 @@ import AdminPage from "./pages/admin/AdminPage";
 
 import Example from "./pages/home/cursor";
 
-import RosterPage from "./pages/roster/RosterPage";
 import RecordsPage from "./pages/records/RecordsPage";
 import RetailPage from "./pages/retail/RetailPage";
 import RagersPage from "./pages/ragers/RagersPage";
@@ -67,9 +66,9 @@ class App extends Component {
                     <Switch>
                       <Route exact path="/" component={HomePage} />
 
-                      <Route path="/records/" component={RecordsPage} />
+                      <Route  path="/records/" component={RecordsPage} />
 
-                    
+
 
                       <Route path="/retail/" component={RetailPage} />
                       <Route path="/ragers/" component={RagersPage} />

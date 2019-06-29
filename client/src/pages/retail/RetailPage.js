@@ -24,7 +24,7 @@ export default class RetailPage extends Component {
                 {" "}
                 <img
                   className="retail--image"
-                  src="https://f4.bcbits.com/img/0015763424_36.jpg"
+                  src="https://i.imgur.com/YI1aJoL.png"
                   alt="t-shirt"
                 />
                 <div className="retail--price">$30</div>

@@ -62,7 +62,7 @@ export const getRelease = id => dispatch => {
     .catch(err =>
       dispatch({
         type: GET_RELEASE,
-        payload: null
+        payload: "weiner"
       })
     );
 };
