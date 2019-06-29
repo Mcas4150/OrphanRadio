@@ -39,6 +39,11 @@ class NavMenu extends Component {
 
   render() {
     const { releases } = this.props.release;
+    const sortedReleases = releases.sort(function(a, b){
+      if(a.catalog < b.catalog) { return -1; }
+      if(a.catalog > b.catalog) { return 1; }
+      return 0;
+  })
 
     if (this.props.open === false) {
       return <div className="nav-menu__hidden" />;
@@ -78,8 +83,8 @@ class NavMenu extends Component {
             </NavLink>
           </div>
           <div className="links-container">
-            {releases &&
-              releases.map((release, index) => {
+            {sortedReleases &&
+              sortedReleases.map((release, index) => {
                 return (
                   <NavLink
                     className={"releases--sublinks__link sublink"}
