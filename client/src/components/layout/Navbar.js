@@ -28,7 +28,7 @@ export default class NavBar extends Component {
   render() {
     const { menuOpen } = this.state;
     return (
-      <div className="navbar">
+      <div className="navbar" onClick={this.handleMenuClick}>
         <div className="logo-left">
           <LeftCanvas color={this.props.color} />
         </div>
@@ -38,8 +38,8 @@ export default class NavBar extends Component {
         </Link> */}
         <div className="navbar--links" />
 
-          <NavMenuMobile onClick={this.HandleMenuClick} open={menuOpen}/>
-
+          <NavMenuMobile  open={menuOpen}/>
+        
       </div>
     );
   }

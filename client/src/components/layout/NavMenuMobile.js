@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "./NavMenuMobile.css";
 import BackgroundCanvas from "../backgroundCanvas";
+import NavMenuButton from "./NavMenuButton";
 import { getReleases, getRelease } from "../../actions/releaseActions";
 
 class NavMenuMobile extends Component {
@@ -28,11 +29,11 @@ class NavMenuMobile extends Component {
   // }
 
   handleOpen() {
-    this.setState({ open:true });
+    this.setState({ open: true });
   }
 
   handleClose() {
-    this.setState({ open:false });
+    this.setState({ open: false });
   }
   //   }
   // componentWillReceiveProps(nextProps) {
@@ -60,9 +61,9 @@ class NavMenuMobile extends Component {
     });
 
     return (
-      <div className="navMenu-container" >
+      <div className="navMenu-container">
         {open ? (
-          <div className="navMenuMobile" >
+          <div className="navMenuMobile">
             <div className="navMenuMobile--list">
               <Link
                 className="navMenuMobile--link navMenuMobile--link__top"
@@ -149,7 +150,9 @@ class NavMenuMobile extends Component {
             </div>
           </div>
         ) : (
-          <div className="navbar--panel" >Link</div>
+          <div className="navbar--panel">
+            <NavMenuButton open={open} />
+          </div>
         )}
       </div>
     );

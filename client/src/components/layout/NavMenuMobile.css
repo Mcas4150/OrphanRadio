@@ -10,14 +10,17 @@
   background: black;
   opacity: 1;
 
-
   /* transition: height 0.3s ease; */
   /* -webkit-transition: width 1s ease;
   transition: width 1s ease; */
   z-index: 2;
 }
 
-
+.navMenu-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
 
 .navMenuMobile--hidden {
   width: 0vw;
@@ -39,29 +42,28 @@
   animation-delay: 0.2s;
   text-decoration: none;
 }
-.navMenuMobile--link__top{
+.navMenuMobile--link__top {
   font-size: 3rem;
 }
 /* .navMenuMobile--link:hover {
   color: gray;
 } */
 
-.link-records:hover{
-  color: #00559D;
+.link-records:hover {
+  color: #00559d;
 }
 
-.link-roster:hover{
+.link-roster:hover {
   color: red;
 }
 
-.link-retail:hover{
+.link-retail:hover {
   color: red;
 }
 
-.link-ragers:hover{
+.link-ragers:hover {
   color: yellow;
 }
-
 
 .navMenuMobile--image-container {
   grid-area: image;
@@ -71,7 +73,7 @@
   /* height: 30vh; */
 }
 
-.links-container{
+.links-container {
   text-align: right;
   padding: 5px 15px;
 
@@ -94,15 +96,15 @@ hr {
   color: white;
 }
 
-.social{
+.social {
   font-size: 28px;
 }
 
-.social :hover{
+.social :hover {
   color: gray;
 }
 
-.social-row{
+.social-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -133,8 +135,6 @@ hr {
 }
 
 @media (max-width: 600px) {
-
-
   .orphanLogo {
     /* width: 100%; */
     height: 2vh;

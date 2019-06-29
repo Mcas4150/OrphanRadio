@@ -33,21 +33,21 @@ export default class NavMenuButton extends Component {
       line: {
         height: "2px",
         width: "20px",
-        background: this.state.open ? "white" : "black",
+        background: this.props.open ? "white" : "white",
         transition: "all 0.2s ease"
       },
       lineTop: {
-        transform: this.state.open ? "rotate(45deg)" : "none",
+        transform: this.props.open ? "rotate(45deg)" : "none",
         transformOrigin: "top left",
         marginBottom: "5px"
       },
       lineMiddle: {
-        opacity: this.state.open ? 0 : 1,
-        zIndex: this.state.open ? 0 : 3,
-        transform: this.state.open ? "translateX(-16px)" : "none"
+        opacity: this.props.open ? 0 : 1,
+        zIndex: this.props.open ? 0 : 3,
+        transform: this.props.open ? "translateX(-16px)" : "none"
       },
       lineBottom: {
-        transform: this.state.open ? "translateX(-1px) rotate(-45deg)" : "none",
+        transform: this.props.open ? "translateX(-1px) rotate(-45deg)" : "none",
         transformOrigin: "top left",
         marginTop: "5px"
       }
