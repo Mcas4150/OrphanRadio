@@ -96,10 +96,18 @@
     display: none;
   }
 
+  .retail-page--title {
+    display: none;
+  }
+
+  .retail-page {
+    padding: 15px;
+  }
+
   .retail-page--main {
     display: grid;
     height: 80vh;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr ;
   }
 
   .retail-page--mobile-sublinks {

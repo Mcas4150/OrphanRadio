@@ -114,6 +114,12 @@ hr {
   color: white;
 }
 
+.navMenuMobile--footer-container{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
 @media (max-width: 800px) {
   .navMenuMobile {
     position: absolute;

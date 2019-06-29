@@ -92,6 +92,14 @@
     font-size: 1.5rem;
   }
 
+  .ragers-page{
+    padding: 15px;
+  }
+
+  .ragers-page--title{
+    display: none;
+  }
+
   .ragers-page--sublinks {
     display: none;
   }
@@ -99,7 +107,7 @@
   .ragers-page--main {
     display: grid;
     height: 80vh;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr ;
   }
 
   .ragers-page--mobile-sublinks {
