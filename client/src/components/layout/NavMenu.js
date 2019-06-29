@@ -12,7 +12,7 @@ class NavMenu extends Component {
     super(props);
     this.state = {
       open: true,
-      currentReleaseIndex: 0
+      currentColor: "white"
     };
     // this.handleUnClick = this.handleUnClick.bind(this);
     this.changeRelease = this.changeRelease.bind(this);
@@ -33,8 +33,9 @@ class NavMenu extends Component {
     }
   }
 
-  changeRelease(index) {
-    this.props.getRelease(index);
+  changeRelease(release) {
+    this.props.getRelease(release._id);
+    this.setState({ currentColor: release.color});
   }
 
   render() {
@@ -57,7 +58,7 @@ class NavMenu extends Component {
             <hr />
             <NavLink
               className="navMenu--link link-records"
-              exact
+
               activeClassName="active-records"
               to="/records/"
             >
@@ -93,7 +94,7 @@ class NavMenu extends Component {
                     activeStyle={{ color: release.color }}
                     to={{ pathname: `/records/${release._id}` }}
                   >
-                    <div onClick={() => this.changeRelease(release._id)}>
+                    <div onClick={() => this.changeRelease(release)}>
                       {release.catalog}.
                     </div>
                   </NavLink>
@@ -105,6 +106,7 @@ class NavMenu extends Component {
               <BackgroundCanvas
                 mouseX={this.props.point.x}
                 mouseY={this.props.point.y}
+                color={this.state.currentColor}
               />
             </div>
 

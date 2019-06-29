@@ -4,6 +4,11 @@ import * as THREE from "three";
 import "./BackgroundCanvas.css";
 
 export default class BackgroundCanvas extends Component {
+  constructor(props) {
+    super(props);
+
+  }
+
   componentDidMount() {
     const width = 200;
     // const width = 250 ;
@@ -97,7 +102,7 @@ export default class BackgroundCanvas extends Component {
 
     let edges = new THREE.EdgesGeometry(geometry);
     let material = new THREE.LineBasicMaterial({
-      color: "#fff",
+      color: this.props.color,
       linewidth
     });
     return new THREE.LineSegments(edges, material);
@@ -108,7 +113,7 @@ export default class BackgroundCanvas extends Component {
     geometry.scale(x, y, z);
     let edges = new THREE.EdgesGeometry(geometry);
     let material = new THREE.LineBasicMaterial({
-      color: "#fff",
+      color: this.props.color,
       linewidth
     });
     return new THREE.LineSegments(edges, material);
