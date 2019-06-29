@@ -4,10 +4,7 @@ import * as THREE from "three";
 import "./BackgroundCanvas.css";
 
 export default class BackgroundCanvas extends Component {
-  constructor(props) {
-    super(props);
 
-  }
 
   componentDidMount() {
     const width = 200;

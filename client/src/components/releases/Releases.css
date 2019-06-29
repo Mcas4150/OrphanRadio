@@ -16,7 +16,7 @@ a {
 .releases--grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  gap: 30px;
 }
 
 .releases--sublinks :hover {

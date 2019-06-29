@@ -39,57 +39,18 @@ class Releases extends Component {
 
   render() {
     const { releases } = this.props.release;
+    const sortedReleases = releases.sort(function(a, b){
+      if(a.catalog < b.catalog) { return -1; }
+      if(a.catalog > b.catalog) { return 1; }
+      return 0;
+  })
     const { appearCard } = this.state;
 
-    // let releaseContent;
-    // if (releases === null) {
-    //   releaseContent = "releases";
-    // } else {
-    //   const currentArtist =
-    //     releases.length && releases[this.state.currentReleaseIndex].artist;
-    //   const currentTitle =
-    //     releases.length && releases[this.state.currentReleaseIndex].title;
-    //   const currentCatalog =
-    //     releases.length && releases[this.state.currentReleaseIndex].catalog;
-    //   const currentListenLink =
-    //     releases.length && releases[this.state.currentReleaseIndex].listenLink;
-    //   const currentBuyLink =
-    //     releases.length && releases[this.state.currentReleaseIndex].buyLink;
-    //   const currentImage =
-    //     releases.length && releases[this.state.currentReleaseIndex].image;
-    //   const currentText =
-    //     releases.length && releases[this.state.currentReleaseIndex].text;
-    //   const currentID =
-    //     releases.length && releases[this.state.currentReleaseIndex]._id;
 
     return (
-   
+
         <div className="releases--container">
-          {/* <div className="releases--sublinks">
-              {releases.map((release, index) => {
-                return (
-                  <React.Fragment>
-                    <div
-                      key={index}
-                      className={
-                        this.state.currentReleaseIndex === index
-                          ? "releases--sublinks__link sublink active-link"
-                          : "releases--sublinks__link sublink"
-                      }
-                      style={{
-                        color:
-                          this.state.currentReleaseIndex === index
-                            ? release.color
-                            : "white"
-                      }}
-                      onClick={() => this.changeRelease(index)}
-                    >
-                      {release.catalog}
-                    </div>
-                  </React.Fragment>
-                );
-              })}
-            </div> */}
+
           {/* <TransitionGroup>
               <CSSTransition key={currentID} timeout={200} classNames="fade">
                 <ReleaseCard
@@ -105,8 +66,8 @@ class Releases extends Component {
               </CSSTransition>
             </TransitionGroup> */}
           <div className="releases--grid">
-            {releases &&
-              releases.map((release, index) => {
+            {sortedReleases &&
+              sortedReleases.map((release, index) => {
                 return (
                   <Link
                     className="navbar--brand"
