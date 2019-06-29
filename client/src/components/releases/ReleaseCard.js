@@ -38,12 +38,12 @@ class ReleaseCard extends Component {
     const { currentRelease } = this.state;
 
     return (
-      <div className="release--card">
+      <div className="release-card--container">
         {release && (
-          <div>
+          <div className="release--card">
             <div className="release--image-container">
               <img
-                className="release--image"
+                className="release-card--image"
                 src={release.image}
                 alt={release.title}
               />

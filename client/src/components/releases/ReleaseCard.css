@@ -4,7 +4,7 @@ display: grid;
 grid-template-columns: 1fr 2fr;
 }
 
-.release--image {
+.release-card--image {
   margin-top: 20px;
 
   max-height: 55vh;

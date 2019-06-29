@@ -85,6 +85,7 @@ class NavMenu extends Component {
                     className={"releases--sublinks__link sublink"}
                     exact
                     activeClassName="releases--sublinks__link sublink active-link"
+                    activeStyle={{ color: release.color }}
                     to={{ pathname: `/records/${release._id}` }}
                   >
                     <div onClick={() => this.changeRelease(release._id)}>

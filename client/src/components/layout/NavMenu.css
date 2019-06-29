@@ -76,8 +76,7 @@
 .links-container{
   text-align: right;
   padding: 5px 15px;
-  display: grid;
-  grid-template-columns: 1fr;
+ 
   color: white;
 }
 
@@ -108,6 +107,11 @@ hr {
 .social-row{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.sublink {
+  font-size: 2rem;
+  color: white;
 }
 
 @media (max-width: 800px) {
