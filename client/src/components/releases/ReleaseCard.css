@@ -63,7 +63,8 @@
 
   .release-card--container {
     height: 90vh;
-    padding: 25px 15px;
+    padding: 15px;
+    margin-top: 15px;
   }
 
   .release--text-container {
