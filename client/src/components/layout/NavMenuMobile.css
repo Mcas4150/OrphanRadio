@@ -34,7 +34,7 @@
 }
 
 .navMenuMobile--link {
-  font-size: 2.55rem;
+  font-size: 2rem;
   font-family: "FugueRegular";
   color: white;
   transition: "color 0.2s ease-in-out";
@@ -43,7 +43,7 @@
   text-decoration: none;
 }
 .navMenuMobile--link__top {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 /* .navMenuMobile--link:hover {
   color: gray;
@@ -133,7 +133,7 @@ hr {
     top: 0;
     right: 0;
     height: 100%;
-    max-height: 95vh;
+    max-height: 98vh;
     width: 100vw;
     display: grid;
     grid-template-rows: 3fr 3fr 1fr;
