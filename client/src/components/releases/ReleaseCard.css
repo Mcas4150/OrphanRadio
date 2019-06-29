@@ -4,13 +4,10 @@
   grid-template-columns: 1fr 2fr;
 
   /* Increase/Decrease this value for cross-browser compatibility */
-
 }
 
 .release-card--container {
-
-max-height: 90vh;
-
+  max-height: 90vh;
 }
 
 .release-card--image {
@@ -54,24 +51,24 @@ max-height: 90vh;
 
 @media (max-width: 800px) {
   .release-card--image {
-   width: 100%;
+    width: 100%;
     margin: 0 auto;
   }
 
-  .release--image-container{
+  .release--image-container {
     justify-content: center;
     display: inline-grid;
+    overflow: hidden;
   }
 
   .release-card--container {
     height: 90vh;
     padding: 9vw;
-}
+  }
 
-.release--text-container {
-  padding: 20px 0px;
-
-}
+  .release--text-container {
+    padding: 20px 0px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -80,6 +77,5 @@ max-height: 90vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: max-content;
-
   }
 }

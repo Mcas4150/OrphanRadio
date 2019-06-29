@@ -9,14 +9,14 @@ a {
 }
 
 .release--image {
-  width: 275px;
-  height: 275px;
+  width: 300px;
+  height: 300px;
 }
 
 .releases--grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 50px;
 }
 
 .releases--sublinks :hover {
