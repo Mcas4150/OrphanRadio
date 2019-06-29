@@ -89,6 +89,8 @@
 
   .navbar--panel {
     color: white;
+    height: 100px;
+    width: 100px;
     display:flex;
     justify-content: flex-end;
   }

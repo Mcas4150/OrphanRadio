@@ -1,13 +1,11 @@
-.navMenu {
+.navMenuMobile {
   position: absolute;
   overflow-y: hidden;
   top: 0;
   right: 0;
   height: 100%;
-  max-width: 15vw;
-  min-width: 200px;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 3ffr 3fr 3fr;
   grid-template-areas: "list" "image";
   background: black;
   opacity: 1;
@@ -21,18 +19,18 @@
 
 
 
-.navMenu--hidden {
+.navMenuMobile--hidden {
   width: 0vw;
 }
 
-.navMenu--list {
+.navMenuMobile--list {
   grid-area: list;
   text-align: right;
   padding: 15px;
   /* height: 70vh; */
 }
 
-.navMenu--link {
+.navMenuMobile--link {
   font-size: 2.55rem;
   font-family: "FugueRegular";
   color: white;
@@ -41,10 +39,10 @@
   animation-delay: 0.2s;
   text-decoration: none;
 }
-.navMenu--link__top{
+.navMenuMobile--link__top{
   font-size: 3rem;
 }
-/* .navMenu--link:hover {
+/* .navMenuMobile--link:hover {
   color: gray;
 } */
 
@@ -65,7 +63,7 @@
 }
 
 
-.navMenu--image-container {
+.navMenuMobile--image-container {
   grid-area: image;
   display: flex;
   align-items: center;
@@ -115,15 +113,15 @@ hr {
 }
 
 @media (max-width: 800px) {
-  .navMenu {
+  .navMenuMobile {
     position: absolute;
     overflow-y: hidden;
     top: 0;
     right: 0;
     height: 100vh;
-    width: 40vw;
+    width: 100vw;
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 3fr 3fr 1fr;
     grid-template-areas: "list" "image";
     background: black;
     opacity: 1;
@@ -135,24 +133,7 @@ hr {
 }
 
 @media (max-width: 600px) {
-  .navMenu {
-    display: none;
-    /* position: absolute;
-    overflow-y: hidden;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 60vw;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "list" "image";
-    background: black;
-    opacity: 1;
 
-    color: white;
-    transition: height 0.3s ease;
-    z-index: 2; */
-  }
 
   .orphanLogo {
     /* width: 100%; */

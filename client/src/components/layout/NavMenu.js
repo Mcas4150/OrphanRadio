@@ -35,16 +35,20 @@ class NavMenu extends Component {
 
   changeRelease(release) {
     this.props.getRelease(release._id);
-    this.setState({ currentColor: release.color});
+    this.setState({ currentColor: release.color });
   }
 
   render() {
     const { releases } = this.props.release;
-    const sortedReleases = releases.sort(function(a, b){
-      if(a.catalog < b.catalog) { return -1; }
-      if(a.catalog > b.catalog) { return 1; }
+    const sortedReleases = releases.sort(function(a, b) {
+      if (a.catalog < b.catalog) {
+        return -1;
+      }
+      if (a.catalog > b.catalog) {
+        return 1;
+      }
       return 0;
-  })
+    });
 
     if (this.props.open === false) {
       return <div className="nav-menu__hidden" />;
@@ -58,7 +62,6 @@ class NavMenu extends Component {
             <hr />
             <NavLink
               className="navMenu--link link-records"
-
               activeClassName="active-records"
               to="/records/"
             >
@@ -103,11 +106,12 @@ class NavMenu extends Component {
           </div>
           <div className="navMenu--footer-container">
             <div className="navMenu--image-container">
-              <BackgroundCanvas
+              {/* <BackgroundCanvas
                 mouseX={this.props.point.x}
                 mouseY={this.props.point.y}
                 color={this.state.currentColor}
-              />
+              /> */}
+              <BackgroundCanvas color={this.state.currentColor} />
             </div>
 
             <div className="social-row">
