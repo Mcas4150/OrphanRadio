@@ -132,8 +132,8 @@ hr {
     overflow-y: hidden;
     top: 0;
     right: 0;
-    height: 98vh;
-    max-height: 98vh;
+    height: 100%;
+    max-height: 95vh;
     width: 100vw;
     display: grid;
     grid-template-rows: 3fr 3fr 1fr;
