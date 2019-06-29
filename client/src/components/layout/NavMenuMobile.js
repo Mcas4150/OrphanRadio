@@ -98,55 +98,54 @@ class NavMenuMobile extends Component {
                 Retail.
               </NavLink>
             </div>
-            <div className="links-container">
-              {sortedReleases &&
-                sortedReleases.map((release, index) => {
-                  return (
-                    <NavLink
-                      className={"releases--sublinks__link sublink"}
-                      exact
-                      activeClassName="releases--sublinks__link sublink active-link"
-                      activeStyle={{ color: release.color }}
-                      to={{ pathname: `/records/${release._id}` }}
-                    >
-                      <div onClick={() => this.changeRelease(release)}>
-                        {release.catalog}.
-                      </div>
-                    </NavLink>
-                  );
-                })}
+            <div className="mobile-links">
+              <BackgroundCanvas color={this.state.currentColor} />
+
+              <div className="links-container">
+                {sortedReleases &&
+                  sortedReleases.map((release, index) => {
+                    return (
+                      <NavLink
+                        className={"releases--sublinks__link sublink"}
+                        exact
+                        activeClassName="releases--sublinks__link sublink active-link"
+                        activeStyle={{ color: release.color }}
+                        to={{ pathname: `/records/${release._id}` }}
+                      >
+                        <div onClick={() => this.changeRelease(release)}>
+                          {release.catalog}.
+                        </div>
+                      </NavLink>
+                    );
+                  })}
+              </div>
             </div>
             <div className="navMenuMobile--footer-container">
-              <div className="navMenuMobile--image-container">
-                <BackgroundCanvas color={this.state.currentColor} />
-              </div>
-              <div className="social-row">
-                <a
-                  className="social"
-                  href="https://soundcloud.com/orphan_radio_records"
-                >
-                  <i className="fab fa-soundcloud" />
-                </a>
-                <a
-                  className="social"
-                  href="https://orphanrecordsradio.bandcamp.com/"
-                >
-                  <i className="fab fa-bandcamp" />
-                </a>
-                <a
-                  className="social"
-                  href="https://www.instagram.com/orphan.___/"
-                >
-                  <i className="fab fa-instagram" />
-                </a>
+              <a
+                className="social"
+                href="https://soundcloud.com/orphan_radio_records"
+              >
+                <i className="fab fa-soundcloud" />
+              </a>
+              <a
+                className="social"
+                href="https://orphanrecordsradio.bandcamp.com/"
+              >
+                <i className="fab fa-bandcamp" />
+              </a>
+              <a
+                className="social"
+                href="https://www.instagram.com/orphan.___/"
+              >
+                <i className="fab fa-instagram" />
+              </a>
 
-                <a
-                  className="social"
-                  href="https://www.facebook.com/orphanradiorecords/"
-                >
-                  <i className="fab fa-facebook" />
-                </a>
-              </div>
+              <a
+                className="social"
+                href="https://www.facebook.com/orphanradiorecords/"
+              >
+                <i className="fab fa-facebook" />
+              </a>
             </div>
           </div>
         ) : (
