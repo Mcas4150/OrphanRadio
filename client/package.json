@@ -30,7 +30,7 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "three": "^0.97.0",
+    "three": "^0.125.0",
     "three-orbitcontrols": "^2.102.1"
   },
   "scripts": {
