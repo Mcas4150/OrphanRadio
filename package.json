@@ -33,6 +33,6 @@
     "react-scripts": "^3.0.1",
     "react-transition-group": "^4.2.0",
     "three-orbitcontrols": "^2.102.1",
-    "validator": "^9.4.1"
+    "validator": "^13.7.0"
   }
 }
