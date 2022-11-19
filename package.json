@@ -30,7 +30,7 @@
     "nodemon": "^1.19.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "react-transition-group": "^4.2.0",
     "three-orbitcontrols": "^2.102.1",
     "validator": "^9.4.1"
